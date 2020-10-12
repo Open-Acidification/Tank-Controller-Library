@@ -20,12 +20,3 @@ protected:
     TankControllerLib::singleton()->changeState(state);
   }
 };
-
-class UIStart : UIState {
-public:
-  UIStart() {
-  }
-  ~UIStart() {
-  }
-  virtual void handleKey(char key);
-};

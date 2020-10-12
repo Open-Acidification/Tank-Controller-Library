@@ -1,6 +1,7 @@
 #include "TankControllerLib.h"
 
 #include "UIState/UIState.h"
+#include "UIState/MainMenu.h"
 
 TankControllerLib* TankControllerLib::instance = nullptr;
 
@@ -13,7 +14,7 @@ TankControllerLib::~TankControllerLib() {
 }
 
 void TankControllerLib::setup() {
-  changeState((UIState*)new UIStart);
+  changeState((UIState*)new MainMenu);
   pinMode(LED_BUILTIN, OUTPUT);
 }
 

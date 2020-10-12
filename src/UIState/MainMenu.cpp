@@ -1,3 +1,9 @@
+/* 
+ * MainMenu.cpp
+ * 
+ * Branch to other states to handle various menu options
+ */
+
 // #include "CalibrationManagement.h"
 // #include "ChangeGoogleSheetInterval.h"
 // #include "ChangeTankID.h"
@@ -13,9 +19,9 @@
 #include "SetPHSetPoint.h"
 // #include "SetTempSetPoint.h"
 // #include "TemperatureCalibration.h"
-#include "UIState.h"
+#include "MainMenu.h"
 
-void UIStart::handleKey(char key) {
+void MainMenu::handleKey(char key) {
   switch (key) {
     case 'A':  // Change pH set_point
       this->changeState((UIState*)new SetPHSetPoint);
@@ -66,7 +72,7 @@ void UIStart::handleKey(char key) {
       // this->changeState((UIState*) new SetChillOrHeat);
       break;
     default:
-      changeState((UIState*)new UIStart);
+      changeState((UIState*)new MainMenu);
       break;
   }
 }
