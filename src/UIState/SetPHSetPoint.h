@@ -3,5 +3,6 @@
 
 class SetPHSetPoint : UIState {
 public:
-  virtual void handleKey(char key) {}
+  virtual void handleKey(char key) {
+  }
 };

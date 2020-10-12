@@ -9,8 +9,10 @@
 
 class UIState {
 public:
-  UIState() {}
-  virtual ~UIState() {}
+  UIState() {
+  }
+  virtual ~UIState() {
+  }
   virtual void handleKey(char key) = 0;
 
 protected:
@@ -21,7 +23,9 @@ protected:
 
 class UIStart : UIState {
 public:
-  UIStart() {}
-  ~UIStart() {}
+  UIStart() {
+  }
+  ~UIStart() {
+  }
   virtual void handleKey(char key);
 };

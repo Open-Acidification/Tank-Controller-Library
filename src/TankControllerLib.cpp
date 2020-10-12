@@ -28,7 +28,7 @@ void blink() {
 #define NO_KEY '\0'
 void TankControllerLib::loop() {
   blink();
-  char key = NO_KEY; // custom_keypad.getKey();
+  char key = NO_KEY;  // custom_keypad.getKey();
   if (key != NO_KEY) {
     Serial.print(F("To start key: "));
     Serial.println(key);
