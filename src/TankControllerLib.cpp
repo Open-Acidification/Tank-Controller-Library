@@ -1,5 +1,6 @@
-#include <cassert>
 #include "TankControllerLib.h"
+
+#include <cassert>
 
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
