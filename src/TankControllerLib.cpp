@@ -1,16 +1,27 @@
+#include <cassert>
 #include "TankControllerLib.h"
 
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
 
-TankControllerLib* TankControllerLib::instance = nullptr;
+TankControllerLib* TankControllerLib::_instance = nullptr;
+
+TankControllerLib* TankControllerLib::instance() {
+  if (!_instance) {
+    _instance = new TankControllerLib;
+  }
+  return _instance;
+}
 
 TankControllerLib::TankControllerLib() {
+  assert(!_instance);
   _state = nullptr;
 }
 
 TankControllerLib::~TankControllerLib() {
   changeState(nullptr);
+  assert(this == _instance);
+  _instance = nullptr;
 }
 
 void TankControllerLib::setup() {
