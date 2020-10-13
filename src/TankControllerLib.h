@@ -7,6 +7,7 @@ public:
   static TankControllerLib* instance();
   void setup();
   void loop();
+
 protected:
   TankControllerLib();
   ~TankControllerLib();
