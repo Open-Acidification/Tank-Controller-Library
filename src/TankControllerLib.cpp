@@ -1,6 +1,10 @@
 #include "TankControllerLib.h"
 
+#ifdef ARDUINO_CI
 #include <cassert>
+#else
+#define assert(p) (void)0
+#endif
 
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
