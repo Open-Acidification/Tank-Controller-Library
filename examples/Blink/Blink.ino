@@ -1,10 +1,10 @@
 
 #include "TankControllerLib.h"
-TankControllerLib tank;
+TankControllerLib *tank = TankControllerLib::instance();
 
 void setup() {
-  tank.setup();
+  tank->setup();
 }
 void loop() {
-  tank.loop();
+  tank->loop();
 }
