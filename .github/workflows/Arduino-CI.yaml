@@ -20,11 +20,10 @@ jobs:
       - run: |
           bundle install
 
-      # Creates the Library directory and install our libraries
-      - run: |
-          bundle exec ensure_arduino_installation.rb
-          git clone https://github.com/Arduino-CI/LiquidCrystal.git
-          mv LiquidCrystal $(bundle exec arduino_library_location.rb)
+      # Installing libraries needed for this project
+      - name: Install libraries
+        run: |
+          ./scripts/install_libraries.sh  
 
       # Finally, run the tests
       - run: |
