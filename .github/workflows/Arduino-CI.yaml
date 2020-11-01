@@ -23,7 +23,7 @@ jobs:
       # Creates the Library directory and install our libraries
       - run: |
           bundle exec ensure_arduino_installation.rb
-          git clone git@github.com:Arduino-CI/LiquidCrystal.git
+          git clone https://github.com/Arduino-CI/LiquidCrystal.git
           mv LiquidCrystal $(bundle exec arduino_library_location.rb)
 
       # Finally, run the tests
