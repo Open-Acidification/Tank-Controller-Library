@@ -27,6 +27,6 @@ void TC_ethernet::renewDHCPLease() {
   // unsigned long current_millis = millis();
 
   // if (current_millis - previous_lease >= LEASE_INTERVAL) {
-    Ethernet.maintain();
+  Ethernet.maintain();
   // }
 }

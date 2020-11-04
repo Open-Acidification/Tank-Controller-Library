@@ -10,7 +10,9 @@ Implements a wrapper for the Ethernet Class
 class TC_ethernet {
 public:
   static TC_ethernet *getInstance();
-  IPAddress getIP() { return IP; };
+  IPAddress getIP() {
+    return IP;
+  };
   void renewDHCPLease();
 
 protected:
