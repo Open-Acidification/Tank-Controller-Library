@@ -17,9 +17,11 @@ unittest:
         - mega2560
     libraries:
       - "LiquidCrystal"
+      - "Ethernet"
 
 compile:
     platforms:
       - mega2560
     libraries:
       - "LiquidCrystal"
+      - "Ethernet"
