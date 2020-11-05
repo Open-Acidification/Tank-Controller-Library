@@ -8,7 +8,6 @@ platforms:
         features:
         defines:
           - __AVR_ATmega2560__
-          # added this line
           - ARDUINO_CI
         warnings:
         flags:
