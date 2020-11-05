@@ -1,32 +1,31 @@
 #include "Ethernet_TC.h"
-using namespace std;
 
-TC_ethernet *TC_ethernet::_instance = nullptr;
+Ethernet_TC *Ethernet_TC::_instance = nullptr;
 
-TC_ethernet::TC_ethernet() {
+// Establishes the Ethenet connection and sets class variables
+Ethernet_TC::Ethernet_TC() {
   pinMode(4, OUTPUT);
   digitalWrite(4, HIGH);
   if (Ethernet.begin(mac) == 0) {
     Serial.println(F("Failed to configure Ethernet using DHCP"));
+    IPAddress defaultIP = IPAddress(192, 168, 1, 2);
     Ethernet.begin(mac, defaultIP);
     IP = defaultIP;
   }
-
-  defaultIP = IPAddress(192, 168, 1, 2);
-  time_serverIP = IPAddress(132, 163, 97, 1);
 }
 
-TC_ethernet *TC_ethernet::getInstance() {
+Ethernet_TC *Ethernet_TC::getInstance() {
   if (_instance == nullptr) {
-    _instance = new TC_ethernet;
+    _instance = new Ethernet_TC;
   }
   return _instance;
 }
 
-void TC_ethernet::renewDHCPLease() {
-  // unsigned long current_millis = millis();
+void Ethernet_TC::renewDHCPLease() {
+  unsigned long current_millis = millis();
 
-  // if (current_millis - previous_lease >= LEASE_INTERVAL) {
-  Ethernet.maintain();
-  // }
+  if (current_millis - previous_lease >= LEASE_INTERVAL) {
+    Ethernet.maintain();
+    previous_lease = current_millis;
+  }
 }

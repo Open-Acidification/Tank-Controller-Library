@@ -7,21 +7,23 @@ Implements a wrapper for the Ethernet Class
 
 #include "Ethernet.h"
 
-class TC_ethernet {
+class Ethernet_TC {
 public:
-  static TC_ethernet *getInstance();
+  static Ethernet_TC *getInstance();
   IPAddress getIP() {
     return IP;
   };
   void renewDHCPLease();
 
 protected:
-  TC_ethernet();
+  Ethernet_TC();
 
 private:
-  static TC_ethernet *_instance;
+  static Ethernet_TC *_instance;
   byte mac[6] = {0x90, 0xA2, 0xDA, 0x00, 0x00, 0x00};
   IPAddress defaultIP;
   IPAddress time_serverIP;
   IPAddress IP;
+  unsigned long previous_lease;
+  const unsigned long LEASE_INTERVAL = 345600000;  // 4 days in milliseconds
 };
