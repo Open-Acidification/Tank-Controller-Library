@@ -16,12 +16,14 @@ unittest:
     platforms:
         - mega2560
     libraries:
-      - "LiquidCrystal"
       - "Ethernet"
+      - "LiquidCrystal"
+      - "RTClib"
 
 compile:
     platforms:
       - mega2560
     libraries:
-      - "LiquidCrystal"
       - "Ethernet"
+      - "LiquidCrystal"
+      - "RTClib"
