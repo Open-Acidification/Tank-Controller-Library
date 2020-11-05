@@ -13,15 +13,15 @@ platforms:
         flags:
   
 unittest:
-    exclude_dirs:
-        - "/Users/jfoster/Documents/Arduino/libraries/LiquidCrystal/test/"
     platforms:
         - mega2560
     libraries:
       - "LiquidCrystal"
+      - "RTClib"
 
 compile:
     platforms:
       - mega2560
     libraries:
       - "LiquidCrystal"
+      - "RTClib"
