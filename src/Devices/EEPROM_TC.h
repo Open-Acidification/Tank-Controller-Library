@@ -21,13 +21,27 @@ class EEPROM_TC {
 public:
   EEPROM_TC();
   ~EEPROM_TC();
-  void writeMacAddress(byte mac[]);
+  void getMacAddress(byte mac[]);
+  void writeTempSetPoint(double value);
   void writepHSetPoint(double value);
+  void writeKpSetPoint(double value);
+  void writeKiSetPoint(double value);
+  void writeKdSetPoint(double value);
+  void writeHeatSetPoint(double value);
+  void writeAmplitudeSetPoint(double vlaue);
+  void writeFrequencySetPoint(double value);
   double readTempSetPoint();
-  void doubleWrite(int address, double value);
-  double doubleRead(int address);
+  double readpHSetPoint();
+  double readKpSetPoint();
+  double readKiSetPoint();
+  double readKdSetPoint();
+  double readHeatSetPoint();
+  double readAmplitudeSetPoint();
+  double readFrequencySetPoint();
 
 private:
+  void writeDouble(int address, double value);
+  double readDouble(int address);
   const int PH_ADDRESS = 0;
   const int TEMP_ADDRESS = 4;
   const int TANKID_ADDRESS = 8;
