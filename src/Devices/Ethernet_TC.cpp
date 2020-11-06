@@ -28,4 +28,6 @@ void Ethernet_TC::renewDHCPLease() {
     Ethernet.maintain();
     previous_lease = current_millis;
   }
+
+  numAttemptedDHCPReleases++;
 }

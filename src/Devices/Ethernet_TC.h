@@ -13,6 +13,9 @@ public:
   IPAddress getIP() {
     return IP;
   };
+  int getNumAttemptedDHCPReleases() {
+    return numAttemptedDHCPReleases;
+  };
   void renewDHCPLease();
 
 protected:
@@ -26,4 +29,7 @@ private:
   IPAddress IP;
   unsigned long previous_lease;
   const unsigned long LEASE_INTERVAL = 345600000;  // 4 days in milliseconds
+
+  // testing
+  int numAttemptedDHCPReleases = 0;
 };
