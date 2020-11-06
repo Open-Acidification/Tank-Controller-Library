@@ -16,6 +16,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include <EEPROM.h>
 
 class EEPROM_TC {
 public:
@@ -41,7 +42,7 @@ public:
 
 private:
   void writeDouble(int address, double value);
-  double readDouble(int address);
+  double readDouble(int address, double defaultValue);
   const int PH_ADDRESS = 0;
   const int TEMP_ADDRESS = 4;
   const int TANKID_ADDRESS = 8;

@@ -11,7 +11,7 @@ void EEPROM_TC::getMacAddress(byte mac[]) {
   } else {
     Serial.println(F("No MAC Address Found in EEPROM. Generating New MAC."));
     for (int i = 3; i < 6; i++) {
-      mac[i] = TrueRandom.randomByte();
+      mac[i] = i;   // TrueRandom.randomByte();
       EEPROM.write(i + MAC_ADDRESS, mac[i]);
     }
     EEPROM.write(MAC_ADDRESS, '#');
@@ -70,7 +70,7 @@ double EEPROM_TC::readAmplitudeSetPoint() {
   return readDouble(AMPLITUDE_ADDRESS, 0);
 }
 
-void EEPROM_TC::writeAmplitudeSetPoint(double vlaue) {
+void EEPROM_TC::writeAmplitudeSetPoint(double value) {
   writeDouble(AMPLITUDE_ADDRESS, value);
 }
 
@@ -83,7 +83,7 @@ void EEPROM_TC::writeFrequencySetPoint(double value) {
 }
 
 void EEPROM_TC::writeDouble(int address, double value) {
-  if (value != readDouble(address)) {
+  if (value != readDouble(address, 1.0/0.0)) {
     byte* p = (byte*)(void*)&value;
     for (int i = 0; i < sizeof(value); i++) {
       EEPROM.write(address++, *p++);
@@ -91,11 +91,11 @@ void EEPROM_TC::writeDouble(int address, double value) {
   }
 }
 
-double EEPROM_TC::readDouble(int address, double default) {
+double EEPROM_TC::readDouble(int address, double defaultValue) {
   double value = 0.0;
   byte* p = (byte*)(void*)&value;
   for (int i = 0; i < sizeof(value); i++) {
     *p++ = EEPROM.read(address++);
   }
-  return isnan(value) ? default : value;
+  return isnan(value) ? defaultValue : value;
 }
