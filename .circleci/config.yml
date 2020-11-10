@@ -9,9 +9,9 @@ jobs:
       - image: circleci/ruby:2.6
     steps:
       - checkout
-      - ruby/install-deps # use the ruby orb to install dependencies
+      # - ruby/install-deps # use the ruby orb to install dependencies
       - run:
-          name: Install
+          name: Install and test
           command: |
           bundle install
           ./scripts/install_libraries.sh  
