@@ -10,7 +10,6 @@ jobs:
           name: Install and test
           command: |
             bundle install
-#            ./scripts/install_libraries.sh  
             bundle exec arduino_ci_remote.rb
 
 # We use workflows to orchestrate the jobs that we declared above.
