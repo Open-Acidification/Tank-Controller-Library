@@ -5,14 +5,19 @@
 
 unittest(test) {
   // Test singleton
-  Ethernet_TC singleton1;
-  singleton1 = singleton1->getInstance();
-  Ethernet_TC singleton2;
-  singleton2 = singleton2->getInstance();
+  Ethernet_TC* singleton1 = nullptr;
+  singleton1 = Ethernet_TC::getInstance();
+  assertNotNull(singleton1);
+  Ethernet_TC* singleton2 = nullptr;
+  singleton2 = Ethernet_TC::getInstance();
+  assertNotNull(singleton2);
   assertEqual(singleton1, singleton2);
 
   // Test that the default Ip was used as a fall back
-  assertEqual(singleton->getIP(), "19216812");
+  if (singleton1->gotDHCPLease()) {
+    IPAddress defaultIP(192, 168, 1, 2);
+    assertEqual(singleton1->getIP(), defaultIP);
+  }
 
   // Test DHCP is being maintained
   singleton1->renewDHCPLease();

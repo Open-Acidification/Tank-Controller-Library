@@ -17,6 +17,9 @@ public:
     return numAttemptedDHCPReleases;
   };
   void renewDHCPLease();
+  bool gotDHCPLease() {
+    return IP != defaultIP;
+  };
 
 protected:
   Ethernet_TC();
