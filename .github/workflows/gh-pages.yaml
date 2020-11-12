@@ -1,7 +1,7 @@
 name: github pages
 
-on:
-  push #:
+on: [push, pull_request]
+#  push:
 #    branches:
 #      - master  # Set a branch name to trigger deployment
 
@@ -11,7 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Deploy
+      - uses: mattnotmitt/doxygen-action@v1
+        with:
+            working-directory: 'submodule/'
+            doxyfile-path: 'public'
+      
+            - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
