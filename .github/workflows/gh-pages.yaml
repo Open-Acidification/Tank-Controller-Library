@@ -13,8 +13,8 @@ jobs:
 
       - uses: mattnotmitt/doxygen-action@v1
         with:
-            working-directory: 'submodule/'
-            doxyfile-path: 'public'
+            working-directory: '.'
+            doxyfile-path: './Doxyfile'
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
