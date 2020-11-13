@@ -35,7 +35,7 @@ public:
     Serial.print(F("PID output (s): "));
     Serial.println(output / 1000, 1);
   }
-  
+
   void print_DateTime(DateTime dateTime) {
     Serial.print(dateTime.year(), DEC);
     Serial.print('-');
