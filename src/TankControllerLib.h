@@ -1,6 +1,5 @@
 #pragma once
 #include <Arduino.h>
-#include <string>
 
 #define VERSION "0.3.0"
 
@@ -10,7 +9,9 @@ public:
   static TankControllerLib* instance();
   void setup();
   void loop();
-  const char* version() { return VERSION; }
+  const char* version() {
+    return VERSION;
+  }
 
 protected:
   TankControllerLib();
