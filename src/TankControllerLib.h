@@ -1,7 +1,8 @@
 #pragma once
 #include <Arduino.h>
+#include "Devices/LiquidCrystal_TC.h"
 
-#define VERSION "0.3.0"
+const char TANK_CONTROLLER_VERSION[] = "0.3.0";
 
 class UIState;
 class TankControllerLib {
@@ -10,7 +11,7 @@ public:
   void setup();
   void loop();
   const char* version() {
-    return VERSION;
+    return TANK_CONTROLLER_VERSION;
   }
 
 protected:
@@ -18,8 +19,17 @@ protected:
   ~TankControllerLib();
 
 private:
-  friend class UIState;
-  void changeState(UIState* newState);
-  UIState* _state;
+  // class (static) variables
   static TankControllerLib* _instance;
+
+  // instance variables
+  UIState* _state;
+  LiquidCrystal_TC *lcd;
+
+  // private member functions
+  void blink();
+  void changeState(UIState* newState);
+
+  // other classes with access to our privates
+  friend class UIState;
 };
