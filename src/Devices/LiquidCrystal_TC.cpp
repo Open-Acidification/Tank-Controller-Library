@@ -1,5 +1,8 @@
 #include "LiquidCrystal_TC.h"
 
+// pins used for our LiquidDisplay
+const int RS = 24, EN = 22, D4 = 26, D5 = 28, D6 = 30, D7 = 32;
+
 //  class variables
 LiquidCrystal_TC* LiquidCrystal_TC::_instance = nullptr;
 
