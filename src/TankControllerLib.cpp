@@ -9,7 +9,7 @@
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
 
-const char NO_KEY = '\0';   // Move to LiquidCrystal?
+const char NO_KEY = '\0';  // Move to LiquidCrystal?
 
 // ------------ Class Methods ------------
 /**
@@ -28,14 +28,15 @@ TankControllerLib* TankControllerLib::instance() {
 }
 
 // ------------ Instance Methods ------------
-
 /**
  * Constructor
  */
 TankControllerLib::TankControllerLib() {
   assert(!_instance);
-  _state = nullptr;
+  state = nullptr;
   lcd = LiquidCrystal_TC::instance();
+  log = Serial_TC::instance();
+  log->print(F("TankControllerLib::TankControllerLib() - version "), TANK_CONTROLLER_VERSION);
 }
 
 /**
@@ -49,7 +50,7 @@ TankControllerLib::~TankControllerLib() {
 
 /**
  * Blink the on-board LED to let us know that loop() is being called
- * 
+ *
  */
 void TankControllerLib::blink() {
   if (millis() / 500 % 2) {
@@ -63,31 +64,39 @@ void TankControllerLib::blink() {
  * Private member function called by UIState subclasses
  */
 void TankControllerLib::changeState(UIState* newState) {
-  if (_state) {
-    delete _state;
+  if (state) {
+    delete state;
   }
-  _state = newState;
+  state = newState;
 }
 
 /**
- * This is one of two public instance functions. 
+ * This is one of two public instance functions.
  * It is called repeatedly while the board is on.
  */
 void TankControllerLib::loop() {
-  blink();  //  blink the on-board LED to show that we are running
+  blink();            //  blink the on-board LED to show that we are running
   char key = NO_KEY;  // custom_keypad.getKey();
   if (key != NO_KEY) {
-    Serial.print(F("To start key: "));
-    Serial.println(key);
-    _state->handleKey(key);
+    log->print(F("Keypad input: "), key);
+    state->handleKey(key);
   }
 }
 
 /**
- * This is one of two public instance functions. 
+ * This is one of two public instance functions.
  * Here we do any one-time startup initialization.
  */
 void TankControllerLib::setup() {
+  log->print(F("TankControllerLib::setup()"));
   changeState((UIState*)new MainMenu);
   pinMode(LED_BUILTIN, OUTPUT);
+}
+
+/**
+ * What is the current version?
+ */
+const char* TankControllerLib::version() {
+  log->print(F("TankControllerLib::version() = "), TANK_CONTROLLER_VERSION);
+  return TANK_CONTROLLER_VERSION;
 }

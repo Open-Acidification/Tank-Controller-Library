@@ -10,27 +10,26 @@
 
 class Serial_TC {
 public:
+  //  class methods
   static Serial_TC* instance();
-  void print_PID(double Kp, double Ki, double Kd, double output);
-  void print_DateTime(DateTime dateTime);
-  void print_mac(byte mac[]);
-  void print(String aString, String aString2);
+
+  //  instance methods
+  void print(String aString);
+  void print(String aString, char aChar);
   void print(String aString, int anInt);
   void print(String aString, int anInt, int format);
-  void print(String aString) {
-    Serial.println(aString);
-  }
-  void write(byte aByte) {
-    Serial.write(aByte);
-  }
-  void write(char arr[], int anInt) {
-    Serial.write(arr, anInt);
-  }
+  void print(String aString, String aString2);
+  void print_DateTime(DateTime dateTime);
+  void print_mac(byte mac[]);
+  void print_PID(double Kp, double Ki, double Kd, double output);
+  void write(byte aByte);
+  void write(char arr[], int anInt);
 
 private:
-  Serial_TC() {
-    Serial.begin(9600);
-  }
-  void print_two_digits(int value);
+  //  class variable
   static Serial_TC* _instance;
+
+  //  instance methods
+  Serial_TC();
+  void print_two_digits(int value);
 };
