@@ -5,6 +5,8 @@
  *  Also print_PID, print_DataTime, print_mac are used to print the PID information,
  *  current date information, and the mac address.
  */
+#pragma once
+
 #include <Arduino.h>
 #include <RTClib.h>
 

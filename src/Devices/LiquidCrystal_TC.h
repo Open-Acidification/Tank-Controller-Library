@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Arduino.h>
 #ifdef MOCK_PINS_COUNT
 #include <LiquidCrystal_CI.h>
