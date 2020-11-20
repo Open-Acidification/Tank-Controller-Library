@@ -25,7 +25,7 @@ unittest(SerialTest) {
 
   state->serialPort[0].dataOut = "";  // the history of data written
   mySerial->print("Label: ", "value");
-  assertEqual("Label: \r\nvalue\r\n", state->serialPort[0].dataOut);
+  assertEqual("Label: value\r\n", state->serialPort[0].dataOut);
 
   state->serialPort[0].dataOut = "";  // the history of data written
   mySerial->print("Test Hex:", 78, HEX);
