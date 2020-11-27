@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instance_94',['instance',['../classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af',1,'LiquidCrystal_TC::instance()'],['../classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321',1,'Serial_TC::instance()'],['../classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5',1,'TankControllerLib::instance()']]]
+  ['handlekey_111',['handleKey',['../classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6',1,'MainMenu::handleKey()'],['../classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9',1,'SetPHSetPoint::handleKey()'],['../classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b',1,'UIState::handleKey()']]]
 ];

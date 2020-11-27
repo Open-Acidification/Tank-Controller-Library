@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['pinlog_35',['pinLog',['../Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f',1,'Blink.cpp']]],
-  ['print_36',['print',['../classSerial__TC.html#aa18b7fda6d436e65cfc7c27d59b5ba3f',1,'Serial_TC::print(String aString)'],['../classSerial__TC.html#a6381b8f41578ecf73f516bcabe4b5dc4',1,'Serial_TC::print(String aString, char aChar)'],['../classSerial__TC.html#a3acf4aaf8b3af4ccc17344894d624dce',1,'Serial_TC::print(String aString, int anInt)'],['../classSerial__TC.html#a7989012705028383e286f075a4b3a2a9',1,'Serial_TC::print(String aString, int anInt, int format)'],['../classSerial__TC.html#a22ed415295dd839a3d6daa62390af65c',1,'Serial_TC::print(String aString, String aString2)']]],
-  ['print_5fdatetime_37',['print_DateTime',['../classSerial__TC.html#a0861deed998b9cd8512f56457f24f640',1,'Serial_TC']]],
-  ['print_5fmac_38',['print_mac',['../classSerial__TC.html#a23c326d6c75bfe208ce819b3ead0807a',1,'Serial_TC']]],
-  ['print_5fpid_39',['print_PID',['../classSerial__TC.html#a498c650db81fe09ac63fe9260b3e66a4',1,'Serial_TC']]],
-  ['print_5ftwo_5fdigits_40',['print_two_digits',['../classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c',1,'Serial_TC']]]
+  ['observername_35',['observerName',['../classBitCollector.html#a021d2f8c40a47e1aa862195cde124b01',1,'BitCollector']]],
+  ['onbit_36',['onBit',['../classBitCollector.html#a273c7fdd2087ac8ab6bb6931cb06ba9e',1,'BitCollector']]],
+  ['overflowflag_37',['overflowFlag',['../Blink_8cpp.html#a43e5081a12570bf32bc5c52fff9abe24',1,'Blink.cpp']]]
 ];

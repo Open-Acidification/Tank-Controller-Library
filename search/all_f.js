@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['tank_20controller_52',['Tank Controller',['../md_docs_index.html',1,'']]],
-  ['tank_5fcontroller_5fversion_53',['TANK_CONTROLLER_VERSION',['../TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42',1,'TankControllerLib.h']]],
-  ['tankcontrollerlib_54',['TankControllerLib',['../classTankControllerLib.html',1,'TankControllerLib'],['../classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d',1,'TankControllerLib::TankControllerLib()']]],
-  ['tankcontrollerlib_2ecpp_55',['TankControllerLib.cpp',['../TankControllerLib_8cpp.html',1,'']]],
-  ['tankcontrollerlib_2eh_56',['TankControllerLib.h',['../TankControllerLib_8h.html',1,'']]],
-  ['time_57',['time',['../Blink_8cpp.html#a8667588dec524bf854d0c16771d425a1',1,'Blink.cpp']]]
+  ['serial_5ftc_50',['Serial_TC',['../classSerial__TC.html',1,'Serial_TC'],['../classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b',1,'Serial_TC::Serial_TC()']]],
+  ['serial_5ftc_2ecpp_51',['Serial_TC.cpp',['../src_2Devices_2Serial__TC_8cpp.html',1,'(Global Namespace)'],['../test_2Serial__TC_8cpp.html',1,'(Global Namespace)']]],
+  ['serial_5ftc_2eh_52',['Serial_TC.h',['../Serial__TC_8h.html',1,'']]],
+  ['setphsetpoint_53',['SetPHSetPoint',['../classSetPHSetPoint.html',1,'']]],
+  ['setphsetpoint_2eh_54',['SetPHSetPoint.h',['../SetPHSetPoint_8h.html',1,'']]],
+  ['setup_55',['setup',['../classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51',1,'TankControllerLib']]],
+  ['splashscreen_56',['splashScreen',['../classLiquidCrystal__TC.html#a967f89ffe04c9d847bebed7bb7d234ff',1,'LiquidCrystal_TC']]],
+  ['state_57',['state',['../classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14',1,'TankControllerLib::state()'],['../Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a',1,'state():&#160;Blink.cpp']]]
 ];
