@@ -1,8 +1,10 @@
 <map id="src/TankControllerLib.h" name="src/TankControllerLib.h">
-<area shape="rect" id="node1" title=" " alt="" coords="148,5,304,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="188,155,264,181"/>
-<area shape="rect" id="node3" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,80,188,107"/>
-<area shape="rect" id="node5" href="$Serial__TC_8h.html" title=" " alt="" coords="264,80,404,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="43,155,150,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="299,155,369,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="223,5,379,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="205,155,281,181"/>
+<area shape="rect" id="node3" href="$EthernetServer__TC_8h.html" title=" " alt="" coords="5,80,199,107"/>
+<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="275,80,457,107"/>
+<area shape="rect" id="node7" href="$Serial__TC_8h.html" title=" " alt="" coords="481,80,621,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="62,155,142,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="313,155,419,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="516,155,587,181"/>
 </map>

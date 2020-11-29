@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tankcontrollerlib_127',['TankControllerLib',['../classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d',1,'TankControllerLib']]],
-  ['tempprobe_5ftc_128',['TempProbe_TC',['../classTempProbe__TC.html#ab5b560df0c4226f238b51318b1968cc2',1,'TempProbe_TC']]]
+  ['serial_5ftc_137',['Serial_TC',['../classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b',1,'Serial_TC']]],
+  ['setup_138',['setup',['../classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51',1,'TankControllerLib']]],
+  ['splashscreen_139',['splashScreen',['../classLiquidCrystal__TC.html#a967f89ffe04c9d847bebed7bb7d234ff',1,'LiquidCrystal_TC']]]
 ];

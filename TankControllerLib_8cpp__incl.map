@@ -1,11 +1,13 @@
 <map id="src/TankControllerLib.cpp" name="src/TankControllerLib.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="170,5,341,32"/>
-<area shape="rect" id="node2" href="$TankControllerLib_8h.html" title=" " alt="" coords="159,229,293,256"/>
-<area shape="rect" id="node8" href="$MainMenu_8h.html" title=" " alt="" coords="185,80,326,107"/>
-<area shape="rect" id="node9" href="$UIState_8h.html" title=" " alt="" coords="263,155,341,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="188,379,264,405"/>
-<area shape="rect" id="node4" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,304,188,331"/>
-<area shape="rect" id="node6" href="$Serial__TC_8h.html" title=" " alt="" coords="264,304,404,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="43,379,150,405"/>
-<area shape="rect" id="node7" title=" " alt="" coords="299,379,369,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="245,5,415,32"/>
+<area shape="rect" id="node2" href="$TankControllerLib_8h.html" title=" " alt="" coords="233,229,368,256"/>
+<area shape="rect" id="node10" href="$MainMenu_8h.html" title=" " alt="" coords="259,80,401,107"/>
+<area shape="rect" id="node11" href="$UIState_8h.html" title=" " alt="" coords="338,155,415,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="205,379,281,405"/>
+<area shape="rect" id="node4" href="$EthernetServer__TC_8h.html" title=" " alt="" coords="5,304,199,331"/>
+<area shape="rect" id="node6" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="275,304,457,331"/>
+<area shape="rect" id="node8" href="$Serial__TC_8h.html" title=" " alt="" coords="481,304,621,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="62,379,142,405"/>
+<area shape="rect" id="node7" title=" " alt="" coords="313,379,419,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="516,379,587,405"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tankcontrollerlib_83',['TankControllerLib',['../classTankControllerLib.html',1,'']]],
-  ['tempprobe_5ftc_84',['TempProbe_TC',['../classTempProbe__TC.html',1,'']]]
+  ['serial_5ftc_88',['Serial_TC',['../classSerial__TC.html',1,'']]],
+  ['setphsetpoint_89',['SetPHSetPoint',['../classSetPHSetPoint.html',1,'']]]
 ];
