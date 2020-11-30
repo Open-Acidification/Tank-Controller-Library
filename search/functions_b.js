@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['serial_5ftc_137',['Serial_TC',['../classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b',1,'Serial_TC']]],
-  ['setup_138',['setup',['../classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51',1,'TankControllerLib']]],
-  ['splashscreen_139',['splashScreen',['../classLiquidCrystal__TC.html#a967f89ffe04c9d847bebed7bb7d234ff',1,'LiquidCrystal_TC']]]
+  ['print_146',['print',['../classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1',1,'Serial_TC::print(char aChar)'],['../classSerial__TC.html#ac907965fe50262d106f5384857fff916',1,'Serial_TC::print(uint16_t anInt)'],['../classSerial__TC.html#aa18b7fda6d436e65cfc7c27d59b5ba3f',1,'Serial_TC::print(String aString)'],['../classSerial__TC.html#a6381b8f41578ecf73f516bcabe4b5dc4',1,'Serial_TC::print(String aString, char aChar)'],['../classSerial__TC.html#a3acf4aaf8b3af4ccc17344894d624dce',1,'Serial_TC::print(String aString, int anInt)'],['../classSerial__TC.html#a7989012705028383e286f075a4b3a2a9',1,'Serial_TC::print(String aString, int anInt, int format)'],['../classSerial__TC.html#a22ed415295dd839a3d6daa62390af65c',1,'Serial_TC::print(String aString, String aString2)']]],
+  ['print_5fmac_147',['print_mac',['../classSerial__TC.html#a23c326d6c75bfe208ce819b3ead0807a',1,'Serial_TC']]],
+  ['print_5fpid_148',['print_PID',['../classSerial__TC.html#a498c650db81fe09ac63fe9260b3e66a4',1,'Serial_TC']]],
+  ['print_5ftwo_5fdigits_149',['print_two_digits',['../classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c',1,'Serial_TC']]],
+  ['println_150',['println',['../classSerial__TC.html#abe31585c864e6d8aaf60d33a37cb22f2',1,'Serial_TC']]],
+  ['printtoserial_151',['printToSerial',['../classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee',1,'DateTime_TC']]]
 ];
