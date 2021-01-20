@@ -30,7 +30,7 @@ private:
   IPAddress defaultIP = IPAddress(192, 168, 1, 2);
   IPAddress time_serverIP;
   IPAddress IP;
-  unsigned long previous_lease;
+  unsigned long previous_lease = 0;
   const unsigned long LEASE_INTERVAL = 345600000;  // 4 days in milliseconds
 
   // testing
