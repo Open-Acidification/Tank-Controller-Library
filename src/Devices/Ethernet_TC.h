@@ -27,7 +27,7 @@ protected:
 private:
   static Ethernet_TC *_instance;
   byte mac[6] = {0x90, 0xA2, 0xDA, 0x00, 0x00, 0x00};
-  IPAddress defaultIP;
+  IPAddress defaultIP = IPAddress(192, 168, 1, 2);
   IPAddress time_serverIP;
   IPAddress IP;
   unsigned long previous_lease;
