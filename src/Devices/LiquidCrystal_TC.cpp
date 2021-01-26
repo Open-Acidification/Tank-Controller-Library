@@ -81,30 +81,10 @@ void LiquidCrystal_TC::splashScreen() {
  * Prints an input string to the desired line of the LCD screen
  */
 void LiquidCrystal_TC::writeLine(string text, int line) {
+  if (line != 1 && line != 0)
+    throw std::out_of_range("There are only two lines on the LCD 0&1");
   setCursor(0, line);
   print("                ");
   setCursor(0, line);
   print(text);
 }
-
-/**
- * TODO. Waiting on Temp probe for variables
- */
-// void lcdIdleScreen() {
-//   lcd.setCursor(3, 0);
-//   lcd.print(ph_display, 3);
-//   lcd.setCursor(11, 0);
-//   lcd.print(ph_set, 3);
-//   lcd.setCursor(0, 1);
-//   lcd.setCursor(2, 1);
-//   lcd.print(temp, 2);
-//   lcd.setCursor(11, 1);
-//   lcd.print(temp_set, 2);
-//   lcd.setCursor(9, 1);
-//   if (heat == 0) {
-//     lcd.print("C");
-//   }
-//   if (heat == 1) {
-//     lcd.print("H");
-//   }
-// }

@@ -38,19 +38,17 @@ unittest(loop) {
 }
 
 unittest(writeLine) {
-  LiquidCrystal_TC* lcd = LiquidCrystal_TC::instance();
   LiquidCrystal_TC* testLcd = LiquidCrystal_TC::instance();
   testLcd->writeLine("Hello", 0);
   testLcd->writeLine("World", 1);
-  std::vector<std::string> lines = lcd->getLines();
+  std::vector<std::string> lines = testLcd->getLines();
   assertEqual("Hello           ", lines.at(0));
   assertEqual("World           ", lines.at(1));
+  try {
+    testLcd->writeLine("this will break", 3);
+  } catch (std::out_of_range& e) {
+    assertTrue(true);
+  }
 }
 
-/**
- * TODO, waiting on temperature probe to be finished
- */
-// unittest(lcdIdleScreen) {
-
-// }
 unittest_main()
