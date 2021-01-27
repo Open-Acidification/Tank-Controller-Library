@@ -19,12 +19,7 @@ public:
 private:
   // class variables
   static Keypad_TC* _instance;
-  static Keypad keypad;
-  static const byte ROWS;
-  static const byte COLS;
-  static const char STD_KEYS[ROWS][COLS];
-  static const byte ROW_PINS[ROWS];
-  static const byte COL_PINS[COLS];
+  Keypad puppetPad;
   
   // instance methods
   Keypad_TC();
