@@ -16,9 +16,10 @@ public:
   char waitForKey();
   char getKey();
 
-#ifdef MOCK_PINS_COUNT
-  void push_back(char keyChar);
-#endif
+  // Testing support
+  static Keypad* _getPuppet() {
+    return &puppetPad;
+  }
 
 private:
   // class

@@ -25,7 +25,7 @@ Keypad_TC* Keypad_TC::instance() {
 }
 
 /**
- * Gets a key from the keypad by waiting for one to be pressed
+ * Gets a key from the keypad by blocking on key press
  */
 char Keypad_TC::waitForKey() {
   lastKey = puppetPad.waitForKey();
@@ -39,12 +39,3 @@ char Keypad_TC::getKey() {
   lastKey = puppetPad.getKey();
   return lastKey;
 }
-
-/**
- * Testing function to preload the keypad
- */
-#ifdef MOCK_PINS_COUNT
-void Keypad_TC::push_back(char keyChar) {
-  puppetPad.push_back(keyChar);
-}
-#endif

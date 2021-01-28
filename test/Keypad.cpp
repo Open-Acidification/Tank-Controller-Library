@@ -16,13 +16,15 @@ unittest(constructor) {
 
 unittest(getKey) {
   Keypad_TC* testKeypad = Keypad_TC::instance();
-  testKeypad->push_back('Q');
+  Keypad* puppet = testKeypad->_getPuppet();
+  puppet->push_back('Q');
   assertEqual('Q', testKeypad->getKey());
 }
 
 unittest(waitForKey) {
   Keypad_TC* testKeypad = Keypad_TC::instance();
-  testKeypad->push_back('Q');
+  Keypad* puppet = testKeypad->_getPuppet();
+  puppet->push_back('Q');
   assertEqual('Q', testKeypad->waitForKey());
 }
 
