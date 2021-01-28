@@ -1,10 +1,10 @@
 #include "Devices/Keypad_TC.h"
 
-// byte ROWS = 4;
-// byte COLS = 4;
-char STD_KEYS[4][4] = {{'1', '2', '3', 'A'}, {'4', '5', '6', 'B'}, {'7', '8', '9', 'C'}, {'*', '0', '#', 'D'}};
-byte ROW_PINS[4] = {34, 36, 38, 40};
-byte COL_PINS[4] = {42, 44, 46, 48};
+const byte ROWS = 4;
+const byte COLS = 4;
+char STD_KEYS[ROWS][COLS] = {{'1', '2', '3', 'A'}, {'4', '5', '6', 'B'}, {'7', '8', '9', 'C'}, {'*', '0', '#', 'D'}};
+byte ROW_PINS[ROWS] = {34, 36, 38, 40};
+byte COL_PINS[COLS] = {42, 44, 46, 48};
 
 
 //  class variables
