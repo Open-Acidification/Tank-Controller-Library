@@ -16,6 +16,10 @@ public:
   char waitForKey();
   char getKey();
 
+#ifdef MOCK_PINS_COUNT
+  void push_back(char keyChar);
+#endif
+
 private:
   // class
   static Keypad_TC* _instance;
@@ -23,4 +27,5 @@ private:
   Keypad_TC();
 
   // instance
+  char lastKey;
 };

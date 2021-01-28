@@ -15,11 +15,15 @@ unittest(constructor) {
 }
 
 unittest(getKey) {
-  assertTrue(true);
+  Keypad_TC* testKeypad = Keypad_TC::instance();
+  testKeypad->push_back('Q');
+  assertEqual('Q', testKeypad->getKey());
 }
 
 unittest(waitForKey) {
-  assertTrue(true);
+  Keypad_TC* testKeypad = Keypad_TC::instance();
+  testKeypad->push_back('Q');
+  assertEqual('Q', testKeypad->waitForKey());
 }
 
 unittest_main()
