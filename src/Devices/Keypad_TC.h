@@ -17,10 +17,10 @@ public:
   char getKey();
 
 private:
-  // class variables
+  // class
   static Keypad_TC* _instance;
-  Keypad puppetPad;
-  
-  // instance methods
+  static Keypad puppetPad;
   Keypad_TC();
+
+  // instance
 };

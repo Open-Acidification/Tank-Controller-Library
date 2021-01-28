@@ -9,7 +9,7 @@
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
 
-const char NO_KEY = '\0';  // Move to LiquidCrystal?
+// const char NO_KEY = '\0';  // Move to LiquidCrystal?
 
 // ------------ Class Methods ------------
 /**
