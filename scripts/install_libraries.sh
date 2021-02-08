@@ -5,6 +5,7 @@
 # 2 - Development of TankControllerLib and the supporting libraries
 # comment this out if you want full depth for the supporting libraries (case 2)
 export SHALLOW='--depth 1 --branch master --single-branch '
+export SHALLOW_MAIN='--depth 1 --branch main --single-branch '
 # use this if you started with SHALLOW and now want the full repository with history
 # git fetch --unshallow
 
@@ -23,7 +24,7 @@ if [ ! -d "./Adafruit_BusIO" ] ; then
 fi
 
 if [ ! -d "./Adafruit_MAX31865" ] ; then
-  git clone $SHALLOW $GITHUB/Adafruit_MAX31865.git 
+  git clone $SHALLOW_MAIN $GITHUB/Adafruit_MAX31865.git 
 fi
 
 if [ ! -d "./Ethernet" ] ; then
