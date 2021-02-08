@@ -79,10 +79,10 @@ void LiquidCrystal_TC::splashScreen() {
 
 /**
  * Prints an input string to the desired line of the LCD screen
+ * Even numbers go on the bottom line, odd ones go on the top line
  */
 void LiquidCrystal_TC::writeLine(char* text, int line) {
-  if (line != 1 && line != 0)
-    throw std::out_of_range("There are only two lines on the LCD 0&1");
+  line = line % 2;
   setCursor(0, line);
   print("                ");
   setCursor(0, line);
