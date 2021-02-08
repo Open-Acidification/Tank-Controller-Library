@@ -1,7 +1,7 @@
-/*
-Based off Arduino's Ethernet library
-Implements a wrapper for the Ethernet Class
-*/
+/**
+ * Based off Arduino's Ethernet library
+ *Implements a wrapper for the Ethernet Class
+ */
 
 #pragma once
 
