@@ -1,5 +1,5 @@
 #include "pHControl_TC.h"
-#if 0
+
 // Should be called by ISR every 15 ms
 void pHControl_TC::driveOutput() {
     long now = millis();
@@ -15,4 +15,3 @@ void pHControl_TC::driveOutput() {
         noBubble();
     }
 }
-#endif
