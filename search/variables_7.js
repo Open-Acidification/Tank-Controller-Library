@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pin_207',['PIN',['../classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342',1,'TemperatureControl']]],
-  ['pinlog_208',['pinLog',['../Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f',1,'Blink.cpp']]],
-  ['previousmillis_209',['previousMillis',['../classChiller.html#a97a77e6edcd91452306190253ffcea4b',1,'Chiller']]]
+  ['refresistor_179',['refResistor',['../classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535',1,'TempProbe_TC']]],
+  ['rs_180',['RS',['../LiquidCrystal__TC_8cpp.html#a260f8d10f06c67cb957a1dabc0d1528b',1,'LiquidCrystal_TC.cpp']]],
+  ['rtdnominal_181',['RTDnominal',['../classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859',1,'TempProbe_TC']]]
 ];
