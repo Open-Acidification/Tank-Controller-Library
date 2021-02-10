@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['state_182',['state',['../classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14',1,'TankControllerLib::state()'],['../Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a',1,'state():&#160;Blink.cpp']]]
+  ['pinlog_209',['pinLog',['../Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f',1,'Blink.cpp']]],
+  ['previous_5flease_210',['previous_lease',['../classEthernet__TC.html#a6969748731b756a6841da9e21af19be7',1,'Ethernet_TC']]]
 ];

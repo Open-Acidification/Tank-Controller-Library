@@ -7,5 +7,6 @@ var searchData=
   ['datetime_2ecpp_16',['DateTime.cpp',['../DateTime_8cpp.html',1,'']]],
   ['datetime_5ftc_17',['DateTime_TC',['../classDateTime__TC.html',1,'DateTime_TC'],['../classDateTime__TC.html#aacf60c5e80ab1955239dbe7f3426fe9f',1,'DateTime_TC::DateTime_TC()']]],
   ['datetime_5ftc_2ecpp_18',['DateTime_TC.cpp',['../DateTime__TC_8cpp.html',1,'']]],
-  ['datetime_5ftc_2eh_19',['DateTime_TC.h',['../DateTime__TC_8h.html',1,'']]]
+  ['datetime_5ftc_2eh_19',['DateTime_TC.h',['../DateTime__TC_8h.html',1,'']]],
+  ['defaultip_20',['defaultIP',['../classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455',1,'Ethernet_TC']]]
 ];
