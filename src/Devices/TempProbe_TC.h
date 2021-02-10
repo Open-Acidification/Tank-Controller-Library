@@ -12,7 +12,7 @@
  * Connection with the thermocouple:
  * The Adafruit MAX31865 can connect to three different types of thermocouples,
  * two wire, three wire, or four wire. You'll need to look at the sensor's
- * documentation to find the wiring requirments. The board has four pins used
+ * documentation to find the wiring requirements. The board has four pins used
  * for connection with the thermocouple, they are labeled on the board: RTD+
  * (Resistance Positive), RTD- (Resistance Negative), F+ (Fault Plus), and F-
  * (Fault Negative).
@@ -48,7 +48,7 @@
  *
  * Read Fault:
  * Returns a fault number in hex. You can compare with returned fault with the
- * defualt fault values given below uint8_t fault = thermo.readFault();
+ * default fault values given below uint8_t fault = thermo.readFault();
  *
  * Faults:
  * MAX31865_FAULT_HIGHTHRESH (RTD High Threshold)
