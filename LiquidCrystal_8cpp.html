@@ -104,10 +104,12 @@ Include dependency graph for LiquidCrystal.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a860f1f2ace06203615e95b22fb00893e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LiquidCrystal_8cpp.html#a860f1f2ace06203615e95b22fb00893e">unittest</a> (loop)</td></tr>
 <tr class="separator:a860f1f2ace06203615e95b22fb00893e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7961ced258f39a829489a55748a7e157"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LiquidCrystal_8cpp.html#a7961ced258f39a829489a55748a7e157">unittest</a> (writeLine)</td></tr>
+<tr class="separator:a7961ced258f39a829489a55748a7e157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a860f1f2ace06203615e95b22fb00893e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a860f1f2ace06203615e95b22fb00893e">&#9670;&nbsp;</a></span>unittest()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a860f1f2ace06203615e95b22fb00893e">&#9670;&nbsp;</a></span>unittest() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,6 +161,43 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00023">TankControllerLib.cpp:23</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00023">TankControllerLib::instance()</a>.</p>
+
+</div>
+</div>
+<a id="a7961ced258f39a829489a55748a7e157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7961ced258f39a829489a55748a7e157">&#9670;&nbsp;</a></span>unittest() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype">writeLine&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LiquidCrystal_8cpp_source.html#l00040">40</a> of file <a class="el" href="LiquidCrystal_8cpp_source.html">LiquidCrystal.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* testLcd = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  testLcd-&gt;<a class="code" href="classLiquidCrystal__TC.html#a2265531ddb40a73ebb52479608638b08">writeLine</a>(<span class="stringliteral">&quot;Hello&quot;</span>, 0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  testLcd-&gt;<a class="code" href="classLiquidCrystal__TC.html#a2265531ddb40a73ebb52479608638b08">writeLine</a>(<span class="stringliteral">&quot;World&quot;</span>, 1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  std::vector&lt;std::string&gt; lines = testLcd-&gt;getLines();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  assertEqual(<span class="stringliteral">&quot;Hello           &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  assertEqual(<span class="stringliteral">&quot;World           &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  testLcd-&gt;<a class="code" href="classLiquidCrystal__TC.html#a2265531ddb40a73ebb52479608638b08">writeLine</a>(<span class="stringliteral">&quot;Wrong line num&quot;</span>, 6);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  testLcd-&gt;<a class="code" href="classLiquidCrystal__TC.html#a2265531ddb40a73ebb52479608638b08">writeLine</a>(<span class="stringliteral">&quot;this won&#39;t break&quot;</span>, 3);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  lines = testLcd-&gt;getLines();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  assertEqual(<span class="stringliteral">&quot;Wrong line num  &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  assertEqual(<span class="stringliteral">&quot;this won&#39;t break&quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="aclassLiquidCrystal__TC_html_a2265531ddb40a73ebb52479608638b08"><div class="ttname"><a href="classLiquidCrystal__TC.html#a2265531ddb40a73ebb52479608638b08">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC.cpp:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>
