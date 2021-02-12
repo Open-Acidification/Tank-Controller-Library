@@ -44,11 +44,12 @@ unittest(writeLine) {
   std::vector<std::string> lines = testLcd->getLines();
   assertEqual("Hello           ", lines.at(0));
   assertEqual("World           ", lines.at(1));
-  try {
-    testLcd->writeLine("this will break", 3);
-  } catch (std::out_of_range& e) {
-    assertTrue(true);
-  }
+
+  testLcd->writeLine("Wrong line num", 6);
+  testLcd->writeLine("this won't break", 3);
+  lines = testLcd->getLines();
+  assertEqual("Wrong line num  ", lines.at(0));
+  assertEqual("this won't break", lines.at(1));
 }
 
 unittest_main()
