@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uistate_119',['UIState',['../classUIState.html',1,'']]]
+  ['serial_5ftc_133',['Serial_TC',['../classSerial__TC.html',1,'']]],
+  ['setphsetpoint_134',['SetPHSetPoint',['../classSetPHSetPoint.html',1,'']]]
 ];
