@@ -1,8 +1,5 @@
 #include "Devices/EEPROM_TC.h"
 
-#include <iostream>
-using namespace std;
-
 //  class variables
 EEPROM_TC* EEPROM_TC::_instance = nullptr;
 
