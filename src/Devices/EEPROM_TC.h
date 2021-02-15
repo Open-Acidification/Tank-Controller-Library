@@ -12,7 +12,7 @@ public:
   double getPH();
 
   // setter methods
-  double setPH(double value);
+  void setPH(double value);
 
 private:
   // class variables

@@ -1,4 +1,6 @@
 #include "Devices/EEPROM_TC.h"
+#include <iostream>
+using namespace std;
 
 //  class variables
 EEPROM_TC* EEPROM_TC::_instance = nullptr;
@@ -25,6 +27,6 @@ double EEPROM_TC::getPH() {
   return EEPROM.read(PH_ADDRESS);
 }
 
-double EEPROM_TC::setPH(double value) {
+void EEPROM_TC::setPH(double value) {
   EEPROM.update(PH_ADDRESS, value);
 }
