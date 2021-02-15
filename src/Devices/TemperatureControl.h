@@ -1,12 +1,11 @@
 #include <Arduino.h>
 
-// class temp control -temp setpoint +get/set temp target +virtual updateCtrl(),  subclass heater (respective code) and
-// chiller (respective code)
+/**
+ * Temperature Control
+ * Controlling the tank temperature is done by external devices that are controlled by setting
+ * designated pins on the Arduino.
+ */
 
-// Temperature Control
-// Controlling the tank temperature is done by external devices that are controlled by setting designated pins on the
-// Arduino.
-//
 class TemperatureControl {
 protected:
   const int PIN = 47;
@@ -42,4 +41,3 @@ private:
 public:
   void updateControl(double currentTemperature);
 };
-

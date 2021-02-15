@@ -27,11 +27,11 @@ void Heater::updateControl(double currentTemperature) {
   // if the observed temperature is below the temperature setpoint turn on the heater
   if (currentTemperature <= targetTemperature - DELTA) {
     Serial.println(F("heater on"));
-      turnOn(true);
+    turnOn(true);
   }
   // if the observed temperature is above the temperature setpoint turn off the heater
   else if (currentTemperature >= targetTemperature + DELTA) {
     Serial.println(F("heater off"));
-      turnOn(false);
+    turnOn(false);
   }
 }

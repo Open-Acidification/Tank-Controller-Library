@@ -28,7 +28,7 @@ LiquidCrystal_TC::LiquidCrystal_TC() : LiquidCrystal(RS, EN, D4, D5, D6, D7) {
 
 /**
  * Splash screen includes the following logo (actually, this
- * one is double width to get it more nearly porportional):
+ * one is double width to get it more nearly proportional):
               XXXXXXXXXXXX
           XXXXXXXXXXXXXXXXXXXX
         XXXXXXXXXXXX  XXXXXXXXXX
@@ -75,4 +75,16 @@ void LiquidCrystal_TC::splashScreen() {
   write(uint8_t(6));
   write(uint8_t(7));
   print(F("TANK CONTROL"));
+}
+
+/**
+ * Prints an input string to the desired line of the LCD screen
+ * Even numbers go on the bottom line, odd ones go on the top line
+ */
+void LiquidCrystal_TC::writeLine(char* text, int line) {
+  line = line % 2;
+  setCursor(0, line);
+  print("                ");
+  setCursor(0, line);
+  print(text);
 }
