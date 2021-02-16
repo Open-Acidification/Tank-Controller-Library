@@ -30,3 +30,19 @@ fi
 if [ ! -d "./RTClib" ] ; then
   git clone $SHALLOW_MASTER $GITHUB/RTClib.git 
 fi
+
+if [ ! -d "./Keypad" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Keypad.git 
+fi
+
+if [ ! -d "./Arduino-PID-Library" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Arduino-PID-Library.git 
+fi
+
+if [ ! -d "./Arduino-PID-AutoTune-Library" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Arduino-PID-AutoTune-Library.git 
+fi
+
+if [ ! -d "./SD" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/SD.git 
+fi
