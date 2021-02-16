@@ -31,6 +31,7 @@ iostream
 itoa
 jgfoster
 Kd
+Keymap
 Kp
 LOWTHRESH
 mega
