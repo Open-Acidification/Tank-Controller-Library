@@ -29,7 +29,7 @@ double EEPROM_TC::getTemp() {
   return EEPROM.read(TEMP_ADDRESS);
 }
 double EEPROM_TC::getTankID() {
-  return EEPROM.read(TANKID_ADDRESS);
+  return EEPROM.read(TANK_ID_ADDRESS);
 }
 double EEPROM_TC::getCorrectedTemp() {
   return EEPROM.read(TEMP_CORR_ADDRESS);
@@ -94,7 +94,7 @@ void EEPROM_TC::setTemp(double value) {
   EEPROM.update(TEMP_ADDRESS, value);
 }
 void EEPROM_TC::setTankID(double value) {
-  EEPROM.update(TANKID_ADDRESS, value);
+  EEPROM.update(TANK_ID_ADDRESS, value);
 }
 void EEPROM_TC::setCorrectedTemp(double value) {
   EEPROM.update(TEMP_CORR_ADDRESS, value);

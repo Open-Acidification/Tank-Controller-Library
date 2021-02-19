@@ -61,7 +61,7 @@ private:
   // instance variables
   const int PH_ADDRESS = 0;
   const int TEMP_ADDRESS = 4;
-  const int TANKID_ADDRESS = 8;
+  const int TANK_ID_ADDRESS = 8;
   const int TEMP_CORR_ADDRESS = 12;
   const int KP_ADDRESS = 20;
   const int KI_ADDRESS = 28;

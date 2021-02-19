@@ -59,7 +59,6 @@ RTDIN
 RTDINLOW
 sizeof
 strlen
-TANKID
 testfile
 TODO
 uint
