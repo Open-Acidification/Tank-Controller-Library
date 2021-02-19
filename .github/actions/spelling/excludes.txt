@@ -9,3 +9,4 @@ Gemfile.lock
 Doxyfile
 LICENSE
 .all-contributorsrc
+excludes.txt
