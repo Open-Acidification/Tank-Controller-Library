@@ -16,7 +16,7 @@ public:
   double getKP();
   double getKI();
   double getKD();
-  double getMac();  // Not used?
+  double getMac();  // See a discussion about this function
   double getHeat();
   double getAmplitude();
   double getFrequency();
@@ -39,7 +39,7 @@ public:
   void setKP(double value);
   void setKI(double value);
   void setKD(double value);
-  void setMac(double value);  // Not used?
+  void setMac(double value);  
   void setHeat(double value);
   void setAmplitude(double value);
   void setFrequency(double value);
