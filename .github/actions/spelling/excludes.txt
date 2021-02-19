@@ -8,3 +8,4 @@ Gemfile.lock
 \.xslx?$
 Doxyfile
 LICENSE
+.all-contributorsrc
