@@ -11,7 +11,6 @@ public:
     expectedDigits = digits;
   }
   void handleKey(char key);
-  void setValue(){};
 
   // For testing
   int _getValue() {
@@ -19,7 +18,10 @@ public:
   };
 
 protected:
-  int value = 0;
+  /*For child classes*/
+  void setValue(){};
+
+  double value = 0;
   int currentDigits = 0;
   int expectedDigits;
 };
