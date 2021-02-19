@@ -9,14 +9,6 @@ export SHALLOW_MASTER='--depth 1 --branch master --single-branch '
 # use this if you started with SHALLOW and now want the full repository with history
 # git fetch --unshallow
 
-# ensure we have `arduino_ci`
-bundle config --local path vendor/bundle
-bundle install
-
-# set up directories
-bundle exec ensure_arduino_installation.rb
-cd $(bundle exec arduino_library_location.rb)
-
 # add missing libraries
 export GITHUB="https://github.com/Arduino-CI"
 if [ ! -d "./Adafruit_BusIO" ] ; then
@@ -37,4 +29,20 @@ fi
 
 if [ ! -d "./RTClib" ] ; then
   git clone $SHALLOW_MASTER $GITHUB/RTClib.git 
+fi
+
+if [ ! -d "./Keypad" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Keypad.git 
+fi
+
+if [ ! -d "./Arduino-PID-Library" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Arduino-PID-Library.git 
+fi
+
+if [ ! -d "./Arduino-PID-AutoTune-Library" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/Arduino-PID-AutoTune-Library.git 
+fi
+
+if [ ! -d "./SD" ] ; then
+  git clone $SHALLOW_MASTER $GITHUB/SD.git 
 fi
