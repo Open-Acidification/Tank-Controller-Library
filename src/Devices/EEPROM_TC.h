@@ -39,7 +39,7 @@ public:
   void setKP(double value);
   void setKI(double value);
   void setKD(double value);
-  void setMac(double value);  
+  void setMac(double value);
   void setHeat(double value);
   void setAmplitude(double value);
   void setFrequency(double value);
