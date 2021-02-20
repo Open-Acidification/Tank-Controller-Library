@@ -20,6 +20,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://programminggems.wordpress.com/"><img src="https://avatars.githubusercontent.com/u/1577872?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Foster</b></sub></a><br /><a href="https://github.com/Open-Acidification/TankControllerLib/commits?author=jgfoster" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Kavikick"><img src="https://avatars.githubusercontent.com/u/50475639?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kavikick</b></sub></a><br /><a href="https://github.com/Open-Acidification/TankControllerLib/commits?author=Kavikick" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/eucalvo"><img src="https://avatars.githubusercontent.com/u/71796520?v=4?s=100" width="100px;" alt=""/><br /><sub><b>eucalvo</b></sub></a><br /><a href="https://github.com/Open-Acidification/TankControllerLib/commits?author=eucalvo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Lizj96"><img src="https://avatars.githubusercontent.com/u/71606160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lizj96</b></sub></a><br /><a href="https://github.com/Open-Acidification/TankControllerLib/commits?author=Lizj96" title="Code">💻</a></td>
   </tr>
 </table>
 
