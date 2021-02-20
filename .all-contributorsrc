@@ -3,7 +3,7 @@
     "README.md"
   ],
   "imageSize": 100,
-  "contributorsPerLine": 7,
+  "contributorsPerLine": 6,
   "contributorsSortAlphabetically": false,
   "contributors": [
     {
@@ -47,6 +47,42 @@
       "name": "Lizj96",
       "avatar_url": "https://avatars.githubusercontent.com/u/71606160?v=4",
       "profile": "https://github.com/Lizj96",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "khalilxl",
+      "name": "khalilxl",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26103228?v=4",
+      "profile": "https://github.com/khalilxl",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "atg7000",
+      "name": "atg7000",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38963069?v=4",
+      "profile": "https://github.com/atg7000",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cherbel",
+      "name": "Caleb Herbel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36583106?v=4",
+      "profile": "https://github.com/cherbel",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "lsaca05",
+      "name": "Lucas Saca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46550669?v=4",
+      "profile": "https://github.com/lsaca05",
       "contributions": [
         "code"
       ]
