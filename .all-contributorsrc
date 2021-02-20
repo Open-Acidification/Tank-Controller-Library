@@ -41,6 +41,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "cherbel",
+      "name": "Caleb Herbel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36583106?v=4",
+      "profile": "https://github.com/cherbel",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "projectName": "TankControllerLib",
