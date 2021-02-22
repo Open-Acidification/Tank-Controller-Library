@@ -43,7 +43,7 @@ double EEPROM_TC::getKI() {
 double EEPROM_TC::getKD() {
   return EEPROM.read(KD_ADDRESS);
 }
-double EEPROM_TC::getMac() {  // Not used?
+double EEPROM_TC::getMac() {  // See issue #57 about this function
   return EEPROM.read(MAC_ADDRESS);
 }
 double EEPROM_TC::getHeat() {

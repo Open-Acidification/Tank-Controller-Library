@@ -16,7 +16,7 @@ public:
   double getKP();
   double getKI();
   double getKD();
-  double getMac();  // See a discussion about this function
+  double getMac();  // See issue #57 about this function
   double getHeat();
   double getAmplitude();
   double getFrequency();
