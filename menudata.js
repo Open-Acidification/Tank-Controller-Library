@@ -32,10 +32,12 @@ var menudata={children:[
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
+{text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
+{text:"f",url:"functions.html#index_f"},
 {text:"g",url:"functions.html#index_g"},
 {text:"h",url:"functions.html#index_h"},
 {text:"i",url:"functions.html#index_i"},
@@ -76,7 +78,23 @@ var menudata={children:[
 {text:"w",url:"functions_func.html#index_w"},
 {text:"y",url:"functions_func.html#index_y"},
 {text:"~",url:"functions_func.html#index__7E"}]},
-{text:"Variables",url:"functions_vars.html"},
+{text:"Variables",url:"functions_vars.html",children:[
+{text:"_",url:"functions_vars.html#index__5F"},
+{text:"a",url:"functions_vars.html#index_a"},
+{text:"c",url:"functions_vars.html#index_c"},
+{text:"d",url:"functions_vars.html#index_d"},
+{text:"f",url:"functions_vars.html#index_f"},
+{text:"g",url:"functions_vars.html#index_g"},
+{text:"h",url:"functions_vars.html#index_h"},
+{text:"i",url:"functions_vars.html#index_i"},
+{text:"k",url:"functions_vars.html#index_k"},
+{text:"l",url:"functions_vars.html#index_l"},
+{text:"m",url:"functions_vars.html#index_m"},
+{text:"n",url:"functions_vars.html#index_n"},
+{text:"p",url:"functions_vars.html#index_p"},
+{text:"r",url:"functions_vars.html#index_r"},
+{text:"s",url:"functions_vars.html#index_s"},
+{text:"t",url:"functions_vars.html#index_t"}]},
 {text:"Related Functions",url:"functions_rela.html"}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
@@ -94,6 +112,7 @@ var menudata={children:[
 {text:"t",url:"globals.html#index_t"},
 {text:"u",url:"globals.html#index_u"},
 {text:"v",url:"globals.html#index_v"}]},
-{text:"Functions",url:"globals_func.html"},
+{text:"Functions",url:"globals_func.html",children:[
+{text:"u",url:"globals_func.html#index_u"}]},
 {text:"Variables",url:"globals_vars.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}

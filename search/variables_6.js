@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mac_260',['mac',['../classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca',1,'Ethernet_TC']]]
+  ['granularity_5faddress_369',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a148e04caaadc2f25e5bd168205cadcbc',1,'EEPROM_TC']]]
 ];

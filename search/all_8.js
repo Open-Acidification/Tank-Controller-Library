@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['index_2emd_47',['index.md',['../index_8md.html',1,'']]],
-  ['instance_48',['instance',['../classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e',1,'EthernetServer_TC::instance()'],['../classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09',1,'Keypad_TC::instance()'],['../classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af',1,'LiquidCrystal_TC::instance()'],['../classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321',1,'Serial_TC::instance()'],['../classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8',1,'TempProbe_TC::instance()'],['../classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5',1,'TankControllerLib::instance()']]],
-  ['ip_49',['IP',['../classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f',1,'Ethernet_TC']]]
+  ['handlekey_72',['handleKey',['../classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6',1,'MainMenu::handleKey()'],['../classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9',1,'SetPHSetPoint::handleKey()'],['../classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b',1,'UIState::handleKey()']]],
+  ['handlerequest_73',['handleRequest',['../classEthernetServer__TC.html#a4ab32a0943f7c35cfd0ec76e9d4df5e5',1,'EthernetServer_TC']]],
+  ['heat_5faddress_74',['HEAT_ADDRESS',['../classEEPROM__TC.html#ae1adb8ba2678af9f01cc3e2be52fbd86',1,'EEPROM_TC']]],
+  ['heater_75',['Heater',['../classHeater.html',1,'']]]
 ];
