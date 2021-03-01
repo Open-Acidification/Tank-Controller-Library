@@ -31,7 +31,7 @@ TankControllerLib* TankControllerLib::instance() {
  */
 TankControllerLib::TankControllerLib() {
   assert(!_instance);
-  state = nullptr;
+  state = new MainMenu;
   lcd = LiquidCrystal_TC::instance();
   log = Serial_TC::instance();
   log->print(F("TankControllerLib::TankControllerLib() - version "), TANK_CONTROLLER_VERSION);
@@ -73,8 +73,12 @@ void TankControllerLib::changeState(UIState* newState) {
  * It is called repeatedly while the board is on.
  */
 void TankControllerLib::loop() {
+  LiquidCrystal_TC *lc = LiquidCrystal_TC::instance();
+  // print the current prompt on the first line of the display
+  lc->setCursor(0, 0);
+  lc->writeLine(state->prompt(), 0);
   blink();            //  blink the on-board LED to show that we are running
-  char key = NO_KEY;  // custom_keypad.getKey();
+  char key = Keypad_TC::instance()->getKey();
   if (key != NO_KEY) {
     log->print(F("Keypad input: "), key);
     state->handleKey(key);
