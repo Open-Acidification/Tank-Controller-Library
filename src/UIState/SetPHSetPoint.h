@@ -8,7 +8,8 @@
 
 class SetPHSetPoint : public UIState {
 public:
-  virtual void handleKey(char key) {
-  }
-  const char *prompt() { return "Set pH Set Point"; };
+  void handleKey(char key);
+  const char *prompt() {
+    return "Set pH Set Point";
+  };
 };
