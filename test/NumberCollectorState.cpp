@@ -5,38 +5,53 @@
 
 #include <iostream>
 
-unittest(handleKey) {
-  NumCollectorState test(4);
-  assertEqual(0, test._getValue());
-  test.handleKey('1');
-  test.handleKey('2');
-  test.handleKey('3');
-  test.handleKey('4');
-  assertEqual(1234, test._getValue());
+unittest(handleDigit_NoDecimal) {
+  TestNumCollectorState testNoDecimal;
+  testNoDecimal.setExpectedDigits(3);
+  assertEqual(0, testNoDecimal.getValue());
+  testNoDecimal.handleKey('1');
+  testNoDecimal.handleKey('2');
+  testNoDecimal.handleKey('3');
+  assertEqual(123, testNoDecimal.getValue());
+  assertEqual(123, testNoDecimal.getStoredValue());
 }
 
-unittest(backspace) {
-  NumCollectorState test(4);
-  test.handleKey('1');
-  test.handleKey('2');
-  test.handleKey('-');
-  assertEqual(1, test._getValue());
+unittest(handleDigit_WithDecimal) {
+  TestNumCollectorState testDecimal;
+  testDecimal.setExpectedDigits(4);
+  testDecimal.handleKey('1');
+  testDecimal.handleKey('2');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('3');
+  testDecimal.handleKey('4');
+  assertEqual(12.34, testDecimal.getValue());
+  assertEqual(12.34, testDecimal.getStoredValue());
+}
+
+unittest(handleDigit_MultipleDecimals) {
+  TestNumCollectorState testDecimal;
+  testDecimal.setExpectedDigits(4);
+  testDecimal.handleKey('1');
+  testDecimal.handleKey('2');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('3');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('4');
+  assertEqual(12.34, testDecimal.getValue());
+  assertEqual(12.34, testDecimal.getStoredValue());
+}
+
+unittest(backSpace) {
 }
 
 unittest(clear) {
-  NumCollectorState test(4);
-  test.handleKey('1');
-  test.handleKey('2');
-  test.handleKey('/');
-  assertEqual(0, test._getValue());
 }
 
 unittest(enter) {
-  NumCollectorState test(4);
-  test.handleKey('1');
-  test.handleKey('2');
-  test.handleKey('+');
-  assertEqual(1200, test._getValue());
+}
+
+unittest(printing) {
 }
 
 unittest_main()
