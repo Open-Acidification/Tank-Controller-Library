@@ -2,8 +2,9 @@
  * SetPHSetPoint.cpp
  */
 
-#include "MainMenu.h"
 #include "SetPHSetPoint.h"
+
+#include "MainMenu.h"
 
 void SetPHSetPoint::handleKey(char key) {
   switch (key) {

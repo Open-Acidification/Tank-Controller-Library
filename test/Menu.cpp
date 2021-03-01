@@ -12,10 +12,10 @@ unittest(test) {
   lines = lc->getLines();
   assertEqual(" ONTHANK LAB", lc->getLines().at(0).substr(4));
   keypad->push_back('A');
-  tc->loop(); // recognize and apply the key entry
+  tc->loop();  // recognize and apply the key entry
   assertEqual("Set pH Set Point", lc->getLines().at(0));
-  keypad->push_back('D'); // Don't finish (cancel)
-  tc->loop(); // recognize and apply the key entry
+  keypad->push_back('D');  // Don't finish (cancel)
+  tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
 }
