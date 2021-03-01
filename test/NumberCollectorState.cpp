@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-unittest(ADigit_NoDecimal) {
+unittest(A_Digit_NoDecimal) {
   TestNumCollectorState testNoDecimal;
   testNoDecimal.setExpectedDigits(3);
   assertEqual(0, testNoDecimal.getValue());
@@ -16,7 +16,7 @@ unittest(ADigit_NoDecimal) {
   assertEqual(123, testNoDecimal.getStoredValue());
 }
 
-unittest(ADigit_WithDecimal) {
+unittest(A_Digit_WithDecimal) {
   TestNumCollectorState testDecimal;
   testDecimal.setExpectedDigits(4);
   testDecimal.handleKey('1');
@@ -28,7 +28,7 @@ unittest(ADigit_WithDecimal) {
   assertEqual(12.34, testDecimal.getStoredValue());
 }
 
-unittest(ADigit_MultipleDecimals) {
+unittest(A_Digit_MultipleDecimals) {
   TestNumCollectorState testDecimal;
   testDecimal.setExpectedDigits(4);
   testDecimal.handleKey('1');
