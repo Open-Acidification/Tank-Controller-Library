@@ -7,8 +7,8 @@
 
 class NumCollectorState : public UIState {
 public:
-  NumCollectorState() {
-    printPrompt();
+  NumCollectorState(){
+      // printPrompt();
   };
   void handleKey(char key);
   virtual void setValue(double value) = 0;
@@ -35,6 +35,9 @@ protected:
 class TestNumCollectorState : public NumCollectorState {
 public:
   // Implementation
+  TestNumCollectorState() {
+    printPrompt();
+  }
   void setValue(double value) {
     storedValue = value;
   }
