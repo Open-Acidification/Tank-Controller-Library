@@ -16,5 +16,7 @@ public:
   ~MainMenu() {
   }
   virtual void handleKey(char key);
-  const char *prompt() { return "Main Menu"; };
+  const char *prompt() {
+    return "Main Menu";
+  };
 };
