@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-unittest(handleDigit_NoDecimal) {
+unittest(ADigit_NoDecimal) {
   TestNumCollectorState testNoDecimal;
   testNoDecimal.setExpectedDigits(3);
   assertEqual(0, testNoDecimal.getValue());
@@ -16,7 +16,7 @@ unittest(handleDigit_NoDecimal) {
   assertEqual(123, testNoDecimal.getStoredValue());
 }
 
-unittest(handleDigit_WithDecimal) {
+unittest(ADigit_WithDecimal) {
   TestNumCollectorState testDecimal;
   testDecimal.setExpectedDigits(4);
   testDecimal.handleKey('1');
@@ -28,7 +28,7 @@ unittest(handleDigit_WithDecimal) {
   assertEqual(12.34, testDecimal.getStoredValue());
 }
 
-unittest(handleDigit_MultipleDecimals) {
+unittest(ADigit_MultipleDecimals) {
   TestNumCollectorState testDecimal;
   testDecimal.setExpectedDigits(4);
   testDecimal.handleKey('1');
@@ -43,12 +43,38 @@ unittest(handleDigit_MultipleDecimals) {
 }
 
 unittest(backSpace) {
+  TestNumCollectorState testNoDecimal;
+  testNoDecimal.handleKey('1');
+  testNoDecimal.handleKey('2');
+  testNoDecimal.handleKey('B');
+  assertEqual(1, testNoDecimal.getValue());
+
+  TestNumCollectorState testDecimal;
+  testDecimal.handleKey('1');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('2');
+  testDecimal.handleKey('3');
+  testDecimal.handleKey('B');
+  assertEqual(1.2, testDecimal.getValue());
 }
 
 unittest(clear) {
+  TestNumCollectorState testDecimal;
+  testDecimal.handleKey('1');
+  testDecimal.handleKey('2');
+  testDecimal.handleKey('C');
+  assertEqual(0, testDecimal.getValue());
 }
 
-unittest(enter) {
+unittest(AllDone) {
+  TestNumCollectorState testDecimal;
+  testDecimal.setExpectedDigits(4);
+  testDecimal.handleKey('1');
+  testDecimal.handleKey('2');
+  testDecimal.handleKey('3');
+  assertEqual(0, testDecimal.getStoredValue());
+  testDecimal.handleKey('A');
+  assertEqual(123, testDecimal.getStoredValue());
 }
 
 unittest(printing) {
