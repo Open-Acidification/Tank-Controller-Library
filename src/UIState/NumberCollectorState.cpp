@@ -39,11 +39,11 @@ void NumCollectorState::handleDigit(double digit) {
 
 void NumCollectorState::backSpace() {
   if (noDecimal) {
-    value = std::floor(value / 10);
+    value = floor(value / 10);
   } else {
     factor = factor / 10;
     // we use the factor/10 because we want there to be 1 decimal place to floor
-    value = std::floor(value * factor / 10) / (factor / 10);
+    value = floor(value * factor / 10) / (factor / 10);
   }
 }
 
@@ -58,12 +58,12 @@ void NumCollectorState::printPrompt() {
 void NumCollectorState::printValue() {
   char strValue[16];
   if (noDecimal) {
-    std::sprintf(strValue, "%.*f", 0, value);
+    sprintf(strValue, "%.*f", 0, value);
   } else if (factor == 10) {
-    std::sprintf(strValue, "%.*f.", 0, value);
+    sprintf(strValue, "%.*f.", 0, value);
   } else {
-    int precision = std::log10(factor / 10);
-    std::sprintf(strValue, "%.*f", precision, value);
+    int precision = log10(factor / 10);
+    sprintf(strValue, "%.*f", precision, value);
   }
   LiquidCrystal_TC::instance()->writeLine(strValue, 1);
 }

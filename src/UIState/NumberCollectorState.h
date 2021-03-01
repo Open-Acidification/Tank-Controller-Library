@@ -7,9 +7,6 @@
 
 class NumCollectorState : public UIState {
 public:
-  NumCollectorState(){
-      // printPrompt();
-  };
   void handleKey(char key);
   virtual void setValue(double value) = 0;
   virtual int getExpectedDigits() = 0;
