@@ -74,14 +74,17 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="UIState_8h.html">UIState.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSetPHSetPoint.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSetPHSetPoint.html">SetPHSetPoint</a> : <a class="code" href="classUIState.html">UIState</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSetPHSetPoint.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSetPHSetPoint.html">SetPHSetPoint</a> : <span class="keyword">public</span> <a class="code" href="classUIState.html">UIState</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9">   11</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9">handleKey</a>(<span class="keywordtype">char</span> key) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSetPHSetPoint.html#afcee19edb71a1a7129fd07511097a882">handleKey</a>(<span class="keywordtype">char</span> key);</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">   12</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">prompt</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set pH Set Point&quot;</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  };</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="ttc" id="aUIState_8h_html"><div class="ttname"><a href="UIState_8h.html">UIState.h</a></div></div>
 <div class="ttc" id="aclassSetPHSetPoint_html"><div class="ttname"><a href="classSetPHSetPoint.html">SetPHSetPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="SetPHSetPoint_8h_source.html#l00009">SetPHSetPoint.h:9</a></div></div>
-<div class="ttc" id="aclassSetPHSetPoint_html_ae4467acca64ab8b9263a96ce3080cdf9"><div class="ttname"><a href="classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9">SetPHSetPoint::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)</div><div class="ttdef"><b>Definition:</b> <a href="SetPHSetPoint_8h_source.html#l00011">SetPHSetPoint.h:11</a></div></div>
+<div class="ttc" id="aclassSetPHSetPoint_html_a4c7c07c5587a751cdd248e9e1b5afe5b"><div class="ttname"><a href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">SetPHSetPoint::prompt</a></div><div class="ttdeci">const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="SetPHSetPoint_8h_source.html#l00012">SetPHSetPoint.h:12</a></div></div>
+<div class="ttc" id="aclassSetPHSetPoint_html_afcee19edb71a1a7129fd07511097a882"><div class="ttname"><a href="classSetPHSetPoint.html#afcee19edb71a1a7129fd07511097a882">SetPHSetPoint::handleKey</a></div><div class="ttdeci">void handleKey(char key)</div><div class="ttdef"><b>Definition:</b> <a href="SetPHSetPoint_8cpp_source.html#l00009">SetPHSetPoint.cpp:9</a></div></div>
 <div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00010">UIState.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -91,6 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a65639f18f05ce52845bf3269c8b9eb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53ca2b64f05c381f4d68f68fd60c91b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a> (char key)=0</td></tr>
 <tr class="separator:ac53ca2b64f05c381f4d68f68fd60c91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bdeb297601911608b21e27ed2cff89"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">prompt</a> ()=0</td></tr>
+<tr class="separator:a80bdeb297601911608b21e27ed2cff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -185,17 +187,17 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00019">19</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                   {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00020">20</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                   {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00021">TankControllerLib.cpp:21</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a8be211379484e725d1bd58bed2e2c05f"><div class="ttname"><a href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">TankControllerLib::changeState</a></div><div class="ttdeci">void changeState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib.cpp:64</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00022">TankControllerLib.cpp:22</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a8be211379484e725d1bd58bed2e2c05f"><div class="ttname"><a href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">TankControllerLib::changeState</a></div><div class="ttdeci">void changeState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib.cpp:65</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib::changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00021">TankControllerLib::instance()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib::changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00022">TankControllerLib::instance()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00021">MainMenu::handleKey()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00021">MainMenu::handleKey()</a>, and <a class="el" href="SetPHSetPoint_8cpp_source.html#l00009">SetPHSetPoint::handleKey()</a>.</p>
 
 </div>
 </div>
@@ -223,9 +225,38 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSetPHSetPoint.html#ae4467acca64ab8b9263a96ce3080cdf9">SetPHSetPoint</a>, and <a class="el" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="classSetPHSetPoint.html#afcee19edb71a1a7129fd07511097a882">SetPHSetPoint</a>, and <a class="el" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00075">TankControllerLib::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00076">TankControllerLib::loop()</a>.</p>
+
+</div>
+</div>
+<a id="a80bdeb297601911608b21e27ed2cff89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bdeb297601911608b21e27ed2cff89">&#9670;&nbsp;</a></span>prompt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* UIState::prompt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">SetPHSetPoint</a>, and <a class="el" href="classMainMenu.html#a2a6e1d3e5fc01e4313d84c833093e937">MainMenu</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00076">TankControllerLib::loop()</a>.</p>
 
 </div>
 </div>

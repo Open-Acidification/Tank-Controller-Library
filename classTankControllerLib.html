@@ -161,17 +161,18 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00032">32</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                     {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(!<a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classTankControllerLib.html#a53a4de4be13ea161742ca9868ae87df1">lcd</a> = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a> = <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::TankControllerLib() - version &quot;</span>), <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="ttc" id="aTankControllerLib_8cpp_html_ae62a1773f22b7a2f5635c7497269cd39"><div class="ttname"><a href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a></div><div class="ttdeci">#define assert(p)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00006">TankControllerLib.cpp:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00033">33</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                     {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(!<a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a> = <span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classTankControllerLib.html#a53a4de4be13ea161742ca9868ae87df1">lcd</a> = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a> = <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::TankControllerLib() - version &quot;</span>), <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="aTankControllerLib_8cpp_html_ae62a1773f22b7a2f5635c7497269cd39"><div class="ttname"><a href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a></div><div class="ttdeci">#define assert(p)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00007">TankControllerLib.cpp:7</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html_abd9669bfdc7cfd3ee7ec4c9303248a42"><div class="ttname"><a href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a></div><div class="ttdeci">const char TANK_CONTROLLER_VERSION[]</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00010">TankControllerLib.h:10</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC.cpp:13</a></div></div>
+<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00012">MainMenu.h:12</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a0c1cee33bbac2dc5067e5e54bb3c7321"><div class="ttname"><a href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a></div><div class="ttdeci">static Serial_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00013">Serial_TC.cpp:13</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a8c6d52d8cee70e0c438f5f60dc4c0da1"><div class="ttname"><a href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">Serial_TC::print</a></div><div class="ttdeci">void print(char aChar)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00028">Serial_TC.cpp:28</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a185549982a07805d8ce771cbbf37caad"><div class="ttname"><a href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">TankControllerLib::log</a></div><div class="ttdeci">Serial_TC * log</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00030">TankControllerLib.h:30</a></div></div>
@@ -179,9 +180,9 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassTankControllerLib_html_a53a4de4be13ea161742ca9868ae87df1"><div class="ttname"><a href="classTankControllerLib.html#a53a4de4be13ea161742ca9868ae87df1">TankControllerLib::lcd</a></div><div class="ttdeci">LiquidCrystal_TC * lcd</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00029">TankControllerLib.h:29</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a9ed307a5bc670acdefa6faa2f6eb496c"><div class="ttname"><a href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">TankControllerLib::_instance</a></div><div class="ttdeci">static TankControllerLib * _instance</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00025">TankControllerLib.h:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00006">assert</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00013">Serial_TC::instance()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00029">lcd</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00010">TANK_CONTROLLER_VERSION</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00007">assert</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00013">Serial_TC::instance()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00029">lcd</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00010">TANK_CONTROLLER_VERSION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00021">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00022">instance()</a>.</p>
 
 </div>
 </div>
@@ -209,15 +210,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00043">43</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                      {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(<span class="keyword">this</span> == <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_a8be211379484e725d1bd58bed2e2c05f"><div class="ttname"><a href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">TankControllerLib::changeState</a></div><div class="ttdeci">void changeState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib.cpp:64</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00044">44</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                      {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="TankControllerLib_8cpp.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(<span class="keyword">this</span> == <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_a8be211379484e725d1bd58bed2e2c05f"><div class="ttname"><a href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">TankControllerLib::changeState</a></div><div class="ttdeci">void changeState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib.cpp:65</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00006">assert</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00064">changeState()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00007">assert</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00065">changeState()</a>.</p>
 
 </div>
 </div>
@@ -246,16 +247,16 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Blink the on-board LED to let us know that <a class="el" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop()</a> is being called </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00053">53</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                              {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (millis() / 500 % 2) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    digitalWrite(LED_BUILTIN, LOW);  <span class="comment">// turn the LED off by making the voltage LOW</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    digitalWrite(LED_BUILTIN, HIGH);  <span class="comment">// turn the LED on (HIGH is the voltage level)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00054">54</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                              {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (millis() / 500 % 2) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    digitalWrite(LED_BUILTIN, LOW);  <span class="comment">// turn the LED off by making the voltage LOW</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    digitalWrite(LED_BUILTIN, HIGH);  <span class="comment">// turn the LED on (HIGH is the voltage level)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00075">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00076">loop()</a>.</p>
 
 </div>
 </div>
@@ -284,17 +285,17 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Private member function called by <a class="el" href="classUIState.html">UIState</a> subclasses </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00064">64</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                     {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a> = newState;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00065">65</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                                     {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a> = newState;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00019">UIState::changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00088">setup()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00043">~TankControllerLib()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00020">UIState::changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00091">setup()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00044">~TankControllerLib()</a>.</p>
 
 </div>
 </div>
@@ -322,18 +323,18 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>static function to return singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00021">21</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                               {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a> = <span class="keyword">new</span> <a class="code" href="classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d">TankControllerLib</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_a7e52554907b4441815af01b283f4b78d"><div class="ttname"><a href="classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d">TankControllerLib::TankControllerLib</a></div><div class="ttdeci">TankControllerLib()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib.cpp:32</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00022">22</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                               {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a> = <span class="keyword">new</span> <a class="code" href="classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d">TankControllerLib</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTankControllerLib.html#a9ed307a5bc670acdefa6faa2f6eb496c">_instance</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_a7e52554907b4441815af01b283f4b78d"><div class="ttname"><a href="classTankControllerLib.html#a7e52554907b4441815af01b283f4b78d">TankControllerLib::TankControllerLib</a></div><div class="ttdeci">TankControllerLib()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib.cpp:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00019">UIState::changeState()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00020">UIState::changeState()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>
@@ -353,19 +354,25 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>This is one of two public instance functions. It is called repeatedly while the board is on. </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00075">75</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                             {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">blink</a>();            <span class="comment">//  blink the on-board LED to show that we are running</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">char</span> key = NO_KEY;  <span class="comment">// custom_keypad.getKey();</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (key != NO_KEY) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;Keypad input: &quot;</span>), key);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a>(key);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_a2c4b516f407143ac8bf601141b6ead14"><div class="ttname"><a href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">TankControllerLib::blink</a></div><div class="ttdeci">void blink()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00053">TankControllerLib.cpp:53</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00076">76</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                             {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">blink</a>();  <span class="comment">//  blink the on-board LED to show that we are running</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">char</span> key = <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a">getKey</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (key != NO_KEY) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;Keypad input: &quot;</span>), key);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a>(key);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// print the current prompt on the first line of the display</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">prompt</a>(), 0);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="aclassKeypad__TC_html_a3674237741eacf7c6c6e733a8e6f0d09"><div class="ttname"><a href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a></div><div class="ttdeci">static Keypad_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC.cpp:20</a></div></div>
+<div class="ttc" id="aclassKeypad__TC_html_af05734b4c284c56421a53d3e94f3f83a"><div class="ttname"><a href="classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a">Keypad_TC::getKey</a></div><div class="ttdeci">char getKey()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC.cpp:38</a></div></div>
+<div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC.cpp:84</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a2c4b516f407143ac8bf601141b6ead14"><div class="ttname"><a href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">TankControllerLib::blink</a></div><div class="ttdeci">void blink()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00054">TankControllerLib.cpp:54</a></div></div>
+<div class="ttc" id="aclassUIState_html_a80bdeb297601911608b21e27ed2cff89"><div class="ttname"><a href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()=0</div></div>
 <div class="ttc" id="aclassUIState_html_ac53ca2b64f05c381f4d68f68fd60c91b"><div class="ttname"><a href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)=0</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00053">blink()</a>, <a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00054">blink()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC::getKey()</a>, <a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">UIState::prompt()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC::writeLine()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
@@ -387,16 +394,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>This is one of two public instance functions. Here we do any one-time startup initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00088">88</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                              {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::setup()&quot;</span>));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  pinMode(LED_BUILTIN, OUTPUT);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00012">MainMenu.h:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00091">91</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                              {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::setup()&quot;</span>));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  pinMode(LED_BUILTIN, OUTPUT);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00010">UIState.h:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00064">changeState()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00065">changeState()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
@@ -418,11 +424,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>What is the current version? </p>
 
-<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00097">97</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                       {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::version() = &quot;</span>), <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00100">100</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                       {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;TankControllerLib::version() = &quot;</span>), <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="TankControllerLib_8h.html#abd9669bfdc7cfd3ee7ec4c9303248a42">TANK_CONTROLLER_VERSION</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00010">TANK_CONTROLLER_VERSION</a>.</p>
 
@@ -477,7 +483,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TankControllerLib_8h_source.html#l00025">25</a> of file <a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00021">instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00043">~TankControllerLib()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00022">instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00044">~TankControllerLib()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +509,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TankControllerLib_8h_source.html#l00029">29</a> of file <a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>.</p>
 
 </div>
 </div>
@@ -529,7 +535,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TankControllerLib_8h_source.html#l00030">30</a> of file <a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00075">loop()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00088">setup()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00097">version()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00076">loop()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00091">setup()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00100">version()</a>.</p>
 
 </div>
 </div>
@@ -555,7 +561,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TankControllerLib_8h_source.html#l00028">28</a> of file <a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00064">changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00075">loop()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00032">TankControllerLib()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00065">changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00076">loop()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>.</p>
 
 </div>
 </div>
