@@ -7,16 +7,17 @@
 
 class NumCollectorState : public UIState {
 public:
+  NumCollectorState() {
+    LiquidCrystal_TC::instance()->writeLine(" ", 1);
+  }
   void handleKey(char key);
   virtual void setValue(double value) = 0;
   virtual int getExpectedDigits() = 0;
-  virtual const char* getPrompt() = 0;
 
 protected:
   // Helper Functions
   void handleDigit(double digit);
   void backSpace();
-  void printPrompt();
   void printValue();
   bool collectedEnoughDigits() {
     return numDigits >= getExpectedDigits();
@@ -32,16 +33,13 @@ protected:
 class TestNumCollectorState : public NumCollectorState {
 public:
   // Implementation
-  TestNumCollectorState() {
-    printPrompt();
-  }
   void setValue(double value) {
     storedValue = value;
   }
   int getExpectedDigits() {
     return expectedDigits;
   }
-  const char* getPrompt() {
+  const char* prompt() {
     return "Test:";
   }
 

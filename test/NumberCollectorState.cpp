@@ -82,7 +82,6 @@ unittest(printing) {
   std::vector<std::string> lines;
   TestNumCollectorState test;
   lines = testLcd->getLines();
-  assertEqual("Test:           ", lines.at(0));
   assertEqual("                ", lines.at(1));
 
   test.handleKey('2');
@@ -104,6 +103,10 @@ unittest(printing) {
   test.handleKey('4');
   lines = testLcd->getLines();
   assertEqual("21.34           ", lines.at(1));
+
+  test.handleKey('1');
+  lines = testLcd->getLines();
+  assertEqual("21.341          ", lines.at(1));
 }
 
 unittest_main()

@@ -42,17 +42,9 @@ void NumCollectorState::backSpace() {
     value = floor(value / 10);
   } else {
     factor = factor / 10;
-    // we use the factor/10 because we want there to be 1 decimal place to floor
+    // we use factor/10 because factor is set to the next decimal not the current entered one
     value = floor(value * factor / 10) / (factor / 10);
   }
-}
-
-void NumCollectorState::printPrompt() {
-  char holder[16];
-  strcpy(holder, getPrompt());
-  LiquidCrystal_TC::instance()->writeLine(holder, 0);
-  strcpy(holder, " ");
-  LiquidCrystal_TC::instance()->writeLine(holder, 1);
 }
 
 void NumCollectorState::printValue() {
