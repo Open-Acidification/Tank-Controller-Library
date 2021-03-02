@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classDateTime__TC-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DateTime_TC Class Reference</div>  </div>
@@ -99,15 +100,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6f85dfb1ec9ad818a818b60c614571ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9b751b4c0101f688621adfff1d3ad2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">yearMonthAsPath</a> (char *buffer, size_t size)</td></tr>
 <tr class="separator:adb9b751b4c0101f688621adfff1d3ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcd786be827d68c0fcebd7c2c749d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">setAsCurrent</a> ()</td></tr>
+<tr class="separator:afdcd786be827d68c0fcebd7c2c749d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1b05da93afda7c496482990198b14e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDateTime__TC.html">DateTime_TC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a> ()</td></tr>
 <tr class="separator:ae1b05da93afda7c496482990198b14e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8e5ba50584716afe65ba8827fb4f1b"><td class="memItemLeft" align="right" valign="top">static RTC_PCF8523 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateTime__TC.html#a3d8e5ba50584716afe65ba8827fb4f1b">rtc</a> ()</td></tr>
+<tr class="separator:a3d8e5ba50584716afe65ba8827fb4f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ab71a02355209dc3b14ce56898858a58e"><td class="memItemLeft" align="right" valign="top">static RTC_PCF8523 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a> = nullptr</td></tr>
+<tr class="separator:ab71a02355209dc3b14ce56898858a58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DateTime__TC_8h_source.html#l00009">9</a> of file <a class="el" href="DateTime__TC_8h_source.html">DateTime_TC.h</a>.</p>
+<div class="textblock"><p>year range: 2000 - 2099 </p>
+
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8h_source.html#l00011">11</a> of file <a class="el" href="DateTime__TC_8h_source.html">DateTime_TC.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aacf60c5e80ab1955239dbe7f3426fe9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacf60c5e80ab1955239dbe7f3426fe9f">&#9670;&nbsp;</a></span>DateTime_TC()</h2>
@@ -160,11 +171,11 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00015">15</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    : DateTime(year, month, day, hour, min, sec) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00036">36</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    : DateTime(year, month, day, hour, min, sec) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DateTime__TC_8cpp_source.html#l00006">now()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DateTime__TC_8cpp_source.html#l00027">now()</a>.</p>
 
 </div>
 </div>
@@ -192,17 +203,18 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00006">6</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                             {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  DateTime <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a> = RTC_PCF8523::now();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classDateTime__TC.html#aacf60c5e80ab1955239dbe7f3426fe9f">DateTime_TC</a>(<a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.year(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.month(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.day(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.hour(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.minute(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.second());</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
-<div class="ttc" id="aclassDateTime__TC_html_aacf60c5e80ab1955239dbe7f3426fe9f"><div class="ttname"><a href="classDateTime__TC.html#aacf60c5e80ab1955239dbe7f3426fe9f">DateTime_TC::DateTime_TC</a></div><div class="ttdeci">DateTime_TC(uint16_t year, uint8_t month, uint8_t day, uint8_t hour=0, uint8_t min=0, uint8_t sec=0)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00015">DateTime_TC.cpp:15</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00006">DateTime_TC.cpp:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00027">27</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                             {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  DateTime <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a> = <a class="code" href="classDateTime__TC.html#a3d8e5ba50584716afe65ba8827fb4f1b">rtc</a>()-&gt;now();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classDateTime__TC.html#aacf60c5e80ab1955239dbe7f3426fe9f">DateTime_TC</a>(<a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.year(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.month(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.day(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.hour(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.minute(), <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">now</a>.second());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="aclassDateTime__TC_html_a3d8e5ba50584716afe65ba8827fb4f1b"><div class="ttname"><a href="classDateTime__TC.html#a3d8e5ba50584716afe65ba8827fb4f1b">DateTime_TC::rtc</a></div><div class="ttdeci">static RTC_PCF8523 * rtc()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00007">DateTime_TC.cpp:7</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_aacf60c5e80ab1955239dbe7f3426fe9f"><div class="ttname"><a href="classDateTime__TC.html#aacf60c5e80ab1955239dbe7f3426fe9f">DateTime_TC::DateTime_TC</a></div><div class="ttdeci">DateTime_TC(uint16_t year, uint8_t month, uint8_t day, uint8_t hour=0, uint8_t min=0, uint8_t sec=0)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00036">DateTime_TC.cpp:36</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00027">DateTime_TC.cpp:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00015">DateTime_TC()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00036">DateTime_TC()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00007">rtc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00010">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00030">unittest()</a>.</p>
 
 </div>
 </div>
@@ -222,22 +234,22 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>output dateTime to serialPort(DigitalClockDisplay.ino) "2020-11-26 18:55:15" </p>
 
-<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00023">23</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classSerial__TC.html">Serial_TC</a>* serial = <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(year());</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(month());</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(day());</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(hour());</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(minute());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(second());</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#abe31585c864e6d8aaf60d33a37cb22f2">println</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00044">44</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classSerial__TC.html">Serial_TC</a> *serial = <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(year());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(month());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(day());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(hour());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(minute());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(second());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  serial-&gt;<a class="code" href="classSerial__TC.html#abe31585c864e6d8aaf60d33a37cb22f2">println</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="ttc" id="aclassSerial__TC_html"><div class="ttname"><a href="classSerial__TC.html">Serial_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00012">Serial_TC.h:12</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a0c1cee33bbac2dc5067e5e54bb3c7321"><div class="ttname"><a href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a></div><div class="ttdeci">static Serial_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00013">Serial_TC.cpp:13</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a48099c90f8bdc656d0ff0fa1da284c8c"><div class="ttname"><a href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">Serial_TC::print_two_digits</a></div><div class="ttdeci">void print_two_digits(int value)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00087">Serial_TC.cpp:87</a></div></div>
@@ -246,7 +258,85 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00013">Serial_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00087">Serial_TC::print_two_digits()</a>, and <a class="el" href="Serial__TC_8h_source.html#l00025">Serial_TC::println()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00016">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00041">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="a3d8e5ba50584716afe65ba8827fb4f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8e5ba50584716afe65ba8827fb4f1b">&#9670;&nbsp;</a></span>rtc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTC_PCF8523 * DateTime_TC::rtc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00007">7</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                              {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a> = <span class="keyword">new</span> RTC_PCF8523;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">// look for Real Time Clock</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a>-&gt;begin()) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      Serial.println(F(<span class="stringliteral">&quot;Couldn&#39;t find RTC!&quot;</span>));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ;  <span class="comment">// infinite loop; hang forever</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// has the time been set?</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a>-&gt;initialized()) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      Serial.println(F(<span class="stringliteral">&quot;RTC has not been initialized! Date and time is wrong!&quot;</span>));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="comment">// set the RTC to the date &amp; time this file was compiled</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a>-&gt;adjust(DateTime(F(__DATE__), F(__TIME__)));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">_rtc</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="ttc" id="aclassDateTime__TC_html_ab71a02355209dc3b14ce56898858a58e"><div class="ttname"><a href="classDateTime__TC.html#ab71a02355209dc3b14ce56898858a58e">DateTime_TC::_rtc</a></div><div class="ttdeci">static RTC_PCF8523 * _rtc</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00026">DateTime_TC.h:26</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8h_source.html#l00026">_rtc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DateTime__TC_8cpp_source.html#l00027">now()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00078">setAsCurrent()</a>, and <a class="el" href="DateTime_8cpp_source.html#l00013">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="afdcd786be827d68c0fcebd7c2c749d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcd786be827d68c0fcebd7c2c749d6f">&#9670;&nbsp;</a></span>setAsCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DateTime_TC::setAsCurrent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00078">78</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                               {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  DateTime newDT(yOff + 2000, m, d, hh, mm, ss);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classDateTime__TC.html#a3d8e5ba50584716afe65ba8827fb4f1b">rtc</a>()-&gt;adjust(newDT);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00007">rtc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00058">unittest()</a>.</p>
 
 </div>
 </div>
@@ -277,23 +367,50 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>populate a buffer with dateTime as a path: "/2020/09" </p>
 
-<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00042">42</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                                                   {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  memset(buffer, 0, sizeOfBuffer);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">if</span> (sizeOfBuffer &lt; 9) {  <span class="comment">// is there enough room?</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  buffer[0] = <span class="charliteral">&#39;/&#39;</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  itoa(year(), buffer + 1, 10);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  buffer[5] = <span class="charliteral">&#39;/&#39;</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">int</span> i = 6;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span> (month() &lt; 10) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    buffer[i++] = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  itoa(month(), buffer + i, 10);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8cpp_source.html#l00063">63</a> of file <a class="el" href="DateTime__TC_8cpp_source.html">DateTime_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                   {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  memset(buffer, 0, sizeOfBuffer);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span> (sizeOfBuffer &lt; 9) {  <span class="comment">// is there enough room?</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  buffer[0] = <span class="charliteral">&#39;/&#39;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  itoa(year(), buffer + 1, 10);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  buffer[5] = <span class="charliteral">&#39;/&#39;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">int</span> i = 6;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">if</span> (month() &lt; 10) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    buffer[i++] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  itoa(month(), buffer + i, 10);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00024">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00051">unittest()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab71a02355209dc3b14ce56898858a58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71a02355209dc3b14ce56898858a58e">&#9670;&nbsp;</a></span>_rtc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTC_PCF8523 * DateTime_TC::_rtc = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime__TC_8h_source.html#l00026">26</a> of file <a class="el" href="DateTime__TC_8h_source.html">DateTime_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DateTime__TC_8cpp_source.html#l00007">rtc()</a>.</p>
 
 </div>
 </div>
