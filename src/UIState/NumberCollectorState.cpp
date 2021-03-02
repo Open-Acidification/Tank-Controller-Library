@@ -13,7 +13,6 @@ void NumCollectorState::handleKey(char key) {
       setValue(value);
     }
   } else if (key == 'B') {  // Backspace
-    numDigits--;
     backSpace();
   } else if (key == 'C') {  // Clear the value
     numDigits = 0;
@@ -21,35 +20,39 @@ void NumCollectorState::handleKey(char key) {
   } else if (key == 'A') {  // All done
     setValue(value);
   } else if (key == '*') {  // Decimal place (if we already have a decimal nothing happens)
-    noDecimal = false;
+    hasDecimal = true;
   } else if (key == 'D') {  // Don't finish
     changeState((UIState*)new MainMenu);
   }
   printValue();
 }
 
-void NumCollectorState::handleDigit(double digit) {
-  if (noDecimal) {
-    value = value * 10 + digit;
-  } else {
-    value = value + digit / factor;
+void NumCollectorState::handleDigit(int digit) {
+  if (hasDecimal) {
+    value = value + (double)digit / factor;
     factor = factor * 10;
+  } else {
+    value = value * 10 + digit;
   }
 }
 
 void NumCollectorState::backSpace() {
-  if (noDecimal) {
-    value = floor(value / 10);
-  } else {
+  if (hasDecimal && factor == 10) {
+    hasDecimal = false;
+  } else if (hasDecimal) {
+    numDigits--;
     factor = factor / 10;
     // we use factor/10 because factor is set to the next decimal not the current entered one
     value = floor(value * factor / 10) / (factor / 10);
+  } else {
+    numDigits--;
+    value = floor(value / 10);
   }
 }
 
 void NumCollectorState::printValue() {
   char strValue[16];
-  if (noDecimal) {
+  if (!hasDecimal) {
     sprintf(strValue, "%.*f", 0, value);
   } else if (factor == 10) {
     sprintf(strValue, "%.*f.", 0, value);

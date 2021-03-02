@@ -8,7 +8,7 @@
 class NumCollectorState : public UIState {
 public:
   NumCollectorState() {
-    LiquidCrystal_TC::instance()->writeLine(" ", 1);
+    LiquidCrystal_TC::instance()->writeLine("                ", 1);
   }
   void handleKey(char key);
   virtual void setValue(double value) = 0;
@@ -16,7 +16,7 @@ public:
 
 protected:
   // Helper Functions
-  void handleDigit(double digit);
+  void handleDigit(int digit);
   void backSpace();
   void printValue();
   bool collectedEnoughDigits() {
@@ -26,7 +26,7 @@ protected:
   double value = 0.0;
   int numDigits = 0;
   int factor = 10;
-  bool noDecimal = true;
+  bool hasDecimal = false;
 };
 
 #ifdef MOCK_PINS_COUNT

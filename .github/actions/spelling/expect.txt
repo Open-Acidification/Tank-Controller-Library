@@ -43,7 +43,6 @@ microcontroler
 millis
 MOSI
 Mozilla's
-namespace
 nullptr
 numwires
 ONTHANK

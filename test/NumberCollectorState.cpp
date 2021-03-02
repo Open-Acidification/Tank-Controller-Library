@@ -52,10 +52,13 @@ unittest(backSpace) {
   TestNumCollectorState testDecimal;
   testDecimal.handleKey('1');
   testDecimal.handleKey('*');
+  testDecimal.handleKey('B');
   testDecimal.handleKey('2');
+  testDecimal.handleKey('*');
+  testDecimal.handleKey('5');
   testDecimal.handleKey('3');
   testDecimal.handleKey('B');
-  assertEqual(1.2, testDecimal.getValue());
+  assertEqual(12.5, testDecimal.getValue());
 }
 
 unittest(clear) {
