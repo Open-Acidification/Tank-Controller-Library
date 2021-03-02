@@ -15,12 +15,14 @@ Dnominal
 Doxyfile
 Doxygen
 eep
+emoji
 endif
 endl
 Gemfile
 github
 godmode
 Google
+hh
 HIGHTHRESH
 homepage
 http
@@ -34,6 +36,7 @@ Kd
 Keymap
 Kp
 LOWTHRESH
+markdownlint
 mega
 memset
 microcontroler
@@ -55,6 +58,7 @@ REFIN
 REFINHIGH
 REFINLOW
 rpc
+rtc
 rtd
 RTDIN
 RTDINLOW
@@ -62,6 +66,7 @@ sizeof
 sprintf
 strcpy
 strlen
+substr
 testfile
 TODO
 uint
