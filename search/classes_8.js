@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['serial_5ftc_221',['Serial_TC',['../classSerial__TC.html',1,'']]],
-  ['setphsetpoint_222',['SetPHSetPoint',['../classSetPHSetPoint.html',1,'']]]
+  ['numcollectorstate_233',['NumCollectorState',['../classNumCollectorState.html',1,'']]]
 ];
