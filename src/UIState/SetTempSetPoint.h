@@ -1,3 +1,8 @@
+/**
+ * SetTempSetPoint.h
+ *
+ * Set the target Temperature
+ */
 #pragma once
 #include "NumberCollectorState.h"
 
@@ -7,7 +12,7 @@ public:
     return "Set Temperature ";
   };
   int getExpectedDigits() {
-    return 3;
+    return 4;
   };
   void setValue(double value);
 };
