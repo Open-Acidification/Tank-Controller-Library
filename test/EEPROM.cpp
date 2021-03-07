@@ -14,7 +14,7 @@ unittest(Main) {
   assertEqual(singleton1, singleton2);
 }
 
-unittest(EEPROM_Read_and_Write_Double) {
+unittest(eeprom_Read_and_Write_Double) {
   EEPROM_TC* test = EEPROM_TC::instance();
   const int TEST_ADDRESS = 110;  // a couple addresses beyond stored data
 
