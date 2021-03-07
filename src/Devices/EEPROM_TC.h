@@ -54,9 +54,15 @@ public:
   void setTempInterval(double value);
   void setTempDelay(double value);
 
+  // read and write
+  double eepromReadDouble(int address);
+  void eepromWriteDouble(int address, double value);
+
 private:
   // class variables
   static EEPROM_TC* _instance;
+
+  // Functions
 
   // instance variables
   const int PH_ADDRESS = 0;
