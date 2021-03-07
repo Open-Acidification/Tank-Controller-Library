@@ -62,8 +62,6 @@ private:
   // class variables
   static EEPROM_TC* _instance;
 
-  // Functions
-
   // instance variables
   const int PH_ADDRESS = 0;
   const int TEMP_ADDRESS = 4;
