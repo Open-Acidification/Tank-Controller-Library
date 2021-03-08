@@ -3,7 +3,7 @@ var searchData=
   ['getamplitude_56',['getAmplitude',['../classEEPROM__TC.html#ad57373ba3acc82a10362fa8126c6c2c4',1,'EEPROM_TC']]],
   ['getcorrectedtemp_57',['getCorrectedTemp',['../classEEPROM__TC.html#adbfa47107a41ba4663b0fb4861dc33f7',1,'EEPROM_TC']]],
   ['getcurrentswitchstate_58',['getCurrentSwitchState',['../classTemperatureControl.html#a38fe17da6f00ff12d2f2cabbd29638e4',1,'TemperatureControl']]],
-  ['getexpecteddigits_59',['getExpectedDigits',['../classNumCollectorState.html#a9131fec7de188ecb525a5b9d5ebcb114',1,'NumCollectorState']]],
+  ['getexpecteddigits_59',['getExpectedDigits',['../classNumCollectorState.html#a9131fec7de188ecb525a5b9d5ebcb114',1,'NumCollectorState::getExpectedDigits()'],['../classSetTempSetPoint.html#a303970807510b4a53977a4cf78367e7a',1,'SetTempSetPoint::getExpectedDigits()']]],
   ['getfrequency_60',['getFrequency',['../classEEPROM__TC.html#a65d896b3f377e22c54d949c097157dbd',1,'EEPROM_TC']]],
   ['getgranularity_61',['getGranularity',['../classEEPROM__TC.html#a06160e709097774aaa3c7e3425111fb1',1,'EEPROM_TC']]],
   ['getheat_62',['getHeat',['../classEEPROM__TC.html#a02f22ca58baa428c3f401a9934aee0bb',1,'EEPROM_TC']]],
