@@ -10,6 +10,7 @@ void NumCollectorState::handleKey(char key) {
     numDigits++;
     handleDigit(key - '0');
     if (collectedEnoughDigits()) {
+      printValue();
       setValue(value);
     } else {
       printValue();
