@@ -5,6 +5,7 @@
 #include "Devices/EthernetServer_TC.h"
 #include "Devices/Keypad_TC.h"
 #include "Devices/LiquidCrystal_TC.h"
+#include "Devices/SD_TC.h"
 #include "Devices/Serial_TC.h"
 
 const char TANK_CONTROLLER_VERSION[] = "0.3.0";
