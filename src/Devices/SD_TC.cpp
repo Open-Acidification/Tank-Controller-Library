@@ -16,20 +16,16 @@ SDClass_TC* SDClass_TC::instance() {
 
 //  instance methods
 /**
- * Constructor sets pins, dimensions, and shows splash screen
+ * print the root directory and all subdirectories
  */
-SDClass_TC::SDClass_TC() : SDClass() {
-  pinMode(10, OUTPUT);
-  digitalWrite(10, HIGH);
-  // TODO: Need to re-enable this for the physical device
-  // begin(4);
-}
-
 void SDClass_TC::printRootDirectory() {
   File root = open("/");
   printDirectory(root, 0);
 }
 
+/**
+ * print a specified directory with an indent
+ */
 void SDClass_TC::printDirectory(File dir, int numTabs) {
   while (true) {
     File entry = dir.openNextFile();
