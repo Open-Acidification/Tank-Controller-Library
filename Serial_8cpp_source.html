@@ -113,12 +113,12 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  assertEqual(<span class="stringliteral">&quot;b&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  String test = <span class="stringliteral">&quot;test:&quot;</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  mySerial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(test);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  String <a class="code" href="namespacetest.html">test</a> = <span class="stringliteral">&quot;test:&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  mySerial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<a class="code" href="namespacetest.html">test</a>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  assertEqual(<span class="stringliteral">&quot;test:\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  mySerial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(test, 2);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  mySerial-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(<a class="code" href="namespacetest.html">test</a>, 2);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  assertEqual(<span class="stringliteral">&quot;test:2\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
@@ -157,6 +157,7 @@ $(function() {
 <div class="ttc" id="aclassSerial__TC_html_a829193a8c17b3b82d265eab2068fb1df"><div class="ttname"><a href="classSerial__TC.html#a829193a8c17b3b82d265eab2068fb1df">Serial_TC::write</a></div><div class="ttdeci">void write(byte aByte)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00094">Serial_TC.cpp:94</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a8c6d52d8cee70e0c438f5f60dc4c0da1"><div class="ttname"><a href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">Serial_TC::print</a></div><div class="ttdeci">void print(char aChar)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00028">Serial_TC.cpp:28</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_abe31585c864e6d8aaf60d33a37cb22f2"><div class="ttname"><a href="classSerial__TC.html#abe31585c864e6d8aaf60d33a37cb22f2">Serial_TC::println</a></div><div class="ttdeci">void println()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00025">Serial_TC.h:25</a></div></div>
+<div class="ttc" id="anamespacetest_html"><div class="ttname"><a href="namespacetest.html">test</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8py_source.html#l00001">test.py:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['observername_396',['observerName',['../classBitCollector.html#a021d2f8c40a47e1aa862195cde124b01',1,'BitCollector']]],
-  ['onbit_397',['onBit',['../classBitCollector.html#a273c7fdd2087ac8ab6bb6931cb06ba9e',1,'BitCollector']]]
+  ['observername_427',['observerName',['../classBitCollector.html#a021d2f8c40a47e1aa862195cde124b01',1,'BitCollector']]],
+  ['onbit_428',['onBit',['../classBitCollector.html#a273c7fdd2087ac8ab6bb6931cb06ba9e',1,'BitCollector']]]
 ];

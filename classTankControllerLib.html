@@ -334,7 +334,7 @@ Friends</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00025">_instance</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00033">TankControllerLib()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00020">UIState::changeState()</a>, and <a class="el" href="test_2SetTempSetPoint_8cpp_source.html#l00025">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIState_8h_source.html#l00020">UIState::changeState()</a>, <a class="el" href="libTC_8cpp_source.html#l00023">loop()</a>, <a class="el" href="libTC_8cpp_source.html#l00020">setup()</a>, <a class="el" href="test_2SetTempSetPoint_8cpp_source.html#l00025">unittest()</a>, and <a class="el" href="libTC_8cpp_source.html#l00026">version()</a>.</p>
 
 </div>
 </div>
@@ -357,10 +357,10 @@ Friends</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="TankControllerLib_8cpp_source.html#l00076">76</a> of file <a class="el" href="TankControllerLib_8cpp_source.html">TankControllerLib.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                             {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">blink</a>();  <span class="comment">//  blink the on-board LED to show that we are running</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">char</span> key = <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a">getKey</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (key != NO_KEY) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;Keypad input: &quot;</span>), key);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a>(key);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a> = <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a">getKey</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a> != NO_KEY) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a8c6d52d8cee70e0c438f5f60dc4c0da1">print</a>(F(<span class="stringliteral">&quot;Keypad input: &quot;</span>), <a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a>(<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// print the current prompt on the first line of the display</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">prompt</a>(), 0);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
@@ -371,10 +371,11 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassTankControllerLib_html_a2c4b516f407143ac8bf601141b6ead14"><div class="ttname"><a href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">TankControllerLib::blink</a></div><div class="ttdeci">void blink()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00054">TankControllerLib.cpp:54</a></div></div>
 <div class="ttc" id="aclassUIState_html_a80bdeb297601911608b21e27ed2cff89"><div class="ttname"><a href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()=0</div></div>
 <div class="ttc" id="aclassUIState_html_ac53ca2b64f05c381f4d68f68fd60c91b"><div class="ttname"><a href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)=0</div></div>
+<div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00041">libTC.cpp:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00054">blink()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC::getKey()</a>, <a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">UIState::prompt()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00054">blink()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC::getKey()</a>, <a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">UIState::handleKey()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00041">key()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">UIState::prompt()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00028">state</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test_2SetTempSetPoint_8cpp_source.html#l00025">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00023">loop()</a>, and <a class="el" href="test_2SetTempSetPoint_8cpp_source.html#l00025">unittest()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +405,7 @@ Friends</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00065">changeState()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00020">setup()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>
@@ -431,6 +432,8 @@ Friends</h2></td></tr>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00030">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00010">TANK_CONTROLLER_VERSION</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00026">version()</a>.</p>
 
 </div>
 </div>

@@ -78,14 +78,14 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TankControllerLib_8h.html">TankControllerLib.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="LiquidCrystal_8cpp.html#a860f1f2ace06203615e95b22fb00893e">    9</a></span>&#160;<a class="code" href="LiquidCrystal_8cpp.html#a860f1f2ace06203615e95b22fb00893e">unittest</a>(loop) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="LiquidCrystal_8cpp.html#a860f1f2ace06203615e95b22fb00893e">    9</a></span>&#160;<a class="code" href="LiquidCrystal_8cpp.html#a860f1f2ace06203615e95b22fb00893e">unittest</a>(<a class="code" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a>) {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* tank = <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* lcd = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* <a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a> = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  assertTrue(tank != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  assertTrue(lcd != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(<span class="stringliteral">&quot;LiquidCrystal_CI&quot;</span>, lcd-&gt;className());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  assertTrue(<a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a> != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(<span class="stringliteral">&quot;LiquidCrystal_CI&quot;</span>, <a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a>-&gt;className());</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// get currently displayed lines</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  std::vector&lt;std::string&gt; lines = lcd-&gt;getLines();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  std::vector&lt;std::string&gt; lines = <a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a>-&gt;getLines();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">// verify that display contains 2 empty lines</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  assertEqual(2, lines.size());</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  assertEqual(16, lines.at(0).length());</div>
@@ -132,6 +132,8 @@ $(function() {
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC.cpp:84</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00013">TankControllerLib.h:13</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00022">TankControllerLib.cpp:22</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_ae6d55d186296475a16cdd46a2863ca75"><div class="ttname"><a href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a></div><div class="ttdeci">const char * lcd(int index)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00029">libTC.cpp:29</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00023">libTC.cpp:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

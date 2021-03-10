@@ -88,8 +88,8 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SetTempSetPoint_8h.html">SetTempSetPoint.h</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TemperatureCalibration_8h.html">TemperatureCalibration.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu::handleKey</a>(<span class="keywordtype">char</span> key) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu::handleKey</a>(<span class="keywordtype">char</span> <a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>:  <span class="comment">// Change pH set_point</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      this-&gt;<a class="code" href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classSetPHSetPoint.html">SetPHSetPoint</a>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordflow">break</span>;</div>
@@ -165,6 +165,7 @@ $(function() {
 <div class="ttc" id="aclassSetTempSetPoint_html"><div class="ttname"><a href="classSetTempSetPoint.html">SetTempSetPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="SetTempSetPoint_8h_source.html#l00009">SetTempSetPoint.h:9</a></div></div>
 <div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00010">UIState.h:10</a></div></div>
 <div class="ttc" id="aclassUIState_html_a95e27f9c35e2a430ada25b4f2a6f1808"><div class="ttname"><a href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">UIState::changeState</a></div><div class="ttdeci">void changeState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00020">UIState.h:20</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00041">libTC.cpp:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
