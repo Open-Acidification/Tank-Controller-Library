@@ -1,13 +1,13 @@
-CC = g++ -std=c++17 -O3
+CC = g++ -std=c++17 -O3 -fPIC
 DEFINES = -D__AVR__ -D__AVR_ATmega2560__ -DARDUINO_ARCH_AVR -DARDUINO_AVR_MEGA2560 -DARDUINO=100
 ifndef ARDUINO_CI
-	ARDUINO_CI = $(HOME)/Documents/Arduino/arduino_ci/cpp/arduino
+	ARDUINO_CI = $(HOME)/Arduino/arduino_ci/cpp/arduino
 endif
 ifndef LIBRARIES
 	LIBRARIES = $(shell bundle exec arduino_library_location.rb)
 endif
 TC_PATH = $(LIBRARIES)/TankControllerLib/src
-PY_PATH = $(shell cd external/pybind11; python3 -m pybind11 --includes)
+PY_PATH = $(shell cd ../pybind11; python3 -m pybind11 --includes)
 SUFFIX = $(shell python3-config --extension-suffix)
 PY_LIB = ../libTC$(SUFFIX)
 OBJDIR = obj
@@ -15,7 +15,7 @@ OBJDIR = obj
 .PHONY: all
 all : $(PY_LIB)
 
-$(PY_LIB) : TankControllerLib.o ../external/pybind11/setup.py ../libTC.cpp
+$(PY_LIB) : TankControllerLib.o ../pybind11/setup.py ../libTC.cpp
 	echo "===== Compiling PY_LIB ($(PY_LIB)) =====" > /dev/null
 	$(CC) -shared -fPIC               				\
 	-Wl,-undefined,dynamic_lookup     				\
@@ -29,7 +29,8 @@ $(PY_LIB) : TankControllerLib.o ../external/pybind11/setup.py ../libTC.cpp
 	-I$(LIBRARIES)/Ethernet/src       				\
 	-I$(LIBRARIES)/Ethernet/src/utility				\
 	-I$(LIBRARIES)/Keypad/src       					\
-	-I../external/pybind11/include					\
+	-I../pybind11/include					\
+	-I../../src										\
 	../libTC.cpp *.o -o $(PY_LIB)
 	echo
 
@@ -68,7 +69,7 @@ Godmode.o :
 	echo
 
 .ONESHELL:
-../external/pybind11/setup.py :
+../pybind11/setup.py :
 	echo "===== Install pybind11 =====" > /dev/null
 	git submodule update --init --recursive
 	# install pytest
