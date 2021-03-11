@@ -1,12 +1,17 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
+
 #include <string>
 
 #include "SD_TC.h"
 
-unittest_setup() { SD.removeAll(); }
+unittest_setup() {
+  SD.removeAll();
+}
 
-unittest_teardown() { SD.removeAll(); }
+unittest_teardown() {
+  SD.removeAll();
+}
 
 unittest(singleton) {
   SDClass_TC* thing1 = SDClass_TC::instance();
