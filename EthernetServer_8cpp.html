@@ -76,27 +76,19 @@ $(function() {
 <code>#include &lt;ArduinoUnitTests.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EthernetServer__TC_8h_source.html">Devices/EthernetServer_TC.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for EthernetServer.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="EthernetServer_8cpp__incl.png" border="0" usemap="#atest_2EthernetServer_8cpp" alt=""/></div>
 <map name="atest_2EthernetServer_8cpp" id="atest_2EthernetServer_8cpp">
-<area shape="rect" title=" " alt="" coords="432,5,590,32"/>
-<area shape="rect" title=" " alt="" coords="314,229,390,256"/>
-<area shape="rect" title=" " alt="" coords="444,80,578,107"/>
-<area shape="rect" title=" " alt="" coords="602,80,657,107"/>
-<area shape="rect" title=" " alt="" coords="682,80,740,107"/>
-<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="285,80,420,107"/>
-<area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="447,155,610,181"/>
-<area shape="rect" href="EthernetServer__TC_8h.html" title=" " alt="" coords="634,155,828,181"/>
-<area shape="rect" href="Keypad__TC_8h.html" title=" " alt="" coords="852,155,1002,181"/>
-<area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="24,155,206,181"/>
-<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="282,155,422,181"/>
-<area shape="rect" title=" " alt="" coords="493,229,564,256"/>
-<area shape="rect" title=" " alt="" coords="691,229,771,256"/>
-<area shape="rect" title=" " alt="" coords="890,229,964,256"/>
-<area shape="rect" title=" " alt="" coords="62,229,168,256"/>
+<area shape="rect" title=" " alt="" coords="131,5,289,32"/>
+<area shape="rect" title=" " alt="" coords="125,155,201,181"/>
+<area shape="rect" title=" " alt="" coords="25,80,158,107"/>
+<area shape="rect" title=" " alt="" coords="183,80,237,107"/>
+<area shape="rect" title=" " alt="" coords="262,80,321,107"/>
+<area shape="rect" href="EthernetServer__TC_8h.html" title=" " alt="" coords="345,80,539,107"/>
+<area shape="rect" title=" " alt="" coords="402,155,482,181"/>
 </map>
 </div>
 </div>
@@ -125,12 +117,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Trivial test to confirm that <a class="el" href="classEthernetServer__TC.html">EthernetServer_TC</a> compiles, is of proper class, and has proper port </p>
 
-<p class="definition">Definition at line <a class="el" href="EthernetServer_8cpp_source.html#l00013">13</a> of file <a class="el" href="EthernetServer_8cpp_source.html">EthernetServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;               {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classEthernetServer__TC.html">EthernetServer_TC</a>* server = <a class="code" href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a1fe236e3eb9f878a4254a804df04e924">className</a>());</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="EthernetServer_8cpp_source.html#l00012">12</a> of file <a class="el" href="EthernetServer_8cpp_source.html">EthernetServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;               {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classEthernetServer__TC.html">EthernetServer_TC</a>* server = <a class="code" href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a1fe236e3eb9f878a4254a804df04e924">className</a>());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 <div class="ttc" id="aclassEthernetServer__TC_html"><div class="ttname"><a href="classEthernetServer__TC.html">EthernetServer_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00015">EthernetServer_TC.h:15</a></div></div>
 <div class="ttc" id="aclassEthernetServer__TC_html_a1dd22791e14ccd4ed5381470f29f470e"><div class="ttname"><a href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a></div><div class="ttdeci">static EthernetServer_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00010">EthernetServer_TC.cpp:10</a></div></div>
 <div class="ttc" id="aclassEthernetServer__TC_html_a1fe236e3eb9f878a4254a804df04e924"><div class="ttname"><a href="classEthernetServer__TC.html#a1fe236e3eb9f878a4254a804df04e924">EthernetServer_TC::className</a></div><div class="ttdeci">virtual String className() const</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00021">EthernetServer_TC.h:21</a></div></div>
