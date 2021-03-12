@@ -1,11 +1,9 @@
 <map id="src/UIState/NumberCollectorState.h" name="src/UIState/NumberCollectorState.h">
-<area shape="rect" id="node1" title=" " alt="" coords="184,5,375,47"/>
-<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="241,95,318,121"/>
-<area shape="rect" id="node3" href="$TankControllerLib_8h.html" title=" " alt="" coords="207,169,351,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="241,319,317,345"/>
-<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,244,188,271"/>
-<area shape="rect" id="node7" href="$SD__TC_8h.html" title=" " alt="" coords="429,244,554,271"/>
-<area shape="rect" id="node9" href="$Serial__TC_8h.html" title=" " alt="" coords="264,244,404,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="43,319,150,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="466,319,517,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="62,95,139,121"/>
+<area shape="rect" id="node3" href="$TankControllerLib_8h.html" title=" " alt="" coords="29,169,173,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="63,319,139,345"/>
+<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="195,244,377,271"/>
+<area shape="rect" id="node7" href="$Serial__TC_8h.html" title=" " alt="" coords="31,244,171,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="233,319,339,345"/>
 </map>

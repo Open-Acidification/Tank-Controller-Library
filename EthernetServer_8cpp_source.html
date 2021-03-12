@@ -73,18 +73,17 @@ $(function() {
 <a href="EthernetServer_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;ArduinoUnitTests.h&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EthernetServer__TC_8h.html">Devices/EthernetServer_TC.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">   12</a></span>&#160;<a class="code" href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a>(<a class="code" href="namespacetest.html">test</a>) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classEthernetServer__TC.html">EthernetServer_TC</a>* server = <a class="code" href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a1fe236e3eb9f878a4254a804df04e924">className</a>());</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;unittest_main()</div>
-<div class="ttc" id="aEthernetServer_8cpp_html_a8a6cf13ae9f1d45784d14115e35f17a5"><div class="ttname"><a href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a></div><div class="ttdeci">unittest(test)</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer_8cpp_source.html#l00012">EthernetServer.cpp:12</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EthernetServer__TC_8h.html">Devices/EthernetServer_TC.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">   11</a></span>&#160;<a class="code" href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a>(<a class="code" href="namespacetest.html">test</a>) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classEthernetServer__TC.html">EthernetServer_TC</a>* server = <a class="code" href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a1fe236e3eb9f878a4254a804df04e924">className</a>());</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;unittest_main()</div>
+<div class="ttc" id="aEthernetServer_8cpp_html_a8a6cf13ae9f1d45784d14115e35f17a5"><div class="ttname"><a href="EthernetServer_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a></div><div class="ttdeci">unittest(test)</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer_8cpp_source.html#l00011">EthernetServer.cpp:11</a></div></div>
 <div class="ttc" id="aEthernetServer__TC_8h_html"><div class="ttname"><a href="EthernetServer__TC_8h.html">EthernetServer_TC.h</a></div></div>
 <div class="ttc" id="aclassEthernetServer__TC_html"><div class="ttname"><a href="classEthernetServer__TC.html">EthernetServer_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00015">EthernetServer_TC.h:15</a></div></div>
 <div class="ttc" id="aclassEthernetServer__TC_html_a1dd22791e14ccd4ed5381470f29f470e"><div class="ttname"><a href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a></div><div class="ttdeci">static EthernetServer_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00010">EthernetServer_TC.cpp:10</a></div></div>

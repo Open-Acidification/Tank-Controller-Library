@@ -1,13 +1,11 @@
 <map id="test/Blink.cpp" name="test/Blink.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="644,5,745,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="238,229,314,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="628,80,761,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="785,80,967,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="991,80,1063,107"/>
-<area shape="rect" id="node6" href="$TankControllerLib_8h.html" title=" " alt="" coords="209,80,343,107"/>
-<area shape="rect" id="node7" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="370,155,553,181"/>
-<area shape="rect" id="node9" href="$SD__TC_8h.html" title=" " alt="" coords="5,155,131,181"/>
-<area shape="rect" id="node11" href="$Serial__TC_8h.html" title=" " alt="" coords="206,155,346,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="408,229,515,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="43,229,93,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="225,5,326,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="369,229,445,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="27,80,161,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="185,80,366,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="390,80,462,107"/>
+<area shape="rect" id="node6" href="$TankControllerLib_8h.html" title=" " alt="" coords="487,80,621,107"/>
+<area shape="rect" id="node7" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="555,155,737,181"/>
+<area shape="rect" id="node9" href="$Serial__TC_8h.html" title=" " alt="" coords="391,155,531,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="593,229,699,256"/>
 </map>

@@ -1,11 +1,9 @@
 <map id="src/UIState/PHCalibration.h" name="src/UIState/PHCalibration.h">
-<area shape="rect" id="node1" title=" " alt="" coords="188,5,371,32"/>
-<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="241,80,318,107"/>
-<area shape="rect" id="node3" href="$TankControllerLib_8h.html" title=" " alt="" coords="207,155,351,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="241,304,317,331"/>
-<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,229,188,256"/>
-<area shape="rect" id="node7" href="$SD__TC_8h.html" title=" " alt="" coords="429,229,554,256"/>
-<area shape="rect" id="node9" href="$Serial__TC_8h.html" title=" " alt="" coords="264,229,404,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="43,304,150,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="466,304,517,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="58,80,135,107"/>
+<area shape="rect" id="node3" href="$TankControllerLib_8h.html" title=" " alt="" coords="25,155,169,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="59,304,135,331"/>
+<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="191,229,373,256"/>
+<area shape="rect" id="node7" href="$Serial__TC_8h.html" title=" " alt="" coords="27,229,167,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="229,304,335,331"/>
 </map>
