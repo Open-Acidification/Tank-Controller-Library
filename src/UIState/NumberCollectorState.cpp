@@ -28,7 +28,7 @@ void NumCollectorState::handleKey(char key) {
     hasDecimal = true;
     printValue();
   } else if (key == 'D') {  // Don't finish
-    changeState((UIState*)new MainMenu);
+    setNextState((UIState*)new MainMenu);
   }
 }
 
