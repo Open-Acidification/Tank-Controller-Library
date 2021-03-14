@@ -10,13 +10,17 @@
 #include "LiquidCrystal_TC.h"
 #include "TankControllerLib.h"
 
-unittest(test) {
+unittest(setValue) {
   SetTempSetPoint test;
   // setValue
   test.setValue(50.05);
   assertEqual(50.05, EEPROM_TC::instance()->getTemp());
 
   TankControllerLib::instance()->loop();
+  Keypad_TC::instance()->_getPuppet()->push_back('Z');
+  TankControllerLib::instance()->loop();
+  TankControllerLib::instance()->printPrompt();
+  assertEqual("Main Menu       ", TankControllerLib::instance()->getPrompt());
 }
 
 // 0.000=4 digits
@@ -30,6 +34,7 @@ unittest(Next_State) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
 
+  assertEqual("Main Menu       ", lc->getLines().at(0));
   keypad->push_back('B');
   tc->loop();
   assertEqual("Set Temperature ", lc->getLines().at(0));

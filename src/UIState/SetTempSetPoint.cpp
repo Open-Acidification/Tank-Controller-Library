@@ -14,5 +14,5 @@ void SetTempSetPoint::setValue(double value) {
   sprintf(output, "New Temp=%.2f", value);
   LiquidCrystal_TC::instance()->writeLine(output, 1);
   delay(1000);  // 1second
-  this->setNextState((UIState *)new MainMenu);
+  returnToMainMenu();
 }

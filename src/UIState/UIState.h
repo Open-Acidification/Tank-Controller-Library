@@ -9,7 +9,8 @@
 
 class UIState {
 public:
-  UIState() {
+  UIState(TankControllerLib* tc) {
+    this->tc = tc;
   }
   virtual ~UIState() {
   }
@@ -18,6 +19,10 @@ public:
 
 protected:
   void setNextState(UIState* state) {
-    TankControllerLib::instance()->setNextState(state);
+    tc->setNextState(state);
   }
+  void returnToMainMenu() {
+    setNextState(new MainMenu(tc));
+  }
+  TankControllerLib* tc = nullptr;
 };

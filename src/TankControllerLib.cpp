@@ -74,6 +74,21 @@ void TankControllerLib::updateState() {
     }
     state = nextState;
     nextState = nullptr;
+    // print the current prompt on the first line of the display
+    LiquidCrystal_TC::instance()->writeLine(state->prompt());
+  }
+}
+
+/**
+ * Private member function called by loop
+ * Handles keypresses
+ */
+void TankContollerLib::handleUI() {
+  char key = Keypad_TC::instance()->getKey();
+  if (key != NO_KEY) {
+    log->print(F("Keypad input: "), key);
+    state->handleKey(key);
+    updateState();
   }
 }
 
@@ -83,14 +98,7 @@ void TankControllerLib::updateState() {
  */
 void TankControllerLib::loop() {
   blink();  //  blink the on-board LED to show that we are running
-  char key = Keypad_TC::instance()->getKey();
-  if (key != NO_KEY) {
-    log->print(F("Keypad input: "), key);
-    state->handleKey(key);
-    // print the current prompt on the first line of the display
-    LiquidCrystal_TC::instance()->writeLine(state->prompt(), 0);
-  }
-  updateState();
+  handleUI();
 }
 
 /**
@@ -99,7 +107,7 @@ void TankControllerLib::loop() {
  */
 void TankControllerLib::setup() {
   log->print(F("TankControllerLib::setup()"));
-  setNextState((UIState*)new MainMenu);
+  setNextState(((UIState*)new MainMenu(this)));
   updateState();
   pinMode(LED_BUILTIN, OUTPUT);
 }

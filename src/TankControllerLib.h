@@ -23,6 +23,11 @@ public:
     nextState = newState;
   }
 
+  // Backdoor for testing current state
+  char* getPrompt() {
+    return state->prompt();
+  }
+
 private:
   // class variables
   static TankControllerLib* _instance;
@@ -38,4 +43,5 @@ private:
   ~TankControllerLib();
   void blink();
   void updateState();
+  void handleUI();
 };

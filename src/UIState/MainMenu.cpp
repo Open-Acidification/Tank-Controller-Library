@@ -22,7 +22,7 @@
 void MainMenu::handleKey(char key) {
   switch (key) {
     case 'A':  // Change pH set_point
-      this->setNextState((UIState*)new SetPHSetPoint);
+      this->setNextState((UIState*)new SetPHSetPoint(tc));
       break;
     case 'B':  // Change Temperature set_point
       this->setNextState((UIState*)new SetTempSetPoint);
@@ -70,7 +70,7 @@ void MainMenu::handleKey(char key) {
       // this->setNextState((UIState*) new SetChillOrHeat);
       break;
     default:
-      setNextState((UIState*)new MainMenu);
+      returnToMainMenu();
       break;
   }
 }
