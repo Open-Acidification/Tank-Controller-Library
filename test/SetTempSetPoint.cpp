@@ -16,7 +16,6 @@ unittest(test) {
   test.setValue(50.05);
   assertEqual(50.05, EEPROM_TC::instance()->getTemp());
 
-  Keypad_TC::instance()->_getPuppet()->push_back('Z');
   TankControllerLib::instance()->loop();
 }
 
