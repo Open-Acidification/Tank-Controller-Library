@@ -45,7 +45,9 @@ TankControllerLib::TankControllerLib() {
  * Destructor
  */
 TankControllerLib::~TankControllerLib() {
-  changeState(nullptr);
+  std::cout << __FILE__ << ":" << __LINE__ << " setNextState(nullptr)" << std::endl;
+  delete state;
+  delete nextState;
   assert(this == _instance);
   _instance = nullptr;
 }
@@ -64,12 +66,17 @@ void TankControllerLib::blink() {
 
 /**
  * Private member function called by UIState subclasses
+ * Only updates if a new state is available to switch to
  */
-void TankControllerLib::changeState(UIState* newState) {
-  if (state) {
-    delete state;
+void TankControllerLib::updateState() {
+  if (nextState) {
+    if (state) {
+      std::cout << __FILE__ << ":" << __LINE__ << " deleting old state" << std::endl;
+      delete state;
+    }
+    state = nextState;
+    nextState = nullptr;
   }
-  state = newState;
 }
 
 /**
@@ -82,6 +89,7 @@ void TankControllerLib::loop() {
   if (key != NO_KEY) {
     log->print(F("Keypad input: "), key);
     state->handleKey(key);
+    updateState();
     // print the current prompt on the first line of the display
     LiquidCrystal_TC::instance()->writeLine(state->prompt(), 0);
   }
@@ -93,7 +101,9 @@ void TankControllerLib::loop() {
  */
 void TankControllerLib::setup() {
   log->print(F("TankControllerLib::setup()"));
-  changeState((UIState*)new MainMenu);
+  std::cout << __FILE__ << ":" << __LINE__ << " setNextState()" << std::endl;
+  setNextState((UIState*)new MainMenu);
+  updateState();
   pinMode(LED_BUILTIN, OUTPUT);
 }
 

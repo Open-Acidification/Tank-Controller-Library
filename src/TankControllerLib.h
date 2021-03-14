@@ -1,6 +1,8 @@
 #pragma once
 #include <Arduino.h>
 
+#include <cassert>
+
 #include "Devices/LiquidCrystal_TC.h"
 #include "Devices/Serial_TC.h"
 
@@ -16,13 +18,18 @@ public:
   void setup();
   void loop();
   const char* version();
+  void setNextState(UIState* newState) {
+    assert(nextState == nullptr);
+    nextState = newState;
+  }
 
 private:
   // class variables
   static TankControllerLib* _instance;
 
   // instance variables
-  UIState* state;
+  UIState* state = nullptr;
+  UIState* nextState = nullptr;
   LiquidCrystal_TC* lcd;
   Serial_TC* log;
 
@@ -30,8 +37,5 @@ private:
   TankControllerLib();
   ~TankControllerLib();
   void blink();
-  void changeState(UIState* newState);
-
-  // other classes with access to our privates
-  friend class UIState;
+  void updateState();
 };

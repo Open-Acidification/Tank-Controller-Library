@@ -17,7 +17,7 @@ public:
   virtual const char* prompt() = 0;
 
 protected:
-  void changeState(UIState* state) {
-    TankControllerLib::instance()->changeState(state);
+  void setNextState(UIState* state) {
+    TankControllerLib::instance()->setNextState(state);
   }
 };
