@@ -1,8 +1,6 @@
 #pragma once
 #include <Arduino.h>
 
-#include <cassert>
-
 #include "Devices/LiquidCrystal_TC.h"
 #include "Devices/Serial_TC.h"
 
@@ -19,7 +17,6 @@ public:
   void loop();
   const char* version();
   virtual void setNextState(UIState* newState) {
-    assert(nextState == nullptr);
     nextState = newState;
   }
 
@@ -45,7 +42,6 @@ protected:
 class TankControllerLibTest : public TankControllerLib {
 public:
   void setNextState(UIState* newState) {
-    assert(nextState == nullptr);
     nextState = newState;
     updateState();
   }

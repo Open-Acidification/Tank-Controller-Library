@@ -33,6 +33,8 @@ protected:
 #ifdef MOCK_PINS_COUNT
 class TestNumCollectorState : public NumCollectorState {
 public:
+  TestNumCollectorState(TankControllerLib* tc) : NumCollectorState(tc) {
+  }
   // Implementation
   void setValue(double value) {
     storedValue = value;
