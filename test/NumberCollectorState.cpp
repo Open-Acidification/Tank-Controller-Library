@@ -87,7 +87,7 @@ unittest(printing) {
   std::vector<String> lines;
   TestNumCollectorState test(TankControllerLib::instance());
   lines = testLcd->getLines();
-  assertEqual("                ", lines.at(1));
+  assertEqual("0               ", lines.at(1));
 
   test.handleKey('2');
   lines = testLcd->getLines();

@@ -9,7 +9,7 @@
 class NumCollectorState : public UIState {
 public:
   NumCollectorState(TankControllerLib* tc) : UIState(tc) {
-    LiquidCrystal_TC::instance()->writeLine("                ", 1);
+    printValue();
   }
   void handleKey(char key);
   virtual void setValue(double value) = 0;
