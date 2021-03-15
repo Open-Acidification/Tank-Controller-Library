@@ -3,7 +3,7 @@
  */
 
 #pragma once
-#include "LiquidCrystal_TC.h"
+#include "../Devices/LiquidCrystal_TC.h"
 #include "UIState.h"
 
 class NumCollectorState : public UIState {
