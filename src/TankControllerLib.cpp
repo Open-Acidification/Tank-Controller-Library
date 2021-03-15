@@ -111,6 +111,8 @@ const char* TankControllerLib::version() {
   return TANK_CONTROLLER_VERSION;
 }
 
+#ifdef MOCK_PINS_COUNT
 bool TankControllerLibTest::isOnMainMenu() {
   return state->isMainMenu();
 }
+#endif
