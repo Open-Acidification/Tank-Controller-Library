@@ -1,4 +1,8 @@
 <map id="SetPHSetPoint" name="SetPHSetPoint">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="27,5,94,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,116,212"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="71,81,138,108"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="159,185,283,212"/>
+<area shape="rect" id="node4" href="$classSerial__TC.html" title=" " alt="" coords="181,81,260,108"/>
+<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="368,81,489,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="380,5,477,32"/>
 </map>

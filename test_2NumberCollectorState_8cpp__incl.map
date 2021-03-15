@@ -1,12 +1,11 @@
 <map id="test/NumberCollectorState.cpp" name="test/NumberCollectorState.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="393,5,593,32"/>
-<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="233,80,393,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="297,379,373,405"/>
-<area shape="rect" id="node9" title=" " alt="" coords="478,80,611,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="635,80,707,107"/>
-<area shape="rect" id="node3" href="$UIState_8h.html" title=" " alt="" coords="254,155,331,181"/>
-<area shape="rect" id="node4" href="$TankControllerLib_8h.html" title=" " alt="" coords="215,229,359,256"/>
-<area shape="rect" id="node6" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,304,188,331"/>
-<area shape="rect" id="node8" href="$Serial__TC_8h.html" title=" " alt="" coords="212,304,352,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="43,379,150,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="291,5,491,32"/>
+<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="60,80,220,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="351,229,427,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="404,80,537,107"/>
+<area shape="rect" id="node8" href="$TankControllerLib_8h.html" title=" " alt="" coords="245,80,379,107"/>
+<area shape="rect" id="node3" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="107,155,299,181"/>
+<area shape="rect" id="node6" href="$UIState_8h.html" title=" " alt="" coords="5,155,83,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,229,256,256"/>
+<area shape="rect" id="node9" href="$Serial__TC_8h.html" title=" " alt="" coords="374,155,514,181"/>
 </map>

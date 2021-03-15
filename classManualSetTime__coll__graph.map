@@ -1,4 +1,8 @@
 <map id="ManualSetTime" name="ManualSetTime">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="29,5,95,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,119,212"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="73,81,139,108"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="160,185,284,212"/>
+<area shape="rect" id="node4" href="$classSerial__TC.html" title=" " alt="" coords="183,81,261,108"/>
+<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="369,81,491,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="381,5,479,32"/>
 </map>

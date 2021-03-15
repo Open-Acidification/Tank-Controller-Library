@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainmenu_455',['MainMenu',['../classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf',1,'MainMenu']]]
+  ['mainmenu_466',['MainMenu',['../classMainMenu.html#aba9996f596cbc3bd8b1fdf2256c0938e',1,'MainMenu']]],
+  ['manualsettime_467',['ManualSetTime',['../classManualSetTime.html#a93a4f90269cac9a3f3d0e6ce390dbdc0',1,'ManualSetTime']]]
 ];

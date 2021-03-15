@@ -75,22 +75,21 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="NumberCollectorState_8h_source.html">NumberCollectorState.h</a>&quot;</code><br />
 <code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;ArduinoUnitTests.h&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for NumberCollectorState.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_2NumberCollectorState_8cpp__incl.png" border="0" usemap="#atest_2NumberCollectorState_8cpp" alt=""/></div>
 <map name="atest_2NumberCollectorState_8cpp" id="atest_2NumberCollectorState_8cpp">
-<area shape="rect" title=" " alt="" coords="393,5,593,32"/>
-<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="233,80,393,107"/>
-<area shape="rect" title=" " alt="" coords="297,379,373,405"/>
-<area shape="rect" title=" " alt="" coords="478,80,611,107"/>
-<area shape="rect" title=" " alt="" coords="635,80,707,107"/>
-<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="254,155,331,181"/>
-<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="215,229,359,256"/>
-<area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,304,188,331"/>
-<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="212,304,352,331"/>
-<area shape="rect" title=" " alt="" coords="43,379,150,405"/>
+<area shape="rect" title=" " alt="" coords="291,5,491,32"/>
+<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="60,80,220,107"/>
+<area shape="rect" title=" " alt="" coords="351,229,427,256"/>
+<area shape="rect" title=" " alt="" coords="404,80,537,107"/>
+<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="245,80,379,107"/>
+<area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="107,155,299,181"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="5,155,83,181"/>
+<area shape="rect" title=" " alt="" coords="149,229,256,256"/>
+<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="374,155,514,181"/>
 </map>
 </div>
 </div>
@@ -132,7 +131,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00031">31</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                   {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  TestNumCollectorState testDecimal;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  testDecimal.setExpectedDigits(4);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
@@ -144,7 +143,10 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  assertEqual(12.34, testDecimal.getValue());</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  assertEqual(12.34, testDecimal.getStoredValue());</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib.cpp:17</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="ac259e7809f6c9ea8fd147ec8423bee48"></a>
@@ -165,7 +167,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00008">8</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                            {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  TestNumCollectorState testNoDecimal;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  TestNumCollectorState testNoDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  testNoDecimal.setExpectedDigits(3);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  assertEqual(0, testNoDecimal.getValue());</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  testNoDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
@@ -175,6 +177,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  assertEqual(123, testNoDecimal.getStoredValue());</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="a656fa526e13f8b3fc5c0f1f7776e31fe"></a>
@@ -195,7 +199,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00019">19</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                              {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  TestNumCollectorState testDecimal;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  testDecimal.setExpectedDigits(4);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
@@ -206,6 +210,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  assertEqual(12.34, testDecimal.getStoredValue());</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="ab3e431f7247ca718d044be83ed9cd7f2"></a>
@@ -226,7 +232,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00072">72</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                  {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  TestNumCollectorState testDecimal;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  testDecimal.setExpectedDigits(4);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
@@ -236,6 +242,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  assertEqual(123, testDecimal.getStoredValue());</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="a18481f0a5bc95e7a03bd24f80e7e87d3"></a>
@@ -256,13 +264,13 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00045">45</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  TestNumCollectorState testNoDecimal;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  TestNumCollectorState testNoDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  testNoDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  testNoDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  testNoDecimal.handleKey(<span class="charliteral">&#39;B&#39;</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  assertEqual(1, testNoDecimal.getValue());</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  TestNumCollectorState testDecimal;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;*&#39;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;B&#39;</span>);</div>
@@ -274,6 +282,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  assertEqual(12.5, testDecimal.getValue());</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="a2a0c7f3f2ab1105dcd86c6c254044294"></a>
@@ -294,13 +304,15 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test_2NumberCollectorState_8cpp_source.html#l00064">64</a> of file <a class="el" href="test_2NumberCollectorState_8cpp_source.html">NumberCollectorState.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  TestNumCollectorState testDecimal;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;C&#39;</span>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  assertEqual(0, testDecimal.getValue());</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
+
 </div>
 </div>
 <a id="ade92d8df51e2b71bc8057f0d7d6ad5c1"></a>
@@ -323,7 +335,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                   {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* testLcd = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::vector&lt;String&gt; lines;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  TestNumCollectorState <a class="code" href="namespacetest.html">test</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  TestNumCollectorState <a class="code" href="namespacetest.html">test</a>(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="namespacetest.html">test</a>.setExpectedDigits(5);  <span class="comment">// 00.000</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  lines = testLcd-&gt;getLines();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  assertEqual(<span class="stringliteral">&quot;                &quot;</span>, lines.at(1));</div>
@@ -356,7 +368,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC.cpp:13</a></div></div>
 <div class="ttc" id="anamespacetest_html"><div class="ttname"><a href="namespacetest.html">test</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8py_source.html#l00001">test.py:1</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>.</p>
 
 </div>
 </div>

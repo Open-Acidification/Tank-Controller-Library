@@ -91,55 +91,55 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu::handleKey</a>(<span class="keywordtype">char</span> <a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>) {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>:  <span class="comment">// Change pH set_point</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      this-&gt;<a class="code" href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classSetPHSetPoint.html">SetPHSetPoint</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      this-&gt;<a class="code" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classSetPHSetPoint.html">SetPHSetPoint</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;B&#39;</span>:  <span class="comment">// Change Temperature set_point</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      this-&gt;<a class="code" href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classSetTempSetPoint.html">SetTempSetPoint</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      this-&gt;<a class="code" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classSetTempSetPoint.html">SetTempSetPoint</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>));</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:  <span class="comment">// pH Calibration</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new PHCalibration);</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new PHCalibration);</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:  <span class="comment">// Calibration Management</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new CalibrationManagement);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new CalibrationManagement);</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:  <span class="comment">// Change Tank ID</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new ChangeTankID);</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new ChangeTankID);</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:  <span class="comment">// Change Google Sheet Interval</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new ChangeGoogleSheetInterval);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new ChangeGoogleSheetInterval);</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:  <span class="comment">// See Device Uptime &amp; Current Time</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new SeeDeviceUptime);</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new SeeDeviceUptime);</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:  <span class="comment">// See Device addresses</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new SeeDeviceAddresses);</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new SeeDeviceAddresses);</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:  <span class="comment">// Reset LCD Screen</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new ResetLCDScreen);</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new ResetLCDScreen);</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:  <span class="comment">// See Tank ID and Log File Name</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new SeeTankID);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new SeeTankID);</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;4&#39;</span>:  <span class="comment">// See PID Constants</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new SeePIDConstants);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new SeePIDConstants);</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>:  <span class="comment">// PID Tuning Menu</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new PIDTuningMenu);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new PIDTuningMenu);</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>:  <span class="comment">// Temperature Calibration</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new TemperatureCalibration);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new TemperatureCalibration);</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>:  <span class="comment">// Manual Set Time</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new ManualSetTime);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new ManualSetTime);</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:  <span class="comment">// Enable PID</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new EnablePID);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new EnablePID);</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:  <span class="comment">// Set Chill or Heat</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="comment">// this-&gt;changeState((UIState*) new SetChillOrHeat);</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="comment">// this-&gt;setNextState((UIState*) new SetChillOrHeat);</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">changeState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="classUIState.html#ad5b8901aede3466c9a1256b95a8941ef">returnToMainMenu</a>();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
@@ -159,12 +159,13 @@ $(function() {
 <div class="ttc" id="aSetPHSetPoint_8h_html"><div class="ttname"><a href="SetPHSetPoint_8h.html">SetPHSetPoint.h</a></div></div>
 <div class="ttc" id="aSetTempSetPoint_8h_html"><div class="ttname"><a href="SetTempSetPoint_8h.html">SetTempSetPoint.h</a></div></div>
 <div class="ttc" id="aTemperatureCalibration_8h_html"><div class="ttname"><a href="TemperatureCalibration_8h.html">TemperatureCalibration.h</a></div></div>
-<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00012">MainMenu.h:12</a></div></div>
 <div class="ttc" id="aclassMainMenu_html_a9d4609b398fcd8bf9e6dda366735d7e6"><div class="ttname"><a href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)</div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8cpp_source.html#l00022">MainMenu.cpp:22</a></div></div>
 <div class="ttc" id="aclassSetPHSetPoint_html"><div class="ttname"><a href="classSetPHSetPoint.html">SetPHSetPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="SetPHSetPoint_8h_source.html#l00009">SetPHSetPoint.h:9</a></div></div>
 <div class="ttc" id="aclassSetTempSetPoint_html"><div class="ttname"><a href="classSetTempSetPoint.html">SetTempSetPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="SetTempSetPoint_8h_source.html#l00009">SetTempSetPoint.h:9</a></div></div>
-<div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00010">UIState.h:10</a></div></div>
-<div class="ttc" id="aclassUIState_html_a95e27f9c35e2a430ada25b4f2a6f1808"><div class="ttname"><a href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">UIState::changeState</a></div><div class="ttdeci">void changeState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00020">UIState.h:20</a></div></div>
+<div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00009">UIState.h:9</a></div></div>
+<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00023">UIState.h:23</a></div></div>
+<div class="ttc" id="aclassUIState_html_a777d5464735cd39cddb517e186da6f35"><div class="ttname"><a href="classUIState.html#a777d5464735cd39cddb517e186da6f35">UIState::setNextState</a></div><div class="ttdeci">void setNextState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00006">UIState.cpp:6</a></div></div>
+<div class="ttc" id="aclassUIState_html_ad5b8901aede3466c9a1256b95a8941ef"><div class="ttname"><a href="classUIState.html#ad5b8901aede3466c9a1256b95a8941ef">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00010">UIState.cpp:10</a></div></div>
 <div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00040">libTC.cpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

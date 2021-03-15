@@ -1,9 +1,4 @@
 <map id="src/UIState/ResetLCDScreen.h" name="src/UIState/ResetLCDScreen.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,209,32"/>
 <area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="69,80,146,107"/>
-<area shape="rect" id="node3" href="$TankControllerLib_8h.html" title=" " alt="" coords="35,155,179,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="69,304,145,331"/>
-<area shape="rect" id="node5" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="201,229,384,256"/>
-<area shape="rect" id="node7" href="$Serial__TC_8h.html" title=" " alt="" coords="37,229,177,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="239,304,346,331"/>
 </map>

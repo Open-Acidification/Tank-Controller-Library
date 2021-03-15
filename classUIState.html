@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classUIState-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UIState Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -97,30 +98,48 @@ Inheritance diagram for UIState:</div>
 <area shape="rect" href="classSetTempSetPoint.html" title=" " alt="" coords="352,309,477,336"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for UIState:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIState__coll__graph.png" border="0" usemap="#aUIState_coll__map" alt="Collaboration graph"/></div>
+<map name="aUIState_coll__map" id="aUIState_coll__map">
+<area shape="rect" title=" " alt="" coords="5,81,72,108"/>
+<area shape="rect" href="classTankControllerLib.html" title=" " alt="" coords="70,185,194,212"/>
+<area shape="rect" href="classSerial__TC.html" title=" " alt="" coords="106,81,185,108"/>
+<area shape="rect" href="classLiquidCrystal__TC.html" title=" " alt="" coords="293,81,414,108"/>
+<area shape="rect" title=" " alt="" coords="305,5,402,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4fe4636d1d1b57a6f0f435e08526d8ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a4fe4636d1d1b57a6f0f435e08526d8ce">UIState</a> ()</td></tr>
-<tr class="separator:a4fe4636d1d1b57a6f0f435e08526d8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65639f18f05ce52845bf3269c8b9eb08"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a65639f18f05ce52845bf3269c8b9eb08">~UIState</a> ()</td></tr>
-<tr class="separator:a65639f18f05ce52845bf3269c8b9eb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76040d2fa8fc60d3bcfcb537ec86ec67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a76040d2fa8fc60d3bcfcb537ec86ec67">UIState</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
+<tr class="separator:a76040d2fa8fc60d3bcfcb537ec86ec67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53ca2b64f05c381f4d68f68fd60c91b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#ac53ca2b64f05c381f4d68f68fd60c91b">handleKey</a> (char <a class="el" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>)=0</td></tr>
 <tr class="separator:ac53ca2b64f05c381f4d68f68fd60c91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d58bb071e2f4b4eb78e0f1069a29f65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a0d58bb071e2f4b4eb78e0f1069a29f65">isMainMenu</a> ()</td></tr>
+<tr class="separator:a0d58bb071e2f4b4eb78e0f1069a29f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80bdeb297601911608b21e27ed2cff89"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a80bdeb297601911608b21e27ed2cff89">prompt</a> ()=0</td></tr>
 <tr class="separator:a80bdeb297601911608b21e27ed2cff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a95e27f9c35e2a430ada25b4f2a6f1808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a95e27f9c35e2a430ada25b4f2a6f1808">changeState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
-<tr class="separator:a95e27f9c35e2a430ada25b4f2a6f1808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777d5464735cd39cddb517e186da6f35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
+<tr class="separator:a777d5464735cd39cddb517e186da6f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b8901aede3466c9a1256b95a8941ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#ad5b8901aede3466c9a1256b95a8941ef">returnToMainMenu</a> ()</td></tr>
+<tr class="separator:ad5b8901aede3466c9a1256b95a8941ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a357d1e91ae55a8beda87b51cfc9a7d75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTankControllerLib.html">TankControllerLib</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a> = nullptr</td></tr>
+<tr class="separator:a357d1e91ae55a8beda87b51cfc9a7d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract superclass for the <a class="el" href="namespaceTankController.html">TankController</a> UI states Concrete subclass for the initial (start) state </p>
-
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00010">10</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00009">9</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4fe4636d1d1b57a6f0f435e08526d8ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fe4636d1d1b57a6f0f435e08526d8ce">&#9670;&nbsp;</a></span>UIState()</h2>
+<a id="a76040d2fa8fc60d3bcfcb537ec86ec67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76040d2fa8fc60d3bcfcb537ec86ec67">&#9670;&nbsp;</a></span>UIState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +150,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">UIState::UIState </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classTankControllerLib.html">TankControllerLib</a> *&#160;</td>
+          <td class="paramname"><em>tc</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -142,80 +162,17 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00012">12</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            {</div>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00011">11</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                 {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;tc = <a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  }</div>
+<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00023">UIState.h:23</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a65639f18f05ce52845bf3269c8b9eb08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65639f18f05ce52845bf3269c8b9eb08">&#9670;&nbsp;</a></span>~UIState()</h2>
+<p class="reference">References <a class="el" href="UIState_8h_source.html#l00023">tc</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual UIState::~UIState </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00014">14</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                     {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
-</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a95e27f9c35e2a430ada25b4f2a6f1808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95e27f9c35e2a430ada25b4f2a6f1808">&#9670;&nbsp;</a></span>changeState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UIState::changeState </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classUIState.html">UIState</a> *&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00020">20</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                   {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">changeState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
-<div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00024">TankControllerLib.cpp:24</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a8be211379484e725d1bd58bed2e2c05f"><div class="ttname"><a href="classTankControllerLib.html#a8be211379484e725d1bd58bed2e2c05f">TankControllerLib::changeState</a></div><div class="ttdeci">void changeState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00068">TankControllerLib.cpp:68</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00068">TankControllerLib::changeState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00024">TankControllerLib::instance()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00022">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00008">NumCollectorState::handleKey()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00009">SetPHSetPoint::handleKey()</a>, and <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00010">SetTempSetPoint::setValue()</a>.</p>
-
-</div>
-</div>
 <a id="ac53ca2b64f05c381f4d68f68fd60c91b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac53ca2b64f05c381f4d68f68fd60c91b">&#9670;&nbsp;</a></span>handleKey()</h2>
 
@@ -242,8 +199,40 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classTemperatureCalibration.html#a21a803d55891754efe0be9f3f30c2e9e">TemperatureCalibration</a>, <a class="el" href="classSetPHSetPoint.html#afcee19edb71a1a7129fd07511097a882">SetPHSetPoint</a>, <a class="el" href="classSetChillOrHeat.html#ae687a4e08b9d77a3d74d1e75357eb402">SetChillOrHeat</a>, <a class="el" href="classSeeTankID.html#a9c6f53e4500dca2784eda8f02253d34a">SeeTankID</a>, <a class="el" href="classSeePIDConstants.html#ac42f307063dc60df05a0b8cb1ea5057d">SeePIDConstants</a>, <a class="el" href="classSeeDeviceUptime.html#abc183ab3239e53f28201496fc858abd4">SeeDeviceUptime</a>, <a class="el" href="classResetLCDScreen.html#ad9100bc697522b7be901e67c33d3b3e7">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#a97851701a133b3834169c18df175e938">PIDTuningMenu</a>, <a class="el" href="classPHCalibration.html#a01514dfa81155bfe93a0ffde8f058d33">PHCalibration</a>, <a class="el" href="classNumCollectorState.html#a11ff5d6631d4b1f256ef3cfefac88af9">NumCollectorState</a>, <a class="el" href="classManualSetTime.html#a2daf5722592b09da6d96771de1c1ee65">ManualSetTime</a>, <a class="el" href="classMainMenu.html#a9d4609b398fcd8bf9e6dda366735d7e6">MainMenu</a>, <a class="el" href="classEnablePID.html#a5e7e864f78489fe72ec881172ffed278">EnablePID</a>, <a class="el" href="classChangeTankID.html#ae2db33e1b86660cecda311f5427e3a75">ChangeTankID</a>, <a class="el" href="classChangeGoogleSheetInterval.html#abb50cb405a7ee7b0b7ca07641269056f">ChangeGoogleSheetInterval</a>, and <a class="el" href="classCalibrationManagement.html#ab0927177c3bb8578d2be2b1cbe9cb356">CalibrationManagement</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00079">TankControllerLib::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00077">TankControllerLib::handleUI()</a>.</p>
 
+</div>
+</div>
+<a id="a0d58bb071e2f4b4eb78e0f1069a29f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d58bb071e2f4b4eb78e0f1069a29f65">&#9670;&nbsp;</a></span>isMainMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UIState::isMainMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classMainMenu.html#aa54e888c671ca80c5afcfb82fa3000ea">MainMenu</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00015">15</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                            {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a80bdeb297601911608b21e27ed2cff89"></a>
@@ -271,12 +260,114 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classTemperatureCalibration.html#a451cbd7057c1086126fa4df8807b1924">TemperatureCalibration</a>, <a class="el" href="classSetTempSetPoint.html#abb937a45566ce1cdf051852378c0f70d">SetTempSetPoint</a>, <a class="el" href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">SetPHSetPoint</a>, <a class="el" href="classSetChillOrHeat.html#af6a94cfb4f55915d69281a806ac911c4">SetChillOrHeat</a>, <a class="el" href="classSeeTankID.html#a2cd6198bb99b54bef11eb2843725287b">SeeTankID</a>, <a class="el" href="classSeePIDConstants.html#a0e2a386eb02af8e159d43437fa2a0ba6">SeePIDConstants</a>, <a class="el" href="classSeeDeviceUptime.html#a3ede3790dc55a0cb4a04cfea93b489e0">SeeDeviceUptime</a>, <a class="el" href="classResetLCDScreen.html#a1f5e58ad16ae84d25ecc5485ee33854c">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#a68e90e62404b677e85628c1dc69f6e3c">PIDTuningMenu</a>, <a class="el" href="classPHCalibration.html#a9a02771c70b9d256a3595b48fe304925">PHCalibration</a>, <a class="el" href="classManualSetTime.html#a6c01146608ca87946c195f29e26975d9">ManualSetTime</a>, <a class="el" href="classMainMenu.html#a2a6e1d3e5fc01e4313d84c833093e937">MainMenu</a>, <a class="el" href="classEnablePID.html#a6d8d940c79822c0519ae00ee535cfeed">EnablePID</a>, <a class="el" href="classChangeTankID.html#ae473c925dfa217f7a20d2a4b1844d46d">ChangeTankID</a>, <a class="el" href="classChangeGoogleSheetInterval.html#a47152e0affbf536a916c33c61ed11839">ChangeGoogleSheetInterval</a>, and <a class="el" href="classCalibrationManagement.html#a1eaf3946584d91e5b09ee2ef8266a71a">CalibrationManagement</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00079">TankControllerLib::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00061">TankControllerLib::updateState()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="ad5b8901aede3466c9a1256b95a8941ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b8901aede3466c9a1256b95a8941ef">&#9670;&nbsp;</a></span>returnToMainMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIState::returnToMainMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UIState_8cpp_source.html#l00010">10</a> of file <a class="el" href="UIState_8cpp_source.html">UIState.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                               {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>));</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00012">MainMenu.h:12</a></div></div>
+<div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00009">UIState.h:9</a></div></div>
+<div class="ttc" id="aclassUIState_html_a777d5464735cd39cddb517e186da6f35"><div class="ttname"><a href="classUIState.html#a777d5464735cd39cddb517e186da6f35">UIState::setNextState</a></div><div class="ttdeci">void setNextState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00006">UIState.cpp:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00006">setNextState()</a>, and <a class="el" href="UIState_8h_source.html#l00023">tc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00022">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00008">NumCollectorState::handleKey()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00009">SetPHSetPoint::handleKey()</a>, and <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00010">SetTempSetPoint::setValue()</a>.</p>
+
+</div>
+</div>
+<a id="a777d5464735cd39cddb517e186da6f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777d5464735cd39cddb517e186da6f35">&#9670;&nbsp;</a></span>setNextState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIState::setNextState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUIState.html">UIState</a> *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UIState_8cpp_source.html#l00006">6</a> of file <a class="el" href="UIState_8cpp_source.html">UIState.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                         {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#ae743375f8f10e1cc073ae3681b00d347">setNextState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_ae743375f8f10e1cc073ae3681b00d347"><div class="ttname"><a href="classTankControllerLib.html#ae743375f8f10e1cc073ae3681b00d347">TankControllerLib::setNextState</a></div><div class="ttdeci">virtual void setNextState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00026">TankControllerLib.h:26</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00026">TankControllerLib::setNextState()</a>, <a class="el" href="Blink_8cpp_source.html#l00011">state</a>, and <a class="el" href="UIState_8h_source.html#l00023">tc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00022">MainMenu::handleKey()</a>, and <a class="el" href="UIState_8cpp_source.html#l00010">returnToMainMenu()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a357d1e91ae55a8beda87b51cfc9a7d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a357d1e91ae55a8beda87b51cfc9a7d75">&#9670;&nbsp;</a></span>tc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTankControllerLib.html">TankControllerLib</a>* UIState::tc = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00023">23</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00022">MainMenu::handleKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00010">returnToMainMenu()</a>, <a class="el" href="UIState_8cpp_source.html#l00006">setNextState()</a>, and <a class="el" href="UIState_8h_source.html#l00011">UIState()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/UIState/<a class="el" href="UIState_8h_source.html">UIState.h</a></li>
+<li>src/UIState/<a class="el" href="UIState_8cpp_source.html">UIState.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
