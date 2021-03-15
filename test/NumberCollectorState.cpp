@@ -3,8 +3,6 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 
-#include <iostream>
-
 unittest(A_Digit_NoDecimal) {
   TestNumCollectorState testNoDecimal;
   testNoDecimal.setExpectedDigits(3);

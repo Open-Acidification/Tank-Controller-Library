@@ -3,8 +3,6 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 
-#include <iostream>
-
 #include "Devices/Keypad_TC.h"
 #include "EEPROM_TC.h"
 #include "LiquidCrystal_TC.h"

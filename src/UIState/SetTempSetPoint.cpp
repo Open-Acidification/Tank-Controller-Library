@@ -3,8 +3,6 @@
  */
 #include "SetTempSetPoint.h"
 
-#include <iostream>
-
 #include "../Devices/EEPROM_TC.h"
 #include "../Devices/LiquidCrystal_TC.h"
 #include "MainMenu.h"
@@ -16,7 +14,5 @@ void SetTempSetPoint::setValue(double value) {
   sprintf(output, "New Temp=%.2f", value);
   LiquidCrystal_TC::instance()->writeLine(output, 1);
   delay(1000);  // 1second
-  std::cout << __FILE__ << ":" << __LINE__ << std::endl;
   returnToMainMenu();
-  std::cout << __FILE__ << ":" << __LINE__ << std::endl;
 }

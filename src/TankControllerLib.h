@@ -19,7 +19,6 @@ public:
   void loop();
   const char* version();
   virtual void setNextState(UIState* newState) {
-    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
     assert(nextState == nullptr);
     nextState = newState;
   }
@@ -48,9 +47,7 @@ public:
   void setNextState(UIState* newState) {
     assert(nextState == nullptr);
     nextState = newState;
-    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
     updateState();
-    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
   }
   bool isOnMainMenu();
 };
