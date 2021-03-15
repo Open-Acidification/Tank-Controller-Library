@@ -68,6 +68,7 @@ void TankControllerLib::updateState() {
     nextState = nullptr;
     // print the current prompt on the first line of the display
     LiquidCrystal_TC::instance()->writeLine(state->prompt(), 0);
+    LiquidCrystal_TC::instance()->writeLine("                ", 1);
   }
 }
 
