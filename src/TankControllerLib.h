@@ -1,6 +1,13 @@
 #pragma once
 #include <Arduino.h>
 
+#ifdef MOCK_PINS_COUNT
+#include <cassert>   // to support testing
+#include <iostream>  // to support occasional debugging output
+#else
+#define assert(p) (void)0
+#endif
+
 #include "Devices/LiquidCrystal_TC.h"
 #include "Devices/Serial_TC.h"
 
@@ -17,6 +24,7 @@ public:
   void loop();
   const char* version();
   virtual void setNextState(UIState* newState) {
+    assert(nextState == nullptr);
     nextState = newState;
   }
 
@@ -42,6 +50,7 @@ protected:
 class TankControllerLibTest : public TankControllerLib {
 public:
   void setNextState(UIState* newState) {
+    assert(nextState == nullptr);
     nextState = newState;
     updateState();
   }

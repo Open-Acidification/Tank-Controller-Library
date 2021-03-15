@@ -1,12 +1,5 @@
 #include "TankControllerLib.h"
 
-#ifdef MOCK_PINS_COUNT
-#include <cassert>   // to support testing
-#include <iostream>  // to support occasional debugging output
-#else
-#define assert(p) (void)0
-#endif
-
 #include "Devices/Keypad_TC.h"
 #include "Devices/SD_TC.h"
 #include "UIState/MainMenu.h"
