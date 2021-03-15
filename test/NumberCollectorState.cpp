@@ -3,6 +3,16 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 
+unittest(Edge_Case) {
+  TestNumCollectorState test;
+  test.handleKey('9');
+  test.handleKey('0');
+  test.handleKey('*');
+  test.handleKey('0');
+  test.handleKey('9');
+  assertEqual(90.09, test.getValue());
+}
+
 unittest(A_Digit_NoDecimal) {
   TestNumCollectorState testNoDecimal;
   testNoDecimal.setExpectedDigits(3);
