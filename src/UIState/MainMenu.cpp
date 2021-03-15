@@ -29,46 +29,46 @@ void MainMenu::handleKey(char key) {
       this->setNextState((UIState*)new SetTempSetPoint(tc));
       break;
     case 'C':  // pH Calibration
-      this->setNextState((UIState*) new PHCalibration(tc));
+      this->setNextState((UIState*)new PHCalibration(tc));
       break;
     case 'D':  // Calibration Management
-      this->setNextState((UIState*) new CalibrationManagement(tc));
+      this->setNextState((UIState*)new CalibrationManagement(tc));
       break;
     case '#':  // Change Tank ID
-      this->setNextState((UIState*) new ChangeTankID(tc));
+      this->setNextState((UIState*)new ChangeTankID(tc));
       break;
     case '*':  // Change Google Sheet Interval
-      this->setNextState((UIState*) new ChangeGoogleSheetInterval(tc));
+      this->setNextState((UIState*)new ChangeGoogleSheetInterval(tc));
       break;
     case '0':  // See Device Uptime & Current Time
-      this->setNextState((UIState*) new SeeDeviceUptime(tc));
+      this->setNextState((UIState*)new SeeDeviceUptime(tc));
       break;
     case '1':  // See Device addresses
-      this->setNextState((UIState*) new SeeDeviceAddress(tc));
+      this->setNextState((UIState*)new SeeDeviceAddress(tc));
       break;
     case '2':  // Reset LCD Screen
-      this->setNextState((UIState*) new ResetLCDScreen(tc));
+      this->setNextState((UIState*)new ResetLCDScreen(tc));
       break;
     case '3':  // See Tank ID and Log File Name
-      this->setNextState((UIState*) new SeeTankID(tc));
+      this->setNextState((UIState*)new SeeTankID(tc));
       break;
     case '4':  // See PID Constants
-      this->setNextState((UIState*) new SeePIDConstants(tc));
+      this->setNextState((UIState*)new SeePIDConstants(tc));
       break;
     case '5':  // PID Tuning
-      this->setNextState((UIState*) new PIDTuningMenu(tc));
+      this->setNextState((UIState*)new PIDTuningMenu(tc));
       break;
     case '6':  // Temperature Calibration
-      this->setNextState((UIState*) new TemperatureCalibration(tc));
+      this->setNextState((UIState*)new TemperatureCalibration(tc));
       break;
     case '7':  // Manual Set Time
-      this->setNextState((UIState*) new ManualSetTime(tc));
+      this->setNextState((UIState*)new ManualSetTime(tc));
       break;
     case '8':  // Enable PID
-      this->setNextState((UIState*) new EnablePID(tc));
+      this->setNextState((UIState*)new EnablePID(tc));
       break;
     case '9':  // Set Chill or Heat
-      this->setNextState((UIState*) new SetChillOrHeat(tc));
+      this->setNextState((UIState*)new SetChillOrHeat(tc));
       break;
     default:
       returnToMainMenu();
