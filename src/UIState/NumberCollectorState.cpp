@@ -6,12 +6,9 @@
 #include "MainMenu.h"
 
 void NumCollectorState::handleKey(char key) {
-  if (key > '0' && key < '9') {  // a digit
+  if (key >= '0' && key <= '9') {  // a digit
     numDigits++;
     handleDigit(key - '0');
-    if (collectedEnoughDigits()) {
-      setValue(value);
-    }
   } else if (key == 'B') {  // Backspace
     backSpace();
   } else if (key == 'C') {  // Clear the value
