@@ -18,17 +18,13 @@ public:
   void setup();
   void loop();
   const char* version();
-  void setNextState(UIState* newState) {
+  virtual void setNextState(UIState* newState) {
+    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
     assert(nextState == nullptr);
     nextState = newState;
   }
 
-  // Backdoor for testing current state
-  char* getPrompt() {
-    return state->prompt();
-  }
-
-private:
+protected:
   // class variables
   static TankControllerLib* _instance;
 
@@ -45,3 +41,17 @@ private:
   void updateState();
   void handleUI();
 };
+
+#ifdef MOCK_PINS_COUNT
+class TankControllerLibTest : public TankControllerLib {
+public:
+  void setNextState(UIState* newState) {
+    assert(nextState == nullptr);
+    nextState = newState;
+    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
+    updateState();
+    std::cout << __FILE__ << ":" << __LINE__ << std::endl;
+  }
+  bool isOnMainMenu();
+};
+#endif

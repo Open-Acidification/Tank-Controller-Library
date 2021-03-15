@@ -34,7 +34,7 @@ TankControllerLib* TankControllerLib::instance() {
  */
 TankControllerLib::TankControllerLib() {
   assert(!_instance);
-  state = new MainMenu;
+  state = new MainMenu(this);
   lcd = LiquidCrystal_TC::instance();
   log = Serial_TC::instance();
   log->print(F("TankControllerLib::TankControllerLib() - version "), TANK_CONTROLLER_VERSION);
@@ -47,8 +47,6 @@ TankControllerLib::TankControllerLib() {
 TankControllerLib::~TankControllerLib() {
   delete state;
   delete nextState;
-  assert(this == _instance);
-  _instance = nullptr;
 }
 
 /**
@@ -75,7 +73,7 @@ void TankControllerLib::updateState() {
     state = nextState;
     nextState = nullptr;
     // print the current prompt on the first line of the display
-    LiquidCrystal_TC::instance()->writeLine(state->prompt());
+    LiquidCrystal_TC::instance()->writeLine(state->prompt(), 0);
   }
 }
 
@@ -83,7 +81,7 @@ void TankControllerLib::updateState() {
  * Private member function called by loop
  * Handles keypresses
  */
-void TankContollerLib::handleUI() {
+void TankControllerLib::handleUI() {
   char key = Keypad_TC::instance()->getKey();
   if (key != NO_KEY) {
     log->print(F("Keypad input: "), key);
@@ -118,4 +116,8 @@ void TankControllerLib::setup() {
 const char* TankControllerLib::version() {
   log->print(F("TankControllerLib::version() = "), TANK_CONTROLLER_VERSION);
   return TANK_CONTROLLER_VERSION;
+}
+
+bool TankControllerLibTest::isOnMainMenu() {
+  return state->isMainMenu();
 }

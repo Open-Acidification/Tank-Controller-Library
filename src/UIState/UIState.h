@@ -5,24 +5,20 @@
 
 #pragma once
 
-#include "../TankControllerLib.h"
-
+class TankControllerLib;  // Forward reference
 class UIState {
 public:
   UIState(TankControllerLib* tc) {
     this->tc = tc;
   }
-  virtual ~UIState() {
-  }
   virtual void handleKey(char key) = 0;
+  virtual bool isMainMenu() {
+    return false;
+  }
   virtual const char* prompt() = 0;
 
 protected:
-  void setNextState(UIState* state) {
-    tc->setNextState(state);
-  }
-  void returnToMainMenu() {
-    setNextState(new MainMenu(tc));
-  }
+  void setNextState(UIState* state);
+  void returnToMainMenu();
   TankControllerLib* tc = nullptr;
 };

@@ -3,11 +3,12 @@
  */
 
 #pragma once
+#include "LiquidCrystal_TC.h"
 #include "UIState.h"
 
 class NumCollectorState : public UIState {
 public:
-  NumCollectorState() {
+  NumCollectorState(TankControllerLib* tc) : UIState(tc) {
     LiquidCrystal_TC::instance()->writeLine("                ", 1);
   }
   void handleKey(char key);
