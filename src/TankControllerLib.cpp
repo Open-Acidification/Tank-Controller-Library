@@ -30,7 +30,7 @@ TankControllerLib::TankControllerLib() {
   state = new MainMenu(this);
   lcd = LiquidCrystal_TC::instance();
   log = Serial_TC::instance();
-  log->print(F("TankControllerLib::TankControllerLib() - version "), TANK_CONTROLLER_VERSION);
+  log->print(F("TankControllerLib::TankControllerLib() - version "), F(TANK_CONTROLLER_VERSION));
   SDClass_TC::instance()->printRootDirectory();
 }
 
@@ -107,7 +107,7 @@ void TankControllerLib::setup() {
  * What is the current version?
  */
 const char* TankControllerLib::version() {
-  log->print(F("TankControllerLib::version() = "), TANK_CONTROLLER_VERSION);
+  log->print(F("TankControllerLib::version() = "), F(TANK_CONTROLLER_VERSION));
   return TANK_CONTROLLER_VERSION;
 }
 
