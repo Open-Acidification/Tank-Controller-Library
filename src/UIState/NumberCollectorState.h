@@ -19,6 +19,7 @@ protected:
   void handleDigit(int digit);
   void backSpace();
   void printValue();
+  virtual bool isInteger() { return false; }
 
   double value = 0.0;
   int numDigits = 0;
@@ -50,4 +51,12 @@ public:
 private:
   double storedValue = 0.0;
 };
+
+class TestIntNumCollectorState : public TestNumCollectorState {
+public:
+  TestIntNumCollectorState(TankControllerLib* tc) : TestNumCollectorState(tc) {
+  }
+  virtual bool isInteger() { return true; }
+};
+
 #endif

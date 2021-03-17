@@ -14,8 +14,8 @@ unittest(test) {
   tc.setNextState(test);
 
   // setValue
-  test->setValue(12.34);
-  assertEqual(12.34, EEPROM_TC::instance()->getTankID());
+  test->setValue(12);
+  assertEqual(12, EEPROM_TC::instance()->getTankID());
 
   assertTrue(tc.isOnMainMenu());
 }
