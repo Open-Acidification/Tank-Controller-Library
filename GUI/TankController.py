@@ -24,9 +24,13 @@ class TankController(wx.Frame):
     def InitUI(self):
         panel = wx.Panel(self)
         panel.Bind(wx.EVT_CHAR, self.Keyboard)
-        mainSizer = wx.FlexGridSizer(wx.HORIZONTAL)
-        mainSizer.Add(self.device(panel))
-        mainSizer.Add(self.eeprom(panel))
+        mainSizer = wx.FlexGridSizer(wx.VERTICAL)
+        topSizer = wx.FlexGridSizer(wx.HORIZONTAL)
+        topSizer.Add(self.device(panel))
+        topSizer.Add(self.eeprom(panel))
+        mainSizer.Add(topSizer)
+        bottomSizer = wx.FlexGridSizer(wx.HORIZONTAL)
+        mainSizer.Add(bottomSizer)
         panel.SetSizer(mainSizer)
 
     def device(self, panel):
