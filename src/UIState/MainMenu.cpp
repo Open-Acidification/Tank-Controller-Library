@@ -2,7 +2,7 @@
 
 #include "CalibrationManagement.h"
 #include "ChangeGoogleSheetInterval.h"
-#include "ChangeTankID.h"
+#include "SetTankID.h"
 #include "EnablePID.h"
 #include "ManualSetTime.h"
 #include "PHCalibration.h"
@@ -35,7 +35,7 @@ void MainMenu::handleKey(char key) {
       this->setNextState((UIState*)new CalibrationManagement(tc));
       break;
     case '#':  // Change Tank ID
-      this->setNextState((UIState*)new ChangeTankID(tc));
+      this->setNextState((UIState*)new SetTankID(tc));
       break;
     case '*':  // Change Google Sheet Interval
       this->setNextState((UIState*)new ChangeGoogleSheetInterval(tc));
