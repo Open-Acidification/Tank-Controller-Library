@@ -94,4 +94,4 @@ Godmode.o :
 
 .PHONY: clean
 clean :
-	rm *.o *.so *.dylib $(PY_LIB) 2> /dev/null || echo
+	rm -rf build *.o *.so *.dylib $(PY_LIB) 2> /dev/null || echo

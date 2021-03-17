@@ -4,6 +4,7 @@ print('TankController version ', libTC.version())
 
 try:
     import wx
+    import wx.Grid as grid
 except ImportError:
     print('wxpython is not installed')
     exit()
@@ -14,7 +15,7 @@ class TankController(wx.Frame):
             '7', '8', '9', 'C',
             '*', '0', '#', 'D']
   def __init__(self, parent, title):
-    super(TankController, self).__init__(parent, title = title, size = (220,300))
+    super(TankController, self).__init__(parent, title = title, size = (800,600))
     self.InitUI()
     self.Centre()
     self.Show()
@@ -23,7 +24,7 @@ class TankController(wx.Frame):
     panel = wx.Panel(self)
     panel.Bind(wx.EVT_CHAR, self.Keyboard)
 
-    mainSizer = wx.BoxSizer(wx.VERTICAL)
+    mainSizer = wx.BoxSizer(wx.HORIZONTAL)
 
     version = wx.StaticText(panel, label="Version " + libTC.version())
     mainSizer.Add(version,1)
@@ -45,12 +46,37 @@ class TankController(wx.Frame):
     keypadSizer.Add(keypadGrid, 1)
     mainSizer.Add(keypadSizer, 2)
 
-    tankSizer = wx.StaticBoxSizer(wx.VERTICAL, panel, label="Tank Simulation")
-    tank = wx.StaticText(panel, label = "TANK")
-    tankSizer.Add(tank, 1)
-    mainSizer.Add(tankSizer, 3)
+    addEEPROM(panel, mainSizer)
 
     panel.SetSizer(mainSizer)
+
+  # getPH();
+  # getTemp();
+  # getTankID();
+  # getCorrectedTemp();
+  # getKP();
+  # getKI();
+  # getKD();
+  # getMac();  // See issue #57 about this function
+  # getHeat();
+  # getAmplitude();
+  # getFrequency();
+  # getGranularity();
+  # getMaxDataAge();
+  # getPHSeriesSize();
+  # getPHSeriesPointer();
+  # getTempSeriesSize();
+  # getTempSeriesPointer();
+  # getPHInterval();
+  # getPHDelay();
+  # getTempInterval();
+  # getTempDelay();
+
+  def addEEPEOM(self, panel, mainSizer):
+    eepromSizer = wx.StaticBoxSizer(wx.VERTICAL, panel, label="EEPROM")
+    label = wx.StaticText(panel, label = "PH")
+    eepromSizer.Add(label, 1)
+    mainSizer.Add(eepromSizer, 3)
 
   def KeypadEvent(self, event):
     key = event.GetEventObject().GetLabel()
