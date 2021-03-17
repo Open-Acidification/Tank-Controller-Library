@@ -8,5 +8,6 @@ var searchData=
   ['serial_5ftc_339',['Serial_TC',['../classSerial__TC.html',1,'']]],
   ['setchillorheat_340',['SetChillOrHeat',['../classSetChillOrHeat.html',1,'']]],
   ['setphsetpoint_341',['SetPHSetPoint',['../classSetPHSetPoint.html',1,'']]],
-  ['settempsetpoint_342',['SetTempSetPoint',['../classSetTempSetPoint.html',1,'']]]
+  ['settankid_342',['SetTankID',['../classSetTankID.html',1,'']]],
+  ['settempsetpoint_343',['SetTempSetPoint',['../classSetTempSetPoint.html',1,'']]]
 ];

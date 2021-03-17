@@ -1,8 +1,7 @@
 <map id="src/UIState/MainMenu.h" name="src/UIState/MainMenu.h">
-<area shape="rect" id="node1" title=" " alt="" coords="416,5,579,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="312,5,475,32"/>
 <area shape="rect" id="node2" href="$TankControllerLib_8cpp.html" title=" " alt="" coords="5,87,176,114"/>
 <area shape="rect" id="node3" href="$MainMenu_8cpp.html" title=" " alt="" coords="201,87,378,114"/>
 <area shape="rect" id="node4" href="$src_2UIState_2NumberCollectorState_8cpp.html" title=" " alt="" coords="402,80,593,121"/>
-<area shape="rect" id="node5" href="$src_2UIState_2SetTempSetPoint_8cpp.html" title=" " alt="" coords="617,87,837,114"/>
-<area shape="rect" id="node6" href="$UIState_8cpp.html" title=" " alt="" coords="861,87,1024,114"/>
+<area shape="rect" id="node5" href="$UIState_8cpp.html" title=" " alt="" coords="617,87,780,114"/>
 </map>

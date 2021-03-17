@@ -1,5 +1,6 @@
 <map id="NumCollectorState" name="NumCollectorState">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,137,107"/>
-<area shape="rect" id="node3" href="$classSetTempSetPoint.html" title=" " alt="" coords="9,155,134,181"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="38,5,105,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="45,80,177,107"/>
+<area shape="rect" id="node3" href="$classSetTankID.html" title=" " alt="" coords="5,155,89,181"/>
+<area shape="rect" id="node4" href="$classSetTempSetPoint.html" title=" " alt="" coords="114,155,239,181"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="78,5,145,32"/>
 </map>

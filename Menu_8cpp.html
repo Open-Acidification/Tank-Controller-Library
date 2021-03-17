@@ -105,8 +105,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad05b40ef7b70eca63bdb7a797591a880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0827e1e8872d5023da595dad9d540ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Menu_8cpp.html#ac0827e1e8872d5023da595dad9d540ff">unittest</a> (<a class="el" href="classCalibrationManagement.html">CalibrationManagement</a>)</td></tr>
 <tr class="separator:ac0827e1e8872d5023da595dad9d540ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442ac1542bfd18f92928aeb16dc7e9d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Menu_8cpp.html#a442ac1542bfd18f92928aeb16dc7e9d6">unittest</a> (<a class="el" href="classChangeTankID.html">ChangeTankID</a>)</td></tr>
-<tr class="separator:a442ac1542bfd18f92928aeb16dc7e9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ebd40a3519f37e117178b7f9ed1edf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Menu_8cpp.html#ab5ebd40a3519f37e117178b7f9ed1edf">unittest</a> (<a class="el" href="classSetTankID.html">SetTankID</a>)</td></tr>
+<tr class="separator:ab5ebd40a3519f37e117178b7f9ed1edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a557a5ff579a1bae0243ab7b4a4edfe41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Menu_8cpp.html#a557a5ff579a1bae0243ab7b4a4edfe41">unittest</a> (<a class="el" href="classChangeGoogleSheetInterval.html">ChangeGoogleSheetInterval</a>)</td></tr>
 <tr class="separator:a557a5ff579a1bae0243ab7b4a4edfe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1557b79a45f486eea676b274da3c4a34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Menu_8cpp.html#a1557b79a45f486eea676b274da3c4a34">unittest</a> (<a class="el" href="classSeeDeviceUptime.html">SeeDeviceUptime</a>)</td></tr>
@@ -210,44 +210,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a442ac1542bfd18f92928aeb16dc7e9d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a442ac1542bfd18f92928aeb16dc7e9d6">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/16]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unittest </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classChangeTankID.html">ChangeTankID</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Menu_8cpp_source.html#l00069">69</a> of file <a class="el" href="Menu_8cpp_source.html">Menu.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                       {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* tc = <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* lc = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  Keypad* keypad = <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#ac3aff46de80e03901f9fe4d7898c14c5">_getPuppet</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::vector&lt;String&gt; lines;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;#&#39;</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// recognize and apply the key entry</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  assertEqual(<span class="stringliteral">&quot;Set Tank ID#    &quot;</span>, lc-&gt;getLines().at(0));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;D&#39;</span>);  <span class="comment">// Don&#39;t finish (cancel)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();              <span class="comment">// recognize and apply the key entry</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  lines = lc-&gt;getLines();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  assertEqual(<span class="stringliteral">&quot;Main Menu       &quot;</span>, lc-&gt;getLines().at(0));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Keypad__TC_8h_source.html#l00020">Keypad_TC::_getPuppet()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib::loop()</a>.</p>
-
-</div>
-</div>
 <a id="a27a9c67b41d35d046c9fc828986db150"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27a9c67b41d35d046c9fc828986db150">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a9c67b41d35d046c9fc828986db150">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +247,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="af43da31081fc49c7b67417bda2abce15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af43da31081fc49c7b67417bda2abce15">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af43da31081fc49c7b67417bda2abce15">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +283,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ad05b40ef7b70eca63bdb7a797591a880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05b40ef7b70eca63bdb7a797591a880">&#9670;&nbsp;</a></span>unittest() <span class="overload">[6/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05b40ef7b70eca63bdb7a797591a880">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +319,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a30b39fdbe38f54370269e937475a78fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30b39fdbe38f54370269e937475a78fd">&#9670;&nbsp;</a></span>unittest() <span class="overload">[7/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b39fdbe38f54370269e937475a78fd">&#9670;&nbsp;</a></span>unittest() <span class="overload">[6/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +355,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ab28d0aa70c87a2fdb49dcb022bc1fcf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab28d0aa70c87a2fdb49dcb022bc1fcf2">&#9670;&nbsp;</a></span>unittest() <span class="overload">[8/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28d0aa70c87a2fdb49dcb022bc1fcf2">&#9670;&nbsp;</a></span>unittest() <span class="overload">[7/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,7 +391,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9e1dd7b3c29f5865cd1f9fa241b53b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e1dd7b3c29f5865cd1f9fa241b53b12">&#9670;&nbsp;</a></span>unittest() <span class="overload">[9/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1dd7b3c29f5865cd1f9fa241b53b12">&#9670;&nbsp;</a></span>unittest() <span class="overload">[8/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,7 +427,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a1557b79a45f486eea676b274da3c4a34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1557b79a45f486eea676b274da3c4a34">&#9670;&nbsp;</a></span>unittest() <span class="overload">[10/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1557b79a45f486eea676b274da3c4a34">&#9670;&nbsp;</a></span>unittest() <span class="overload">[9/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -499,7 +463,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a311c13d9fca01a22a345bc0f5587497f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a311c13d9fca01a22a345bc0f5587497f">&#9670;&nbsp;</a></span>unittest() <span class="overload">[11/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a311c13d9fca01a22a345bc0f5587497f">&#9670;&nbsp;</a></span>unittest() <span class="overload">[10/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +499,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="aad6e20264184a3207b22b431b82ef831"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad6e20264184a3207b22b431b82ef831">&#9670;&nbsp;</a></span>unittest() <span class="overload">[12/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6e20264184a3207b22b431b82ef831">&#9670;&nbsp;</a></span>unittest() <span class="overload">[11/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -571,7 +535,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a104cdef87e3cc2245ecba1a0e059640d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a104cdef87e3cc2245ecba1a0e059640d">&#9670;&nbsp;</a></span>unittest() <span class="overload">[13/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a104cdef87e3cc2245ecba1a0e059640d">&#9670;&nbsp;</a></span>unittest() <span class="overload">[12/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,7 +571,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5c3a5b5775bfba1c3248c1d22c9fb121"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c3a5b5775bfba1c3248c1d22c9fb121">&#9670;&nbsp;</a></span>unittest() <span class="overload">[14/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3a5b5775bfba1c3248c1d22c9fb121">&#9670;&nbsp;</a></span>unittest() <span class="overload">[13/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,6 +603,42 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  lines = lc-&gt;getLines();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  assertEqual(<span class="stringliteral">&quot;Main Menu       &quot;</span>, lc-&gt;getLines().at(0));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Keypad__TC_8h_source.html#l00020">Keypad_TC::_getPuppet()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib::loop()</a>.</p>
+
+</div>
+</div>
+<a id="ab5ebd40a3519f37e117178b7f9ed1edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ebd40a3519f37e117178b7f9ed1edf">&#9670;&nbsp;</a></span>unittest() <span class="overload">[14/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSetTankID.html">SetTankID</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Menu_8cpp_source.html#l00069">69</a> of file <a class="el" href="Menu_8cpp_source.html">Menu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* tc = <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a>* lc = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  Keypad* keypad = <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#ac3aff46de80e03901f9fe4d7898c14c5">_getPuppet</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::vector&lt;String&gt; lines;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;#&#39;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// recognize and apply the key entry</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  assertEqual(<span class="stringliteral">&quot;Set Tank ID#    &quot;</span>, lc-&gt;getLines().at(0));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;D&#39;</span>);  <span class="comment">// Don&#39;t finish (cancel)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();              <span class="comment">// recognize and apply the key entry</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  lines = lc-&gt;getLines();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  assertEqual(<span class="stringliteral">&quot;Main Menu       &quot;</span>, lc-&gt;getLines().at(0));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Keypad__TC_8h_source.html#l00020">Keypad_TC::_getPuppet()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00017">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib::loop()</a>.</p>
 

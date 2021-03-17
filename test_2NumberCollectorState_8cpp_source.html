@@ -144,7 +144,7 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  assertEqual(0, testDecimal.getValue());</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="test_2NumberCollectorState_8cpp.html#ab3e431f7247ca718d044be83ed9cd7f2">   75</a></span>&#160;<a class="code" href="test_2NumberCollectorState_8cpp.html#affe4576012bcc9e071274d6f2bfb8544">unittest</a>(AllDone) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="test_2NumberCollectorState_8cpp.html#a5db1f64a3bd3e402e5089bb235b1b15a">   75</a></span>&#160;<a class="code" href="test_2NumberCollectorState_8cpp.html#affe4576012bcc9e071274d6f2bfb8544">unittest</a>(accept) {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  TestNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
@@ -186,7 +186,17 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  assertEqual(<span class="stringliteral">&quot;21.341          &quot;</span>, lines.at(1));</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="test_2NumberCollectorState_8cpp.html#ac81fe5be48c000b41607e44f454fab7a">  117</a></span>&#160;<a class="code" href="test_2NumberCollectorState_8cpp.html#affe4576012bcc9e071274d6f2bfb8544">unittest</a>(integer) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  TestIntNumCollectorState testDecimal(<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>());</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;1&#39;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;2&#39;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;*&#39;</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;3&#39;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  testDecimal.handleKey(<span class="charliteral">&#39;4&#39;</span>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  assertEqual(1234, testDecimal.getValue());</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;unittest_main()</div>
 <div class="ttc" id="aNumberCollectorState_8h_html"><div class="ttname"><a href="NumberCollectorState_8h.html">NumberCollectorState.h</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html"><div class="ttname"><a href="TankControllerLib_8h.html">TankControllerLib.h</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html"><div class="ttname"><a href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8h_source.html#l00010">LiquidCrystal_TC.h:10</a></div></div>

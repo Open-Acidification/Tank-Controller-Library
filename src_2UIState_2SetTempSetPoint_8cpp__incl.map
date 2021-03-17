@@ -1,12 +1,11 @@
 <map id="src/UIState/SetTempSetPoint.cpp" name="src/UIState/SetTempSetPoint.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="77,5,297,32"/>
-<area shape="rect" id="node2" href="$SetTempSetPoint_8h.html" title=" " alt="" coords="50,80,185,107"/>
-<area shape="rect" id="node4" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,229,197,256"/>
-<area shape="rect" id="node8" href="$EEPROM__TC_8h.html" title=" " alt="" coords="287,80,459,107"/>
-<area shape="rect" id="node10" href="$MainMenu_8h.html" title=" " alt="" coords="214,155,306,181"/>
-<area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="29,155,189,181"/>
-<area shape="rect" id="node7" href="$UIState_8h.html" title=" " alt="" coords="221,229,299,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="298,304,374,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="48,304,155,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="330,155,417,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="97,5,317,32"/>
+<area shape="rect" id="node2" href="$SetTempSetPoint_8h.html" title=" " alt="" coords="29,80,163,107"/>
+<area shape="rect" id="node4" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="107,229,299,256"/>
+<area shape="rect" id="node8" href="$EEPROM__TC_8h.html" title=" " alt="" coords="250,80,422,107"/>
+<area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="9,155,169,181"/>
+<area shape="rect" id="node7" href="$UIState_8h.html" title=" " alt="" coords="5,229,83,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="289,304,365,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="149,304,256,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="374,155,461,181"/>
 </map>
