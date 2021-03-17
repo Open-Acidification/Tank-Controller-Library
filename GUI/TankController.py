@@ -12,7 +12,6 @@ except ImportError:
     print('wxpython is not installed!')
     exit()
 
-
 class TankController(wx.Frame):
 
     def __init__(self, parent, title):
@@ -87,11 +86,11 @@ class TankController(wx.Frame):
                 currentColumn = rightSizer
             elif i >= len(labels) / 3:
                 currentColumn = centerSizer
-            currentColumn.Add(box)
+            currentColumn.Add(box, wx.EXPAND)
             self.eeprom.append(value)
-        eepromSizer.Add(leftSizer)
-        eepromSizer.Add(centerSizer)
-        eepromSizer.Add(rightSizer)
+        eepromSizer.Add(leftSizer, wx.EXPAND)
+        eepromSizer.Add(centerSizer, wx.EXPAND)
+        eepromSizer.Add(rightSizer, wx.EXPAND)
         return eepromSizer
 
     def serial(self):
@@ -106,7 +105,6 @@ class TankController(wx.Frame):
         self.lqd.SetLabelText(libTC.lcd(0) + '\n' + libTC.lcd(1))
         for i, each in enumerate(self.eeprom):
             each.SetLabelText(str(libTC.eeprom(i)))
-            print(i, libTC.eeprom(i))
 
     def handleKey(self, key):
         libTC.key(key)
@@ -122,7 +120,6 @@ class TankController(wx.Frame):
         key = chr(event.GetUnicodeKey()).upper()
         self.handleKey(key)
         print("Keyboard", key)
-
 
 if __name__ == "__main__":
     app = wx.App()
