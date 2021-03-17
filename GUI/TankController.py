@@ -28,6 +28,7 @@ class TankController(wx.Frame):
         mainSizer.Add(self.device(panel))
         mainSizer.Add(self.eeprom(panel))
         panel.SetSizer(mainSizer)
+        self.updateDisplay()
 
     def device(self, panel):
         deviceSizer = wx.StaticBoxSizer(
