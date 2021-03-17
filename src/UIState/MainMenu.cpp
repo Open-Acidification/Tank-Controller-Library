@@ -2,7 +2,6 @@
 
 #include "CalibrationManagement.h"
 #include "ChangeGoogleSheetInterval.h"
-#include "SetTankID.h"
 #include "EnablePID.h"
 #include "ManualSetTime.h"
 #include "PHCalibration.h"
@@ -14,6 +13,7 @@
 #include "SeeTankID.h"
 #include "SetChillOrHeat.h"
 #include "SetPHSetPoint.h"
+#include "SetTankID.h"
 #include "SetTempSetPoint.h"
 #include "TemperatureCalibration.h"
 
