@@ -70,7 +70,10 @@ $(function() {
 <h1>Build Process</h1>
 <p>Follow these steps</p><ul>
 <li><code>cd GUI</code></li>
-<li><code>pip install pybind11</code></li>
+<li><code>python3 -m pip install wxPython pybind11</code></li>
+<li><code>make clean</code></li>
+<li><code>filePath=`bundle exec which arduino_library_location.rb`</code></li>
+<li><code>ARDUINO_CI=${filePath%/*}/</code></li>
 <li><code>(mkdir -p build; cd build; make -f ../Makefile)</code></li>
 <li><code>python <a class="el" href="TankController_8py.html">TankController.py</a></code></li>
 </ul>

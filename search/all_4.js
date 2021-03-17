@@ -9,5 +9,6 @@ var searchData=
   ['datetime_5ftc_2ecpp_34',['DateTime_TC.cpp',['../DateTime__TC_8cpp.html',1,'']]],
   ['datetime_5ftc_2eh_35',['DateTime_TC.h',['../DateTime__TC_8h.html',1,'']]],
   ['defaultip_36',['defaultIP',['../classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455',1,'Ethernet_TC']]],
-  ['delta_37',['DELTA',['../classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523',1,'TemperatureControl']]]
+  ['delta_37',['DELTA',['../classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523',1,'TemperatureControl']]],
+  ['device_38',['device',['../classTankController_1_1TankController.html#a2c36058802404724070735b24756dabc',1,'TankController::TankController']]]
 ];
