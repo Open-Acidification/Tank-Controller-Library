@@ -56,6 +56,7 @@ unittest(Temp) {
 
 // Confirm that memory overlap bug is fixed in EEPROM3
 unittest(writing_PH_should_corrupt_Temp) {
+  EEPROM_TC* singleton = EEPROM_TC::instance(2);
   assertEqual(4, singleton->getTemp());
   EEPROM_TC* singleton = EEPROM_TC::instance();
   singleton->setPH(3.05);
