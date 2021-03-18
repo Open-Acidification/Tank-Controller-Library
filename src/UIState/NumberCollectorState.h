@@ -16,8 +16,9 @@ public:
 
 protected:
   // Helper Functions
-  void handleDigit(int digit);
+  void clear();
   void backSpace();
+  void handleDigit(int digit);
   void printValue();
   virtual bool isInteger() {
     return false;

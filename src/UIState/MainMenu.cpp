@@ -3,7 +3,7 @@
 #include "CalibrationManagement.h"
 #include "ChangeGoogleSheetInterval.h"
 #include "EnablePID.h"
-#include "ManualSetTime.h"
+#include "SetTime.h"
 #include "PHCalibration.h"
 #include "PIDTuningMenu.h"
 #include "ResetLCDScreen.h"
@@ -62,7 +62,7 @@ void MainMenu::handleKey(char key) {
       this->setNextState((UIState*)new TemperatureCalibration(tc));
       break;
     case '7':  // Manual Set Time
-      this->setNextState((UIState*)new ManualSetTime(tc));
+      this->setNextState((UIState*)new SetTime(tc));
       break;
     case '8':  // Enable PID
       this->setNextState((UIState*)new EnablePID(tc));
