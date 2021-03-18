@@ -6,8 +6,8 @@ Follow these steps
 * `cd GUI`
 * `python3 -m pip install wxPython pybind11`
 * `make clean`
-* ``filepath=`bundle exec which arduino_library_location.rb` ``
-* `ARDUINO_CI=${filepath%/*}/`
+* ``filePath=`bundle exec which arduino_library_location.rb` ``
+* `ARDUINO_CI=${filePath%/*}/`
 * `(mkdir -p build; cd build; make -f ../Makefile)`
 * `python TankController.py`
 
