@@ -209,7 +209,7 @@ unittest(SetTime) {
   tc->loop();
   keypad->push_back('7');
   tc->loop();  // recognize and apply the key entry
-  assertEqual("Manual Set Time ", lc->getLines().at(0));
+  assertEqual("Set Year (YYYY):", lc->getLines().at(0));
   keypad->push_back('D');  // Don't finish (cancel)
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();

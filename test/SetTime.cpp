@@ -19,7 +19,7 @@ unittest(test) {
 
   // get currently displayed lines
   std::vector<String> lines = lcd->getLines();
-  assertEqual("Year (YYYY):    ", lines.at(0));
+  assertEqual("Set Year (YYYY):", lines.at(0));
   test->setValue(2020);
   lines = lcd->getLines();
   assertEqual("Month (1-12):   ", lines.at(0));
@@ -34,7 +34,7 @@ unittest(test) {
   assertEqual("Minute (0,59):  ", lines.at(0));
   test->setValue(15);
 
-  // a year ago ensures that it preceeds the compile time
+  // a year ago ensures that it precedes the compile time
   now = DateTime_TC::now();
   char buffer[17];
   strcpy(buffer, "YYYY-MM-DD hh:mm");
