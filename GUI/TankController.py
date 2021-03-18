@@ -26,19 +26,21 @@ class TankController(wx.Frame):
         self.panel.Bind(wx.EVT_CHAR, self.Keyboard)
         mainSizer = wx.BoxSizer(wx.VERTICAL)
         topSizer = wx.BoxSizer(wx.HORIZONTAL)
-        topSizer.Add(self.device(), wx.EXPAND)
-        topSizer.Add(self.eeprom(), wx.EXPAND)
-        mainSizer.Add(topSizer)
+        topSizer.Add(self.device(), flag=wx.EXPAND)
+        topSizer.Add(self.eeprom(), flag=wx.EXPAND)
+        mainSizer.Add(topSizer, flag=wx.EXPAND)
         bottomSizer = wx.BoxSizer(wx.HORIZONTAL)
-        bottomSizer.Add(self.serial(), wx.EXPAND)
-        mainSizer.Add(bottomSizer, wx.EXPAND)
+        bottomSizer.Add(self.serial(), flag=wx.EXPAND)
+        mainSizer.Add(bottomSizer, flag=wx.EXPAND)
         self.panel.SetSizer(mainSizer)
+        libTC.loop()
+        self.updateDisplay()
 
     def device(self):
         deviceSizer = wx.StaticBoxSizer(
             wx.VERTICAL, self.panel, label="Tank Controller v" + libTC.version())
-        deviceSizer.Add(self.liquidCrystal())
-        deviceSizer.Add(self.keypad())
+        deviceSizer.Add(self.liquidCrystal(), flag=wx.EXPAND)
+        deviceSizer.Add(self.keypad(), flag=wx.EXPAND)
         return deviceSizer
 
     def liquidCrystal(self):
@@ -48,7 +50,7 @@ class TankController(wx.Frame):
         font = wx.Font(20, wx.FONTFAMILY_TELETYPE,
                        wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
         self.lqd.SetFont(font)
-        lqdSizer.Add(self.lqd)
+        lqdSizer.Add(self.lqd, flag=wx.EXPAND)
         return lqdSizer
 
     def keypad(self):
@@ -61,8 +63,8 @@ class TankController(wx.Frame):
         for each in labels:
             button = wx.Button(self.panel, label=each)
             button.Bind(wx.EVT_LEFT_UP, self.KeypadEvent)
-            keypadGrid.Add(button, 0, wx.EXPAND)
-        keypadSizer.Add(keypadGrid)
+            keypadGrid.Add(button, 0, flag=wx.EXPAND)
+        keypadSizer.Add(keypadGrid, flag=wx.EXPAND)
         return keypadSizer
 
     def eeprom(self):
@@ -86,25 +88,30 @@ class TankController(wx.Frame):
                 currentColumn = rightSizer
             elif i >= len(labels) / 3:
                 currentColumn = centerSizer
-            currentColumn.Add(box, wx.EXPAND)
+            currentColumn.Add(box, flag=wx.EXPAND)
             self.eeprom.append(value)
-        eepromSizer.Add(leftSizer, wx.EXPAND)
-        eepromSizer.Add(centerSizer, wx.EXPAND)
-        eepromSizer.Add(rightSizer, wx.EXPAND)
+        eepromSizer.Add(leftSizer, flag=wx.EXPAND)
+        eepromSizer.Add(centerSizer, flag=wx.EXPAND)
+        eepromSizer.Add(rightSizer, flag=wx.EXPAND)
         return eepromSizer
 
     def serial(self):
         serialSizer = wx.StaticBoxSizer(
             wx.VERTICAL, self.panel, label="Serial Log")
-        self.console = wx.TextCtrl(
-            self.panel, style=wx.TE_READONLY | wx.TE_MULTILINE, value="ReadOnly Text")
-        serialSizer.Add(self.console, wx.EXPAND)
+        self.console = wx.TextCtrl(self.panel, size=(1000,1000),
+            style=wx.TE_READONLY | wx.TE_MULTILINE | wx.HSCROLL)
+        serialSizer.Add(self.console, flag=wx.EXPAND)
         return serialSizer
 
     def updateDisplay(self):
+        # update Liquid Crystal display
         self.lqd.SetLabelText(libTC.lcd(0) + '\n' + libTC.lcd(1))
+        # update EEPROM storage
         for i, each in enumerate(self.eeprom):
             each.SetLabelText(str(libTC.eeprom(i)))
+        # update Serial output
+        self.console.AppendText(libTC.serial().replace('\r\n', '\n'))
+
 
     def handleKey(self, key):
         libTC.key(key)
