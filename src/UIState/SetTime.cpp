@@ -21,7 +21,7 @@ void SetTime::setValue(double value) {
     char buffer[17];
     strcpy(buffer, "YYYY-MM-DD hh:mm");
     now.toString(buffer);
-    LiquidCrystal_TC::instance()->writeLine("New Date/Time:", 0);
+    LiquidCrystal_TC::instance()->writeLine("New Date/Time:  ", 0);
     LiquidCrystal_TC::instance()->writeLine(buffer, 1);
     delay(1000);  // 1 second
     returnToMainMenu();

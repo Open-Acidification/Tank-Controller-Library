@@ -20,5 +20,5 @@ private:
   int subState = 0;
   int values[NUM_VALUES] = {0, 0, 0, 0, 0};
   const char* prompts[NUM_VALUES] = {
-      "Set Year (YYYY):", "Month (1-12):   ", "Day (1-31):     ", "Hour (0-23):    ", "Minute (0,59):  "};
+      "Set Year (YYYY):", "Month (1-12):   ", "Day (1-31):     ", "Hour (0-23):    ", "Minute (0-59):  "};
 };
