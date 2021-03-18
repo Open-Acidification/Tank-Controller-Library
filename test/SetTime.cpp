@@ -31,7 +31,7 @@ unittest(test) {
   assertEqual("Hour (0-23):    ", lines.at(0));
   test->setValue(13);
   lines = lcd->getLines();
-  assertEqual("Minute (0,59):  ", lines.at(0));
+  assertEqual("Minute (0-59):  ", lines.at(0));
   test->setValue(15);
 
   // a year ago ensures that it precedes the compile time
