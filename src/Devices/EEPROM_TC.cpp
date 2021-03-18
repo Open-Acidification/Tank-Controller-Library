@@ -21,18 +21,18 @@ EEPROM_TC* EEPROM_TC::_instance = nullptr;
  */
 EEPROM_TC* EEPROM_TC::instance(int version) {
   if (_instance) {
-    assert(_instance->getVersion() == version);
+    assert(version == 0 || _instance->getVersion() == version);
     return _instance;
   }
   _instance = new EEPROM_TC_3();
   if (_instance->isRightVersion()) {
-    if (_instance->getVersion() == version) {
+    if (version == 0 || _instance->getVersion() == version) {
       return _instance;
     }
   }
   delete _instance;
   _instance = new EEPROM_TC_2();
-  assert(_instance->getVersion() == version);
+  assert(version == 0 || _instance->getVersion() == version);
   return _instance;
 }
 

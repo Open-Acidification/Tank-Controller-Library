@@ -6,7 +6,7 @@ class EEPROM_TC {
 public:
   // class methods
   // return singleton (the current version by default)
-  static EEPROM_TC* instance(int version = 3);
+  static EEPROM_TC* instance(int version = 0);
 
   // destructor
   virtual ~EEPROM_TC() {
