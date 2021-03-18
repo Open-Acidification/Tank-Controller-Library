@@ -3,7 +3,13 @@
 
 #include "EEPROM_TC.h"
 
-unittest(Main) {
+unittest(version) {
+  // Test singleton
+  EEPROM_TC* eeprom = EEPROM_TC::instance();
+  assert(eeprom->getVersion() == 3);
+}
+
+unittest(singleton) {
   // Test singleton
   EEPROM_TC* singleton1 = nullptr;
   singleton1 = EEPROM_TC::instance();
@@ -16,7 +22,7 @@ unittest(Main) {
 
 unittest(eeprom_Read_and_Write_Double) {
   EEPROM_TC* test = EEPROM_TC::instance();
-  const int TEST_ADDRESS = 110;  // a couple addresses beyond stored data
+  const int TEST_ADDRESS = 240;  // a couple addresses beyond stored data
 
   // integer
   test->eepromWriteDouble(TEST_ADDRESS, 10);
@@ -43,7 +49,7 @@ unittest(Temp) {
 
 unittest(TankID) {
   EEPROM_TC* singleton = EEPROM_TC::instance();
-  assertNAN(singleton->getTankID());
+  assertEqual(-1, singleton->getTankID());
   singleton->setTankID(5);
   assertEqual(5, singleton->getTankID());
 }
@@ -85,9 +91,11 @@ unittest(Mac) {
 
 unittest(Heat) {
   EEPROM_TC* singleton = EEPROM_TC::instance();
-  assertNAN(singleton->getHeat());
-  singleton->setHeat(11);
-  assertEqual(11, singleton->getHeat());
+  assertTrue(singleton->getHeat());  // (bool)(-1)
+  singleton->setHeat(false);
+  assertFalse(singleton->getHeat());
+  singleton->setHeat(true);
+  assertTrue(singleton->getHeat());
 }
 
 unittest(Amplitude) {
