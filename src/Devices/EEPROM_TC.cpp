@@ -1,5 +1,10 @@
 #include "Devices/EEPROM_TC.h"
 
+#include <EEPROM.h>
+
+#include "Devices/EEPROM_TC_2.h"
+#include "Devices/EEPROM_TC_3.h"
+
 #ifdef MOCK_PINS_COUNT
 #include <cassert>   // to support testing
 #include <iostream>  // to support occasional debugging output
