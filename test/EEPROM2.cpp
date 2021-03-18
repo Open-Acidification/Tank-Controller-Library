@@ -51,7 +51,6 @@ unittest(Temp) {
 unittest(writing_PH_should_corrupt_Temp) {
   EEPROM_TC* singleton = EEPROM_TC::instance(2);
   assertEqual(4, singleton->getTemp());
-  EEPROM_TC* singleton = EEPROM_TC::instance();
   singleton->setPH(3.05);
   assertNotEqual(4, singleton->getTemp());
 }
