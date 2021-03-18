@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['amplitude_5faddress_594',['AMPLITUDE_ADDRESS',['../classEEPROM__TC.html#a0f58dd51deecb39b0317cddbe7f90212',1,'EEPROM_TC']]],
-  ['app_595',['app',['../namespaceTankController.html#a1bf1ea29b5e95bb44afebd4bc4aee922',1,'TankController']]]
+  ['amplitude_5faddress_625',['AMPLITUDE_ADDRESS',['../classEEPROM__TC__2.html#a01c73601de5b23d49d3434864aba48fd',1,'EEPROM_TC_2::AMPLITUDE_ADDRESS()'],['../classEEPROM__TC__3.html#aabff806c67a58e37f78f751f53308908',1,'EEPROM_TC_3::AMPLITUDE_ADDRESS()']]],
+  ['app_626',['app',['../namespaceTankController.html#a1bf1ea29b5e95bb44afebd4bc4aee922',1,'TankController']]]
 ];
