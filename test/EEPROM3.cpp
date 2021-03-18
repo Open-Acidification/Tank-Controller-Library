@@ -22,7 +22,7 @@ unittest(singleton) {
 
 unittest(eeprom_Read_and_Write_Double) {
   EEPROM_TC* test = EEPROM_TC::instance();
-  const int TEST_ADDRESS = 240;  // a couple addresses beyond stored data
+  const int TEST_ADDRESS = 4000;  // beyond the end of our use
 
   // integer
   test->eepromWriteDouble(TEST_ADDRESS, 10);
@@ -51,6 +51,13 @@ unittest(Temp) {
   EEPROM_TC* singleton = EEPROM_TC::instance();
   assertNAN(singleton->getTemp());
   singleton->setTemp(4);
+  assertEqual(4, singleton->getTemp());
+}
+
+// Confirm that memory overlap bug is fixed in EEPROM3
+unittest(writing_PH_should_corrupt_Temp) {
+  EEPROM_TC* singleton = EEPROM_TC::instance();
+  singleton->setPH(3.05);
   assertEqual(4, singleton->getTemp());
 }
 
