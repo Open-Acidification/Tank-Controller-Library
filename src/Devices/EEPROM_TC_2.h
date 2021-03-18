@@ -29,7 +29,8 @@ public:
   double getTempDelay();
 
   // setter methods
-  void setVersion() {} // Nothing to be done here!
+  void setVersion() {
+  }  // Nothing to be done here!
   void setPH(double value);
   void setTemp(double value);
   void setTankID(int value);

@@ -58,7 +58,7 @@ protected:
 
 private:
   // new with v0.3
-  const int VERSION_ADDRESS = 0;                    // 999
+  const int VERSION_ADDRESS = 0;  // 999
   // from v0.197
   const int TANK_ID_ADDRESS = VERSION_ADDRESS + 4;  // 999
   const int HEAT_ADDRESS = TANK_ID_ADDRESS + 4;     // bool

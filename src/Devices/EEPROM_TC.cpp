@@ -63,4 +63,3 @@ void EEPROM_TC::eepromWriteInt(int address, int value) {
     EEPROM.update(address++, *p++);
   }
 }
-
