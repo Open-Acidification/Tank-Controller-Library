@@ -3,7 +3,6 @@
 #include "CalibrationManagement.h"
 #include "ChangeGoogleSheetInterval.h"
 #include "EnablePID.h"
-#include "SetTime.h"
 #include "PHCalibration.h"
 #include "PIDTuningMenu.h"
 #include "ResetLCDScreen.h"
@@ -15,6 +14,7 @@
 #include "SetPHSetPoint.h"
 #include "SetTankID.h"
 #include "SetTempSetPoint.h"
+#include "SetTime.h"
 #include "TemperatureCalibration.h"
 
 /**

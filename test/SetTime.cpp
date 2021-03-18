@@ -14,6 +14,7 @@ unittest(test) {
   tc.setNextState(test);
 
   DateTime_TC now = DateTime_TC::now();
+  // the default time is the code compile time
   assertTrue(now.year() > 2020);
 
   // get currently displayed lines
@@ -33,9 +34,11 @@ unittest(test) {
   assertEqual("Minute (0,59):  ", lines.at(0));
   test->setValue(15);
 
+  // a year ago ensures that it preceeds the compile time
+  now = DateTime_TC::now();
   char buffer[17];
   strcpy(buffer, "YYYY-MM-DD hh:mm");
-  DateTime_TC::now().toString(buffer);
+  now.toString(buffer);
   assertEqual("2020-03-18 13:15", buffer);
 
   assertTrue(tc.isOnMainMenu());
