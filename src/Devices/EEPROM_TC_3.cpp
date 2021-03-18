@@ -10,6 +10,7 @@
 //  instance methods
 bool EEPROM_TC_3::isRightVersion() {
   int version = getVersion();
+  // the initial value in EEPROM is -1, so we are starting clean
   return version == -1 || version == 3;
 }
 void EEPROM_TC_3::setVersion() {
@@ -20,6 +21,7 @@ void EEPROM_TC_3::setVersion() {
 int EEPROM_TC_3::getVersion() {
   int result = eepromReadInt(VERSION_ADDRESS);
   if (result == -1) {
+    // the initial value in EEPROM is -1, so we are starting clean
     setVersion();
     result = eepromReadInt(VERSION_ADDRESS);
   }

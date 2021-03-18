@@ -57,6 +57,9 @@ protected:
   virtual bool isRightVersion();
 
 private:
+  // NOTE BUG: many addresses provide for 4 bytes for a double
+  // this is wrong and is fixed in EEPROM_TC_3
+
   // instance variables from v0.197
   const int PH_ADDRESS = 0;          // 9.999
   const int TEMP_ADDRESS = 4;        // 99.99
