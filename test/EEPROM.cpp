@@ -6,7 +6,7 @@
 unittest(version) {
   // Test singleton
   EEPROM_TC* eeprom = EEPROM_TC::instance();
-  assert(eeprom->getVersion() == 3);
+  assertEqual(3, eeprom->getVersion());
 }
 
 unittest(singleton) {
