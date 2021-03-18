@@ -91,7 +91,7 @@ void loop() {
 }
 
 string serial() {
-  GodmodeState* state = GODMODE();
+  GodmodeState *state = GODMODE();
   string result = string(state->serialPort[0].dataOut);
   state->serialPort[0].dataOut = "";
   return result;
