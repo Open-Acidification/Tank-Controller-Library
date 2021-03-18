@@ -35,7 +35,7 @@ unittest(eeprom_Read_and_Write_Double) {
 
 unittest(eeprom_Read_and_Write_Int) {
   EEPROM_TC* test = EEPROM_TC::instance();
-  const int TEST_ADDRESS = 240;  // a couple addresses beyond stored data
+  const int TEST_ADDRESS = 4000;  // beyond the end of our use
   test->eepromWriteInt(TEST_ADDRESS, 20);
   assertEqual(20, test->eepromReadInt(TEST_ADDRESS));
 }
