@@ -9,7 +9,8 @@ public:
   static EEPROM_TC* instance();
 
   // destructor
-  virtual ~EEPROM_TC() {}
+  virtual ~EEPROM_TC() {
+  }
 
   // accessor methods
   virtual int getVersion() = 0;
