@@ -23,7 +23,7 @@ double EEPROM_TC_2::getTemp() {
   return eepromReadDouble(TEMP_ADDRESS);
 }
 int EEPROM_TC_2::getTankID() {
-  return eepromReadInt(TANK_ID_ADDRESS);
+  return (int)eepromReadDouble(TANK_ID_ADDRESS);
 }
 double EEPROM_TC_2::getCorrectedTemp() {
   return eepromReadDouble(TEMP_CORR_ADDRESS);
@@ -41,7 +41,7 @@ double EEPROM_TC_2::getMac() {  // See issue #57 about this function
   return eepromReadDouble(MAC_ADDRESS);
 }
 bool EEPROM_TC_2::getHeat() {
-  return (bool)eepromReadInt(HEAT_ADDRESS);
+  return (bool)eepromReadDouble(HEAT_ADDRESS);
 }
 double EEPROM_TC_2::getAmplitude() {
   return eepromReadDouble(AMPLITUDE_ADDRESS);
@@ -88,7 +88,7 @@ void EEPROM_TC_2::setTemp(double value) {
   eepromWriteDouble(TEMP_ADDRESS, value);
 }
 void EEPROM_TC_2::setTankID(int value) {
-  eepromWriteInt(TANK_ID_ADDRESS, value);
+  eepromWriteDouble(TANK_ID_ADDRESS, (double)value);
 }
 void EEPROM_TC_2::setCorrectedTemp(double value) {
   eepromWriteDouble(TEMP_CORR_ADDRESS, value);
@@ -106,7 +106,7 @@ void EEPROM_TC_2::setMac(double value) {
   eepromWriteDouble(MAC_ADDRESS, value);
 }
 void EEPROM_TC_2::setHeat(bool value) {
-  eepromWriteInt(HEAT_ADDRESS, (int)value);
+  eepromWriteDouble(HEAT_ADDRESS, (double)value);
 }
 void EEPROM_TC_2::setAmplitude(double value) {
   eepromWriteDouble(AMPLITUDE_ADDRESS, value);
