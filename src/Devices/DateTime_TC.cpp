@@ -1,5 +1,7 @@
 #include "Devices/DateTime_TC.h"
 
+#include <string.h>
+
 #include "Devices/Serial_TC.h"
 
 RTC_PCF8523 *DateTime_TC::_rtc = nullptr;
@@ -31,7 +33,7 @@ DateTime_TC DateTime_TC::now() {
   return DateTime_TC(now.year(), now.month(), now.day(), now.hour(), now.minute(), now.second());
 }
 
-char *buffer[20];
+char buffer[20];
 char *DateTime_TC::nowAsStr16() {
   strcpy(buffer, "YYYY-MM-DD hh:mm");
   DateTime_TC::now().toString(buffer);
