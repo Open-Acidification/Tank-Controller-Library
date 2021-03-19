@@ -34,14 +34,8 @@ DateTime_TC DateTime_TC::now() {
 }
 
 char buffer[20];
-char *DateTime_TC::nowAsStr16() {
+char *DateTime_TC::nowAs16CharacterString() {
   strcpy(buffer, "YYYY-MM-DD hh:mm");
-  DateTime_TC::now().toString(buffer);
-  return buffer;
-}
-
-char *DateTime_TC::nowAsStr19() {
-  strcpy(buffer, "YYYY-MM-DD hh:mm:ss");
   DateTime_TC::now().toString(buffer);
   return buffer;
 }
