@@ -63,10 +63,8 @@ void TankControllerLib::blink() {
  */
 void TankControllerLib::updateState() {
   if (nextState) {
-    // SetTime sets the current state to get the prompt
-    if (state != nextState) {
-      delete state;
-    }
+    assert(state != nextState);
+    delete state;
     state = nextState;
     nextState = nullptr;
     state->start();
