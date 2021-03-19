@@ -18,14 +18,9 @@ void SetTime::setValue(double value) {
     DateTime_TC dt(values[0], values[1], values[2], values[3], values[4]);
     dt.setAsCurrent();
 
-    char buffer[20];
-    strcpy(buffer, "YYYY-MM-DD hh:mm:ss");
-    dt.toString(buffer);
+    char *buffer = DateTime_TC::nowAsStr19();
     Serial_TC::instance()->print("Set time to ", buffer);
-
-    DateTime_TC now = DateTime_TC::now();
-    strcpy(buffer, "YYYY-MM-DD hh:mm");
-    now.toString(buffer);
+    buffer[16] = '\0';
     LiquidCrystal_TC::instance()->writeLine("New Date/Time:  ", 0);
     LiquidCrystal_TC::instance()->writeLine(buffer, 1);
     returnToMainMenu(1000);  // after 1-second delay

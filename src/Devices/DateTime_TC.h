@@ -15,6 +15,8 @@ public:
 
   // class methods
   static DateTime_TC now();
+  static char *nowAsStr16();
+  static char *nowAsStr19();
   static RTC_PCF8523 *rtc();  // public so we can test
 
   // instance methods

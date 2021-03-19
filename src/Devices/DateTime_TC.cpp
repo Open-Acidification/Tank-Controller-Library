@@ -4,6 +4,8 @@
 
 RTC_PCF8523 *DateTime_TC::_rtc = nullptr;
 
+// class methods
+
 RTC_PCF8523 *DateTime_TC::rtc() {
   if (_rtc == nullptr) {
     _rtc = new RTC_PCF8523;
@@ -27,6 +29,19 @@ RTC_PCF8523 *DateTime_TC::rtc() {
 DateTime_TC DateTime_TC::now() {
   DateTime now = rtc()->now();
   return DateTime_TC(now.year(), now.month(), now.day(), now.hour(), now.minute(), now.second());
+}
+
+char *buffer[20];
+char *DateTime_TC::nowAsStr16() {
+  strcpy(buffer, "YYYY-MM-DD hh:mm");
+  DateTime_TC::now().toString(buffer);
+  return buffer;
+}
+
+char *DateTime_TC::nowAsStr19() {
+  strcpy(buffer, "YYYY-MM-DD hh:mm:ss");
+  DateTime_TC::now().toString(buffer);
+  return buffer;
 }
 
 //  instance methods
