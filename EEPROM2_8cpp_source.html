@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classEEPROM__TC.html">EEPROM_TC</a>* singleton = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>(2);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  assertEqual(4, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>());</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  singleton-&gt;<a class="code" href="classEEPROM__TC.html#a961506c5b6fe130995ec3545c4f16956">setPH</a>(3.05);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertNotEqual(4, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertNotEqual(4, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>());  <span class="comment">// THIS IS THE BUG!!</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="EEPROM2_8cpp.html#a2e87e24df2a7ab81c64c3236be6a30d4">   58</a></span>&#160;<a class="code" href="EEPROM2_8cpp.html#a0541bb4b15ae64dec56f0f356d4e4c91">unittest</a>(TankID) {</div>
@@ -262,7 +262,14 @@ $(function() {
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  assertEqual(23, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a44cdc2a22fc254f1542336c9d275d2dd">getTempDelay</a>());</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="EEPROM2_8cpp.html#a9bc8b6561417e4c49b5a4670ff60c4bb">  193</a></span>&#160;<a class="code" href="EEPROM2_8cpp.html#a0541bb4b15ae64dec56f0f356d4e4c91">unittest</a>(GoogleSheetIntervalMinutes) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="classEEPROM__TC.html">EEPROM_TC</a>* singleton = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>(2);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  assertEqual(-1, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">getGoogleSheetInterval</a>());</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  singleton-&gt;<a class="code" href="classEEPROM__TC.html#ac4e3ffac4d003ea2f8b14d33b5430330">setGoogleSheetInterval</a>(20);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  assertEqual(20, singleton-&gt;<a class="code" href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">getGoogleSheetInterval</a>());</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;unittest_main()</div>
 <div class="ttc" id="aEEPROM2_8cpp_html_a0541bb4b15ae64dec56f0f356d4e4c91"><div class="ttname"><a href="EEPROM2_8cpp.html#a0541bb4b15ae64dec56f0f356d4e4c91">unittest</a></div><div class="ttdeci">unittest(version2)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM2_8cpp_source.html#l00006">EEPROM2.cpp:6</a></div></div>
 <div class="ttc" id="aEEPROM__TC_8h_html"><div class="ttname"><a href="EEPROM__TC_8h.html">EEPROM_TC.h</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html"><div class="ttname"><a href="classEEPROM__TC.html">EEPROM_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8h_source.html#l00005">EEPROM_TC.h:5</a></div></div>
@@ -281,6 +288,7 @@ $(function() {
 <div class="ttc" id="aclassEEPROM__TC_html_a2b7abbcf641df64989bf1844b1b3666d"><div class="ttname"><a href="classEEPROM__TC.html#a2b7abbcf641df64989bf1844b1b3666d">EEPROM_TC::getAmplitude</a></div><div class="ttdeci">virtual double getAmplitude()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a2f89c11f679d6504146c86e3928ae250"><div class="ttname"><a href="classEEPROM__TC.html#a2f89c11f679d6504146c86e3928ae250">EEPROM_TC::setKP</a></div><div class="ttdeci">virtual void setKP(double value)=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a32e6b01292ca09bbf247e2499ef4fe8c"><div class="ttname"><a href="classEEPROM__TC.html#a32e6b01292ca09bbf247e2499ef4fe8c">EEPROM_TC::getPHDelay</a></div><div class="ttdeci">virtual double getPHDelay()=0</div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a35ae288c5bb1fe0ba87189a1a8c4af1b"><div class="ttname"><a href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">EEPROM_TC::getGoogleSheetInterval</a></div><div class="ttdeci">virtual int getGoogleSheetInterval()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a3d76a02486f9ea6815637230cd1c2f54"><div class="ttname"><a href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">EEPROM_TC::getTemp</a></div><div class="ttdeci">virtual double getTemp()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a44cdc2a22fc254f1542336c9d275d2dd"><div class="ttname"><a href="classEEPROM__TC.html#a44cdc2a22fc254f1542336c9d275d2dd">EEPROM_TC::getTempDelay</a></div><div class="ttdeci">virtual double getTempDelay()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a4cec461613cc901cbfca0c3e7db71aff"><div class="ttname"><a href="classEEPROM__TC.html#a4cec461613cc901cbfca0c3e7db71aff">EEPROM_TC::getMaxDataAge</a></div><div class="ttdeci">virtual double getMaxDataAge()=0</div></div>
@@ -303,6 +311,7 @@ $(function() {
 <div class="ttc" id="aclassEEPROM__TC_html_ab3dfbecd9432ee6f38b51678f3278db0"><div class="ttname"><a href="classEEPROM__TC.html#ab3dfbecd9432ee6f38b51678f3278db0">EEPROM_TC::setPHDelay</a></div><div class="ttdeci">virtual void setPHDelay(double value)=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_abf93d032f287efe593b8fdb0138c86ea"><div class="ttname"><a href="classEEPROM__TC.html#abf93d032f287efe593b8fdb0138c86ea">EEPROM_TC::getPHInterval</a></div><div class="ttdeci">virtual double getPHInterval()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_ac4d08ddc62aaf244d289b5db0c9999a0"><div class="ttname"><a href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp</a></div><div class="ttdeci">virtual void setTemp(double value)=0</div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_ac4e3ffac4d003ea2f8b14d33b5430330"><div class="ttname"><a href="classEEPROM__TC.html#ac4e3ffac4d003ea2f8b14d33b5430330">EEPROM_TC::setGoogleSheetInterval</a></div><div class="ttdeci">virtual void setGoogleSheetInterval(int value)=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_aca7cf51069f9b24378d7bed6c92baca7"><div class="ttname"><a href="classEEPROM__TC.html#aca7cf51069f9b24378d7bed6c92baca7">EEPROM_TC::getMac</a></div><div class="ttdeci">virtual double getMac()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_ad2b7ab412f6cb04200b9bb02dab30d64"><div class="ttname"><a href="classEEPROM__TC.html#ad2b7ab412f6cb04200b9bb02dab30d64">EEPROM_TC::setPHInterval</a></div><div class="ttdeci">virtual void setPHInterval(double value)=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_ad9a5a8047705d7b8d7d10cab79143d8d"><div class="ttname"><a href="classEEPROM__TC.html#ad9a5a8047705d7b8d7d10cab79143d8d">EEPROM_TC::getPHSeriesSize</a></div><div class="ttdeci">virtual double getPHSeriesSize()=0</div></div>
