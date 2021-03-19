@@ -189,14 +189,14 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;reset();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> dateTime = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 11, 26, 18, 55, 15);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  dateTime.<a class="code" href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">printToSerial</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> <a class="code" href="libTC_8cpp.html#ac06ab6eb33982f2bb2e5598d8e38ab43">dateTime</a> = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 11, 26, 18, 55, 15);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="libTC_8cpp.html#ac06ab6eb33982f2bb2e5598d8e38ab43">dateTime</a>.printToSerial();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-11-26 18:55:15\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_a6f85dfb1ec9ad818a818b60c614571ee"><div class="ttname"><a href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">DateTime_TC::printToSerial</a></div><div class="ttdeci">void printToSerial()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00044">DateTime_TC.cpp:44</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_ac06ab6eb33982f2bb2e5598d8e38ab43"><div class="ttname"><a href="libTC_8cpp.html#ac06ab6eb33982f2bb2e5598d8e38ab43">dateTime</a></div><div class="ttdeci">string dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00022">libTC.cpp:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00044">DateTime_TC::printToSerial()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
+<p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00022">dateTime()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  assertEqual(24, now1.second());</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00027">DateTime_TC::now()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00078">DateTime_TC::setAsCurrent()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00027">DateTime_TC::now()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00069">DateTime_TC::setAsCurrent()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +286,9 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  date.<a class="code" href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">yearMonthAsPath</a>(buffer, <span class="keyword">sizeof</span>(buffer));</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertEqual(<span class="stringliteral">&quot;/2020/09&quot;</span>, buffer);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00063">DateTime_TC.cpp:63</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00054">DateTime_TC.cpp:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00063">DateTime_TC::yearMonthAsPath()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00054">DateTime_TC::yearMonthAsPath()</a>.</p>
 
 </div>
 </div>

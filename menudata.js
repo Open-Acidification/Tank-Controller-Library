@@ -123,6 +123,7 @@ var menudata={children:[
 {text:"u",url:"globals.html#index_u"},
 {text:"v",url:"globals.html#index_v"}]},
 {text:"Functions",url:"globals_func.html",children:[
+{text:"d",url:"globals_func.html#index_d"},
 {text:"e",url:"globals_func.html#index_e"},
 {text:"k",url:"globals_func.html#index_k"},
 {text:"l",url:"globals_func.html#index_l"},
