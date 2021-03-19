@@ -1,7 +1,9 @@
 #include "TankControllerLib.h"
 
 #include "Devices/Keypad_TC.h"
+#include "Devices/LiquidCrystal_TC.h"
 #include "Devices/SD_TC.h"
+#include "Devices/Serial_TC.h"
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
 
@@ -67,10 +69,7 @@ void TankControllerLib::updateState() {
     }
     state = nextState;
     nextState = nullptr;
-    // print the current prompt on the first line of the display
-    const char *prompt = state->prompt();
-    LiquidCrystal_TC::instance()->writeLine(prompt, 0);
-    LiquidCrystal_TC::instance()->writeLine("                ", 1);
+    state->start();
   }
 }
 

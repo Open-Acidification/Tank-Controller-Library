@@ -8,11 +8,10 @@
 #define assert(p) (void)0
 #endif
 
-#include "Devices/LiquidCrystal_TC.h"
-#include "Devices/Serial_TC.h"
-
 const char TANK_CONTROLLER_VERSION[] = "0.3.0";
 
+class LiquidCrystal_TC;
+class Serial_TC;
 class UIState;
 class TankControllerLib {
 public:

@@ -19,6 +19,7 @@ public:
     return false;
   }
   virtual const char* prompt() = 0;
+  virtual void start();
 
 protected:
   void setNextState(UIState* state);
