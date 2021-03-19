@@ -1,12 +1,7 @@
 #pragma once
 #include <Arduino.h>
 
-#ifdef MOCK_PINS_COUNT
-#include <cassert>   // to support testing
-#include <iostream>  // to support occasional debugging output
-#else
-#define assert(p) (void)0
-#endif
+#include "TC_assert.h"
 
 const char TANK_CONTROLLER_VERSION[] = "0.3.0";
 
