@@ -4,12 +4,21 @@
 #include "Devices/LiquidCrystal_TC.h"
 #include "UIState/MainMenu.h"
 
-void UIState::setNextState(UIState* state) {
-  tc->setNextState(state);
+void UIState::handleKey(char key) {
+  // default is to just return to main menu
+  // this is useful for display-only actions
+  this->returnToMainMenu();
 }
 
-void UIState::returnToMainMenu() {
-  setNextState((UIState*)new MainMenu(tc));
+void UIState::returnToMainMenu(int msDelay) {
+  if (msDelay) {
+    delay(msDelay);
+  }
+  this->setNextState((UIState*)new MainMenu(tc));
+}
+
+void UIState::setNextState(UIState* state) {
+  tc->setNextState(state);
 }
 
 void UIState::start() {
