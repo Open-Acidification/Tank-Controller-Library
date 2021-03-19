@@ -311,7 +311,7 @@ $(function() {
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;9&#39;</span>);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// recognize and apply the key entry</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  assertEqual(<span class="stringliteral">&quot;Chill or Heat?  &quot;</span>, lc-&gt;getLines().at(0));</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  assertEqual(<span class="stringliteral">&quot;1:Chill; 9:Heat &quot;</span>, lc-&gt;getLines().at(0));</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  keypad-&gt;push_back(<span class="charliteral">&#39;D&#39;</span>);  <span class="comment">// Don&#39;t finish (cancel)</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  tc-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();              <span class="comment">// recognize and apply the key entry</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  lines = lc-&gt;getLines();</div>

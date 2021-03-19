@@ -14,7 +14,7 @@ var searchData=
   ['serial_2ecpp_447',['Serial.cpp',['../Serial_8cpp.html',1,'']]],
   ['serial_5ftc_2ecpp_448',['Serial_TC.cpp',['../Serial__TC_8cpp.html',1,'']]],
   ['serial_5ftc_2eh_449',['Serial_TC.h',['../Serial__TC_8h.html',1,'']]],
-  ['setchillorheat_2ecpp_450',['SetChillOrHeat.cpp',['../SetChillOrHeat_8cpp.html',1,'']]],
+  ['setchillorheat_2ecpp_450',['SetChillOrHeat.cpp',['../test_2SetChillOrHeat_8cpp.html',1,'(Global Namespace)'],['../src_2UIState_2SetChillOrHeat_8cpp.html',1,'(Global Namespace)']]],
   ['setchillorheat_2eh_451',['SetChillOrHeat.h',['../SetChillOrHeat_8h.html',1,'']]],
   ['setgooglesheetinterval_2ecpp_452',['SetGoogleSheetInterval.cpp',['../test_2SetGoogleSheetInterval_8cpp.html',1,'(Global Namespace)'],['../src_2UIState_2SetGoogleSheetInterval_8cpp.html',1,'(Global Namespace)']]],
   ['setgooglesheetinterval_2eh_453',['SetGoogleSheetInterval.h',['../SetGoogleSheetInterval_8h.html',1,'']]],

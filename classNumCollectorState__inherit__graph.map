@@ -1,9 +1,10 @@
 <map id="NumCollectorState" name="NumCollectorState">
-<area shape="rect" id="node1" title=" " alt="" coords="301,80,433,107"/>
-<area shape="rect" id="node3" href="$classSetGoogleSheetInterval.html" title=" " alt="" coords="5,155,165,181"/>
-<area shape="rect" id="node4" href="$classSetPHSetPoint.html" title=" " alt="" coords="190,155,301,181"/>
-<area shape="rect" id="node5" href="$classSetTankID.html" title=" " alt="" coords="325,155,409,181"/>
-<area shape="rect" id="node6" href="$classSetTempSetPoint.html" title=" " alt="" coords="433,155,559,181"/>
-<area shape="rect" id="node7" href="$classSetTime.html" title=" " alt="" coords="583,155,654,181"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="333,5,400,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="373,80,505,107"/>
+<area shape="rect" id="node3" href="$classSetChillOrHeat.html" title=" " alt="" coords="5,155,115,181"/>
+<area shape="rect" id="node4" href="$classSetGoogleSheetInterval.html" title=" " alt="" coords="139,155,299,181"/>
+<area shape="rect" id="node5" href="$classSetPHSetPoint.html" title=" " alt="" coords="323,155,434,181"/>
+<area shape="rect" id="node6" href="$classSetTankID.html" title=" " alt="" coords="458,155,542,181"/>
+<area shape="rect" id="node7" href="$classSetTempSetPoint.html" title=" " alt="" coords="567,155,692,181"/>
+<area shape="rect" id="node8" href="$classSetTime.html" title=" " alt="" coords="717,155,787,181"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="405,5,472,32"/>
 </map>

@@ -1,21 +1,21 @@
 <map id="UIState" name="UIState">
-<area shape="rect" id="node1" title=" " alt="" coords="5,309,72,336"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,284,72,311"/>
 <area shape="rect" id="node2" href="$classCalibrationManagement.html" title=" " alt="" coords="120,5,279,32"/>
 <area shape="rect" id="node3" href="$classEnablePID.html" title=" " alt="" coords="158,56,241,83"/>
 <area shape="rect" id="node4" href="$classMainMenu.html" title=" " alt="" coords="158,107,241,133"/>
 <area shape="rect" id="node5" href="$classNumCollectorState.html" title=" " alt="" coords="133,157,265,184"/>
-<area shape="rect" id="node11" href="$classPHCalibration.html" title=" " alt="" coords="148,208,251,235"/>
-<area shape="rect" id="node12" href="$classPIDTuningMenu.html" title=" " alt="" coords="142,259,257,285"/>
-<area shape="rect" id="node13" href="$classResetLCDScreen.html" title=" " alt="" coords="138,309,261,336"/>
-<area shape="rect" id="node14" href="$classSeeDeviceAddress.html" title=" " alt="" coords="133,360,266,387"/>
-<area shape="rect" id="node15" href="$classSeeDeviceUptime.html" title=" " alt="" coords="136,411,263,437"/>
-<area shape="rect" id="node16" href="$classSeePIDConstants.html" title=" " alt="" coords="136,461,263,488"/>
-<area shape="rect" id="node17" href="$classSeeTankID.html" title=" " alt="" coords="156,512,243,539"/>
-<area shape="rect" id="node18" href="$classSetChillOrHeat.html" title=" " alt="" coords="145,563,254,589"/>
-<area shape="rect" id="node19" href="$classTemperatureCalibration.html" title=" " alt="" coords="121,613,277,640"/>
-<area shape="rect" id="node6" href="$classSetGoogleSheetInterval.html" title=" " alt="" coords="327,56,487,83"/>
-<area shape="rect" id="node7" href="$classSetPHSetPoint.html" title=" " alt="" coords="351,107,462,133"/>
-<area shape="rect" id="node8" href="$classSetTankID.html" title=" " alt="" coords="365,157,449,184"/>
-<area shape="rect" id="node9" href="$classSetTempSetPoint.html" title=" " alt="" coords="344,208,469,235"/>
-<area shape="rect" id="node10" href="$classSetTime.html" title=" " alt="" coords="371,259,442,285"/>
+<area shape="rect" id="node12" href="$classPHCalibration.html" title=" " alt="" coords="148,208,251,235"/>
+<area shape="rect" id="node13" href="$classPIDTuningMenu.html" title=" " alt="" coords="142,259,257,285"/>
+<area shape="rect" id="node14" href="$classResetLCDScreen.html" title=" " alt="" coords="138,309,261,336"/>
+<area shape="rect" id="node15" href="$classSeeDeviceAddress.html" title=" " alt="" coords="133,360,266,387"/>
+<area shape="rect" id="node16" href="$classSeeDeviceUptime.html" title=" " alt="" coords="136,411,263,437"/>
+<area shape="rect" id="node17" href="$classSeePIDConstants.html" title=" " alt="" coords="136,461,263,488"/>
+<area shape="rect" id="node18" href="$classSeeTankID.html" title=" " alt="" coords="156,512,243,539"/>
+<area shape="rect" id="node19" href="$classTemperatureCalibration.html" title=" " alt="" coords="121,563,277,589"/>
+<area shape="rect" id="node6" href="$classSetChillOrHeat.html" title=" " alt="" coords="352,31,461,57"/>
+<area shape="rect" id="node7" href="$classSetGoogleSheetInterval.html" title=" " alt="" coords="327,81,487,108"/>
+<area shape="rect" id="node8" href="$classSetPHSetPoint.html" title=" " alt="" coords="351,132,462,159"/>
+<area shape="rect" id="node9" href="$classSetTankID.html" title=" " alt="" coords="365,183,449,209"/>
+<area shape="rect" id="node10" href="$classSetTempSetPoint.html" title=" " alt="" coords="344,233,469,260"/>
+<area shape="rect" id="node11" href="$classSetTime.html" title=" " alt="" coords="371,284,442,311"/>
 </map>
