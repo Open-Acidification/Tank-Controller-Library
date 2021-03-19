@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['google_5finterval_5faddress_652',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC__2.html#abe46300dc93a0f17e28abffd798d7e00',1,'EEPROM_TC_2::GOOGLE_INTERVAL_ADDRESS()'],['../classEEPROM__TC__3.html#a98ecab013669ed104055a02f69f66779',1,'EEPROM_TC_3::GOOGLE_INTERVAL_ADDRESS()']]],
-  ['granularity_5faddress_653',['GRANULARITY_ADDRESS',['../classEEPROM__TC__2.html#ac437dbc5994ff52675a4173495849db8',1,'EEPROM_TC_2::GRANULARITY_ADDRESS()'],['../classEEPROM__TC__3.html#af762b7364e83d57e173cb219a9eac6cc',1,'EEPROM_TC_3::GRANULARITY_ADDRESS()']]]
+  ['factor_657',['factor',['../classNumCollectorState.html#a0f11abfb3c0dbf12f0947c2d10a32ec2',1,'NumCollectorState']]],
+  ['frequency_5faddress_658',['FREQUENCY_ADDRESS',['../classEEPROM__TC__2.html#a5ed07c79cc70f6a9536ff69684b30adf',1,'EEPROM_TC_2::FREQUENCY_ADDRESS()'],['../classEEPROM__TC__3.html#a8d06699f085f0b29bdf3c7757e2846ef',1,'EEPROM_TC_3::FREQUENCY_ADDRESS()']]]
 ];

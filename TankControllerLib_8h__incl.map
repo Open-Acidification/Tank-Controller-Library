@@ -1,7 +1,5 @@
 <map id="src/TankControllerLib.h" name="src/TankControllerLib.h">
-<area shape="rect" id="node1" title=" " alt="" coords="14,5,170,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="54,155,130,181"/>
-<area shape="rect" id="node3" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="186,80,369,107"/>
-<area shape="rect" id="node5" href="$Serial__TC_8h.html" title=" " alt="" coords="22,80,162,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="224,155,331,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="45,155,121,181"/>
+<area shape="rect" id="node3" href="$TC__assert_8h.html" title=" " alt="" coords="80,80,172,107"/>
 </map>

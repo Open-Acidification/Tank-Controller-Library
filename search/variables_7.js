@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hasdecimal_654',['hasDecimal',['../classNumCollectorState.html#a878b88040fffdf3c13cf34809e150d79',1,'NumCollectorState']]],
-  ['heat_5faddress_655',['HEAT_ADDRESS',['../classEEPROM__TC__2.html#aeb637d84e41c9d3505de20819e9d2688',1,'EEPROM_TC_2::HEAT_ADDRESS()'],['../classEEPROM__TC__3.html#aa41e44637458f156c07aecf0981dc490',1,'EEPROM_TC_3::HEAT_ADDRESS()']]]
+  ['google_5finterval_5faddress_659',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC__2.html#abe46300dc93a0f17e28abffd798d7e00',1,'EEPROM_TC_2::GOOGLE_INTERVAL_ADDRESS()'],['../classEEPROM__TC__3.html#a98ecab013669ed104055a02f69f66779',1,'EEPROM_TC_3::GOOGLE_INTERVAL_ADDRESS()']]],
+  ['granularity_5faddress_660',['GRANULARITY_ADDRESS',['../classEEPROM__TC__2.html#ac437dbc5994ff52675a4173495849db8',1,'EEPROM_TC_2::GRANULARITY_ADDRESS()'],['../classEEPROM__TC__3.html#af762b7364e83d57e173cb219a9eac6cc',1,'EEPROM_TC_3::GRANULARITY_ADDRESS()']]]
 ];
