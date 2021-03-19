@@ -12,6 +12,7 @@ except ImportError:
     print('wxpython is not installed!')
     exit()
 
+
 class TankController(wx.Frame):
 
     def __init__(self, parent, title):
@@ -20,6 +21,7 @@ class TankController(wx.Frame):
         self.InitUI()
         self.Centre()
         self.Show()
+        print(libTC.dateTime())
 
     def InitUI(self):
         self.panel = wx.Panel(self)
@@ -98,8 +100,8 @@ class TankController(wx.Frame):
     def serial(self):
         serialSizer = wx.StaticBoxSizer(
             wx.VERTICAL, self.panel, label="Serial Log")
-        self.console = wx.TextCtrl(self.panel, size=(1000,1000),
-            style=wx.TE_READONLY | wx.TE_MULTILINE | wx.HSCROLL)
+        self.console = wx.TextCtrl(self.panel, size=(1000, 1000),
+                                   style=wx.TE_READONLY | wx.TE_MULTILINE | wx.HSCROLL)
         serialSizer.Add(self.console, flag=wx.EXPAND)
         return serialSizer
 
@@ -108,10 +110,9 @@ class TankController(wx.Frame):
         self.lqd.SetLabelText(libTC.lcd(0) + '\n' + libTC.lcd(1))
         # update EEPROM storage
         for i, each in enumerate(self.eeprom):
-            each.SetLabelText(str(libTC.eeprom(i)))
+            each.SetLabelText('{:.4f}'.format(libTC.eeprom(i)))
         # update Serial output
         self.console.AppendText(libTC.serial().replace('\r\n', '\n'))
-
 
     def handleKey(self, key):
         libTC.key(key)
@@ -125,8 +126,17 @@ class TankController(wx.Frame):
 
     def Keyboard(self, event):
         key = chr(event.GetUnicodeKey()).upper()
+        # do some translations
+        if (ord(key) == 3 or ord(key) == 13):  # return
+            key = 'A'
+        if (ord(key) == 27):  # escape
+            key = 'D'
+        if (key == '.'):  # decimal
+            key = '*'
+        print("Keyboard", key, ord(key))
         self.handleKey(key)
-        print("Keyboard", key)
+
+
 
 if __name__ == "__main__":
     app = wx.App()
