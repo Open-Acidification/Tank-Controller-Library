@@ -86,5 +86,4 @@ private:
   const int TEMP_DELAY_ADDRESS = TEMP_INTERVAL_ADDRESS + 8;
   // new with v0.3
   const int GOOGLE_INTERVAL_ADDRESS = TEMP_DELAY_ADDRESS + 8;
-
 };
