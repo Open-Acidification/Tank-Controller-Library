@@ -19,7 +19,7 @@
 namespace py = pybind11;
 char lcdLine[20];
 
-string datetime() {
+string dateTime() {
   DateTime_TC now = DateTime_TC::now();
   char buffer[20];
   strcpy(buffer, "YYYY-MM-DD hh:mm:ss");
@@ -115,7 +115,7 @@ const char *version() {
 PYBIND11_MODULE(libTC, m) {
   m.doc() = "pybind11 example plugin";  // optional module docstring
 
-  m.def("datetime", &datetime, "TankController DateTime");
+  m.def("dateTime", &dateTime, "TankController DateTime");
   m.def("eeprom", &eeprom, "TankController EEPROM");
   m.def("key", &key, "TankController key");
   m.def("lcd", &lcd, "TankController LiquidCrystal");

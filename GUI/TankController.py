@@ -20,7 +20,7 @@ class TankController(wx.Frame):
         self.InitUI()
         self.Centre()
         self.Show()
-        print(libTC.datetime())
+        print(libTC.dateTime())
 
     def InitUI(self):
         self.panel = wx.Panel(self)
