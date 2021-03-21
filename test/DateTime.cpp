@@ -78,6 +78,7 @@ unittest(setAsCurrent) {
 #undef yield
 #include <chrono>
 #include <thread>
+
 #include "UIState/UIState.h"
 
 int myDelay = 0;

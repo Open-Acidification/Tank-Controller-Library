@@ -16,7 +16,7 @@ void sleepHandler(int millis) {
 
 unittest(test) {
   TankControllerLibTest tc;
-  UIState::sleep(((((1 * 24 + 2) * 60) + 3) * 60 + 4) * 1000); // 1 hr 2 minutes
+  UIState::sleep(((((1 * 24 + 2) * 60) + 3) * 60 + 4) * 1000);  // 1 hr 2 minutes
   UIState::addSleepHandler(sleepHandler);
   SeeDeviceUptime* test = new SeeDeviceUptime(&tc);
   // uptime will be visible for one second

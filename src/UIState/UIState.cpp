@@ -18,7 +18,7 @@
  * and the GUI) to register to be notified of delays. Then we can take whatever
  * action is appropriate.
  *
- * typdef void (*SleepHandler)(int ms);
+ * typedef void (*SleepHandler)(int ms);
  *
  */
 
@@ -26,7 +26,7 @@ SleepHandler UIState::sleepHandlers[SLEEP_HANDLERS_COUNT];
 
 bool UIState::addSleepHandler(SleepHandler pFunction) {
   for (int i = 0; i < SLEEP_HANDLERS_COUNT; ++i) {
-    if (!sleepHandlers[i]){
+    if (!sleepHandlers[i]) {
       sleepHandlers[i] = pFunction;
       return true;
     }
@@ -36,7 +36,7 @@ bool UIState::addSleepHandler(SleepHandler pFunction) {
 
 bool UIState::removeSleepHandler(SleepHandler pFunction) {
   for (int i = 0; i < SLEEP_HANDLERS_COUNT; ++i) {
-    if (sleepHandlers[i] == pFunction){
+    if (sleepHandlers[i] == pFunction) {
       sleepHandlers[i] = nullptr;
       return true;
     }
