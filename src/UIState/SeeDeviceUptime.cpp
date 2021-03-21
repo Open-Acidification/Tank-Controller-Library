@@ -14,6 +14,6 @@ void SeeDeviceUptime::start() {
   int seconds = floor((millis() - (days * 86400000) - (hours * 3600000) - (minutes * 60000)) / 1000);
   char buffer[17];
   sprintf(buffer, "Up d:%2i %2i:%2i:%2i", days, hours, minutes, seconds);
-  LiquidCrystal_TC::instance()->writeLine(DateTime_TC::nowAs16CharacterString(), 0);
+  LiquidCrystal_TC::instance()->writeLine(DateTime_TC::now().as16CharacterString(), 0);
   LiquidCrystal_TC::instance()->writeLine(buffer, 1);
 }
