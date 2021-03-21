@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['backspace_483',['backSpace',['../classNumCollectorState.html#ad5d57aeb21c096f4c9fd1dc8e31384f2',1,'NumCollectorState']]],
-  ['bitcollector_484',['BitCollector',['../classBitCollector.html#ab2f6264930f1efc03216474c4503688a',1,'BitCollector']]],
-  ['blink_485',['blink',['../classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14',1,'TankControllerLib']]]
+  ['addsleephandler_492',['addSleepHandler',['../classUIState.html#a665b5f31d630a9808ed682adae025963',1,'UIState']]],
+  ['as16characterstring_493',['as16CharacterString',['../classDateTime__TC.html#a517888828f617bf1de7d424398b474be',1,'DateTime_TC']]]
 ];

@@ -67,7 +67,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">DateTime.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -75,16 +76,22 @@ $(function() {
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;ArduinoUnitTests.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="DateTime__TC_8h_source.html">Devices/DateTime_TC.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &quot;<a class="el" href="UIState_8h_source.html">UIState/UIState.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for DateTime.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="DateTime_8cpp__incl.png" border="0" usemap="#atest_2DateTime_8cpp" alt=""/></div>
 <map name="atest_2DateTime_8cpp" id="atest_2DateTime_8cpp">
-<area shape="rect" title=" " alt="" coords="24,5,152,32"/>
-<area shape="rect" title=" " alt="" coords="35,155,111,181"/>
-<area shape="rect" title=" " alt="" coords="21,80,155,107"/>
-<area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="179,80,341,107"/>
-<area shape="rect" title=" " alt="" coords="225,155,295,181"/>
+<area shape="rect" title=" " alt="" coords="297,5,425,32"/>
+<area shape="rect" title=" " alt="" coords="289,155,365,181"/>
+<area shape="rect" title=" " alt="" coords="157,80,290,107"/>
+<area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="533,80,695,107"/>
+<area shape="rect" title=" " alt="" coords="365,80,426,107"/>
+<area shape="rect" title=" " alt="" coords="450,80,509,107"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="5,80,132,107"/>
+<area shape="rect" title=" " alt="" coords="579,155,649,181"/>
 </map>
 </div>
 </div>
@@ -98,16 +105,84 @@ Functions</h2></td></tr>
 <tr class="separator:ae9961b95f158cd8a05a8892a58b7eaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a524e06370ed7efed001258e3c37a48c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a524e06370ed7efed001258e3c37a48c4">unittest</a> (now)</td></tr>
 <tr class="separator:a524e06370ed7efed001258e3c37a48c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b4e07258301800f9b4738628441ebe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a57b4e07258301800f9b4738628441ebe">unittest</a> (as16CharacterString)</td></tr>
+<tr class="separator:a57b4e07258301800f9b4738628441ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fc94b113b11772744ce3debfad2af0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a07fc94b113b11772744ce3debfad2af0">unittest</a> (printToSerial)</td></tr>
 <tr class="separator:a07fc94b113b11772744ce3debfad2af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3103d91537aaa5572e95a966ae6466e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#ae3103d91537aaa5572e95a966ae6466e">unittest</a> (yearMonthAsPath)</td></tr>
 <tr class="separator:ae3103d91537aaa5572e95a966ae6466e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d27008bff6a47490ce847c987fc468d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a2d27008bff6a47490ce847c987fc468d">unittest</a> (setAsCurrent)</td></tr>
 <tr class="separator:a2d27008bff6a47490ce847c987fc468d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4574249c7187b57adf7bd880cd526a83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a4574249c7187b57adf7bd880cd526a83">sleepHandler</a> (int ms)</td></tr>
+<tr class="separator:a4574249c7187b57adf7bd880cd526a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8faf4e5ea761f149048bbfd2affbf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a8c8faf4e5ea761f149048bbfd2affbf2">unittest</a> (<a class="el" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a>)</td></tr>
+<tr class="separator:a8c8faf4e5ea761f149048bbfd2affbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6b39a99be5ec74d6148d72dd407b873c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a> = 0</td></tr>
+<tr class="separator:a6b39a99be5ec74d6148d72dd407b873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4574249c7187b57adf7bd880cd526a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4574249c7187b57adf7bd880cd526a83">&#9670;&nbsp;</a></span>sleepHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sleepHandler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00087">87</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                          {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a> = ms;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="aDateTime_8cpp_html_a6b39a99be5ec74d6148d72dd407b873c"><div class="ttname"><a href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a></div><div class="ttdeci">int myDelay</div><div class="ttdef"><b>Definition:</b> <a href="DateTime_8cpp_source.html#l00084">DateTime.cpp:84</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime_8cpp_source.html#l00084">myDelay</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00091">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="a57b4e07258301800f9b4738628441ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b4e07258301800f9b4738628441ebe">&#9670;&nbsp;</a></span>unittest() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype">as16CharacterString&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00040">40</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                              {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a> = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2021, 03, 19, 15, 50);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>.printToSerial();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  assertEqual(<span class="stringliteral">&quot;2021-03-19 15:50&quot;</span>, <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>.as16CharacterString());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_afe70025add575198dbe626aeab331386"><div class="ttname"><a href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a></div><div class="ttdeci">char * dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00022">libTC.cpp:22</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00022">dateTime()</a>.</p>
+
+</div>
+</div>
 <a id="ae9961b95f158cd8a05a8892a58b7eaec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9961b95f158cd8a05a8892a58b7eaec">&#9670;&nbsp;</a></span>unittest() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9961b95f158cd8a05a8892a58b7eaec">&#9670;&nbsp;</a></span>unittest() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,12 +207,61 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  assertEqual(48, dt.minute());</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  assertEqual(24, dt.second());</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a8c8faf4e5ea761f149048bbfd2affbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8faf4e5ea761f149048bbfd2affbf2">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00091">91</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a> = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  uint32_t t1 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  std::this_thread::sleep_for(std::chrono::milliseconds(1));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classUIState.html#a6d7318c6372a704d9d15320878fea0b3">UIState::sleep</a>(10000);  <span class="comment">// this should be seen by arduino_ci, but not the underlying system</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  std::chrono::duration&lt;double, std::milli&gt; elapsed = end - start;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  assertTrue(1 &lt;= elapsed.count() &amp;&amp; elapsed.count() &lt; 10);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  uint32_t t2 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  assertTrue(t1 + 10 &lt;= t2 &amp;&amp; t2 &lt;= t1 + 11);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  assertTrue(<a class="code" href="classUIState.html#a665b5f31d630a9808ed682adae025963">UIState::addSleepHandler</a>(<a class="code" href="DateTime_8cpp.html#a4574249c7187b57adf7bd880cd526a83">sleepHandler</a>));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  assertEqual(0, <a class="code" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classUIState.html#a6d7318c6372a704d9d15320878fea0b3">UIState::sleep</a>(500);  <span class="comment">// this should be seen by arduino_ci</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  assertEqual(500, <a class="code" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  assertTrue(<a class="code" href="classUIState.html#a7a55ccb3345f625db650b22c586dbbda">UIState::removeSleepHandler</a>(<a class="code" href="DateTime_8cpp.html#a4574249c7187b57adf7bd880cd526a83">sleepHandler</a>));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  assertFalse(<a class="code" href="classUIState.html#a7a55ccb3345f625db650b22c586dbbda">UIState::removeSleepHandler</a>(<a class="code" href="DateTime_8cpp.html#a4574249c7187b57adf7bd880cd526a83">sleepHandler</a>));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="classUIState.html#a6d7318c6372a704d9d15320878fea0b3">UIState::sleep</a>(500);  <span class="comment">// this should be seen by arduino_ci</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  assertEqual(500, <a class="code" href="DateTime_8cpp.html#a6b39a99be5ec74d6148d72dd407b873c">myDelay</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="aDateTime_8cpp_html_a4574249c7187b57adf7bd880cd526a83"><div class="ttname"><a href="DateTime_8cpp.html#a4574249c7187b57adf7bd880cd526a83">sleepHandler</a></div><div class="ttdeci">void sleepHandler(int ms)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime_8cpp_source.html#l00087">DateTime.cpp:87</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
+<div class="ttc" id="aclassUIState_html_a665b5f31d630a9808ed682adae025963"><div class="ttname"><a href="classUIState.html#a665b5f31d630a9808ed682adae025963">UIState::addSleepHandler</a></div><div class="ttdeci">static bool addSleepHandler(SleepHandler pFunction)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00027">UIState.cpp:27</a></div></div>
+<div class="ttc" id="aclassUIState_html_a6d7318c6372a704d9d15320878fea0b3"><div class="ttname"><a href="classUIState.html#a6d7318c6372a704d9d15320878fea0b3">UIState::sleep</a></div><div class="ttdeci">static void sleep(int ms)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00047">UIState.cpp:47</a></div></div>
+<div class="ttc" id="aclassUIState_html_a7a55ccb3345f625db650b22c586dbbda"><div class="ttname"><a href="classUIState.html#a7a55ccb3345f625db650b22c586dbbda">UIState::removeSleepHandler</a></div><div class="ttdeci">static bool removeSleepHandler(SleepHandler pFunction)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00037">UIState.cpp:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00027">UIState::addSleepHandler()</a>, <a class="el" href="DateTime_8cpp_source.html#l00084">myDelay</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="UIState_8cpp_source.html#l00037">UIState::removeSleepHandler()</a>, <a class="el" href="UIState_8cpp_source.html#l00047">UIState::sleep()</a>, and <a class="el" href="DateTime_8cpp_source.html#l00087">sleepHandler()</a>.</p>
+
+</div>
+</div>
 <a id="a524e06370ed7efed001258e3c37a48c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a524e06370ed7efed001258e3c37a48c4">&#9670;&nbsp;</a></span>unittest() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a524e06370ed7efed001258e3c37a48c4">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,14 +286,13 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  assertTrue(now.minute() &gt;= 0);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  assertTrue(now.second() &gt;= 0);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>.</p>
 
 </div>
 </div>
 <a id="a07fc94b113b11772744ce3debfad2af0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07fc94b113b11772744ce3debfad2af0">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fc94b113b11772744ce3debfad2af0">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,24 +307,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00041">41</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;reset();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a> = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 11, 26, 18, 55, 15);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>.printToSerial();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-11-26 18:55:15\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00047">47</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;reset();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a> = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 11, 26, 18, 55, 15);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>.printToSerial();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-11-26 18:55:15\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_afe70025add575198dbe626aeab331386"><div class="ttname"><a href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a></div><div class="ttdeci">char * dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00022">libTC.cpp:22</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00022">dateTime()</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
 
 </div>
 </div>
 <a id="a2d27008bff6a47490ce847c987fc468d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d27008bff6a47490ce847c987fc468d">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d27008bff6a47490ce847c987fc468d">&#9670;&nbsp;</a></span>unittest() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,26 +338,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00058">58</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                       {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> january(2021, 1, 15, 1, 48, 24);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  january.setAsCurrent();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now1 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  assertEqual(2021, now1.year());</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  assertEqual(1, now1.month());</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  assertEqual(15, now1.day());</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  assertEqual(1, now1.hour());</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  assertEqual(48, now1.minute());</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  assertEqual(24, now1.second());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00064">64</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                       {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> january(2021, 1, 15, 1, 48, 24);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  january.setAsCurrent();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now1 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  assertEqual(2021, now1.year());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  assertEqual(1, now1.month());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  assertEqual(15, now1.day());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  assertEqual(1, now1.hour());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  assertEqual(48, now1.minute());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  assertEqual(24, now1.second());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC::setAsCurrent()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00084">DateTime_TC::setAsCurrent()</a>.</p>
 
 </div>
 </div>
 <a id="a696635b9225d8e65779a920ff96765ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696635b9225d8e65779a920ff96765ad">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a696635b9225d8e65779a920ff96765ad">&#9670;&nbsp;</a></span>unittest() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +386,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ae3103d91537aaa5572e95a966ae6466e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3103d91537aaa5572e95a966ae6466e">&#9670;&nbsp;</a></span>unittest() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3103d91537aaa5572e95a966ae6466e">&#9670;&nbsp;</a></span>unittest() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,17 +401,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00051">51</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                          {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> date = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 9, 26);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[9];</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  date.<a class="code" href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">yearMonthAsPath</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertEqual(<span class="stringliteral">&quot;/2020/09&quot;</span>, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00036">DateTime_TC.cpp:36</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00065">DateTime_TC.cpp:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00057">57</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                          {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> date = <a class="code" href="classDateTime__TC.html">DateTime_TC</a>(2020, 9, 26);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[9];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  date.<a class="code" href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">yearMonthAsPath</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  assertEqual(<span class="stringliteral">&quot;/2020/09&quot;</span>, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00069">DateTime_TC.cpp:69</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00036">buffer</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00065">DateTime_TC::yearMonthAsPath()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00069">DateTime_TC::yearMonthAsPath()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6b39a99be5ec74d6148d72dd407b873c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b39a99be5ec74d6148d72dd407b873c">&#9670;&nbsp;</a></span>myDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int myDelay = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DateTime_8cpp_source.html#l00084">84</a> of file <a class="el" href="DateTime_8cpp_source.html">DateTime.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DateTime_8cpp_source.html#l00087">sleepHandler()</a>, and <a class="el" href="DateTime_8cpp_source.html#l00091">unittest()</a>.</p>
 
 </div>
 </div>

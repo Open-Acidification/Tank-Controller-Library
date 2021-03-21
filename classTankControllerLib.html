@@ -112,10 +112,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a99d78a90a4b6df7a9e2efc5dcc40c437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c4b516f407143ac8bf601141b6ead14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTankControllerLib.html#a2c4b516f407143ac8bf601141b6ead14">blink</a> ()</td></tr>
 <tr class="separator:a2c4b516f407143ac8bf601141b6ead14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad781b819c38b2d9af7ac371ed2537a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTankControllerLib.html#ad781b819c38b2d9af7ac371ed2537a86">updateState</a> ()</td></tr>
-<tr class="separator:ad781b819c38b2d9af7ac371ed2537a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0709a36189d7efe40dcc04da03033048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTankControllerLib.html#a0709a36189d7efe40dcc04da03033048">handleUI</a> ()</td></tr>
 <tr class="separator:a0709a36189d7efe40dcc04da03033048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad781b819c38b2d9af7ac371ed2537a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTankControllerLib.html#ad781b819c38b2d9af7ac371ed2537a86">updateState</a> ()</td></tr>
+<tr class="separator:ad781b819c38b2d9af7ac371ed2537a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -293,16 +293,16 @@ Static Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a> != NO_KEY) {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classTankControllerLib.html#a185549982a07805d8ce771cbbf37caad">log</a>-&gt;<a class="code" href="classSerial__TC.html#a2c1b054cbd36342e1031b3cfa8354bb7">print</a>(F(<span class="stringliteral">&quot;Keypad input: &quot;</span>), <a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#acdef9dc129437c52038cbeb4f4dff03b">handleKey</a>(<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classTankControllerLib.html#ad781b819c38b2d9af7ac371ed2537a86">updateState</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classTankControllerLib.html#ad781b819c38b2d9af7ac371ed2537a86">updateState</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="ttc" id="aclassKeypad__TC_html_a3674237741eacf7c6c6e733a8e6f0d09"><div class="ttname"><a href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a></div><div class="ttdeci">static Keypad_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC.cpp:20</a></div></div>
 <div class="ttc" id="aclassKeypad__TC_html_af05734b4c284c56421a53d3e94f3f83a"><div class="ttname"><a href="classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a">Keypad_TC::getKey</a></div><div class="ttdeci">char getKey()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC.cpp:38</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_ad781b819c38b2d9af7ac371ed2537a86"><div class="ttname"><a href="classTankControllerLib.html#ad781b819c38b2d9af7ac371ed2537a86">TankControllerLib::updateState</a></div><div class="ttdeci">void updateState()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib.cpp:64</a></div></div>
-<div class="ttc" id="aclassUIState_html_acdef9dc129437c52038cbeb4f4dff03b"><div class="ttname"><a href="classUIState.html#acdef9dc129437c52038cbeb4f4dff03b">UIState::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00007">UIState.cpp:7</a></div></div>
+<div class="ttc" id="aclassUIState_html_acdef9dc129437c52038cbeb4f4dff03b"><div class="ttname"><a href="classUIState.html#acdef9dc129437c52038cbeb4f4dff03b">UIState::handleKey</a></div><div class="ttdeci">virtual void handleKey(char key)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00059">UIState.cpp:59</a></div></div>
 <div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00077">libTC.cpp:77</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC::getKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00007">UIState::handleKey()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00077">key()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00033">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">state</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00064">updateState()</a>.</p>
+<p class="reference">References <a class="el" href="Keypad__TC_8cpp_source.html#l00038">Keypad_TC::getKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00059">UIState::handleKey()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00077">key()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00033">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00030">state</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00064">updateState()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00091">loop()</a>.</p>
 
@@ -409,7 +409,7 @@ Static Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TC__assert_8h_source.html#l00007">assert</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00031">nextState</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIState_8cpp_source.html#l00020">UIState::setNextState()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00100">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIState_8cpp_source.html#l00072">UIState::setNextState()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00100">setup()</a>.</p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ Static Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  pinMode(LED_BUILTIN, OUTPUT);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="ttc" id="aclassTankControllerLib_html_ae743375f8f10e1cc073ae3681b00d347"><div class="ttname"><a href="classTankControllerLib.html#ae743375f8f10e1cc073ae3681b00d347">TankControllerLib::setNextState</a></div><div class="ttdeci">virtual void setNextState(UIState *newState)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00020">TankControllerLib.h:20</a></div></div>
-<div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00009">UIState.h:9</a></div></div>
+<div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00013">UIState.h:13</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TankControllerLib_8h_source.html#l00033">log</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00028">Serial_TC::print()</a>, <a class="el" href="TankControllerLib_8h_source.html#l00020">setNextState()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00064">updateState()</a>.</p>
 
@@ -479,9 +479,9 @@ Static Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classTankControllerLib.html#a3d4fbc274d0f8b73eb612e287b587c14">state</a>-&gt;<a class="code" href="classUIState.html#a9a4a56c0f68998ce342a73585c256cce">start</a>();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="ttc" id="aclassUIState_html_a9a4a56c0f68998ce342a73585c256cce"><div class="ttname"><a href="classUIState.html#a9a4a56c0f68998ce342a73585c256cce">UIState::start</a></div><div class="ttdeci">virtual void start()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00024">UIState.cpp:24</a></div></div>
+<div class="ttc" id="aclassUIState_html_a9a4a56c0f68998ce342a73585c256cce"><div class="ttname"><a href="classUIState.html#a9a4a56c0f68998ce342a73585c256cce">UIState::start</a></div><div class="ttdeci">virtual void start()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00076">UIState.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TC__assert_8h_source.html#l00007">assert</a>, <a class="el" href="TankControllerLib_8h_source.html#l00031">nextState</a>, <a class="el" href="UIState_8cpp_source.html#l00024">UIState::start()</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00030">state</a>.</p>
+<p class="reference">References <a class="el" href="TC__assert_8h_source.html#l00007">assert</a>, <a class="el" href="TankControllerLib_8h_source.html#l00031">nextState</a>, <a class="el" href="UIState_8cpp_source.html#l00076">UIState::start()</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00030">state</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00078">handleUI()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00100">setup()</a>.</p>
 

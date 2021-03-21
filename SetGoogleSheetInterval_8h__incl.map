@@ -1,8 +1,8 @@
 <map id="src/UIState/SetGoogleSheetInterval.h" name="src/UIState/SetGoogleSheetInterval.h">
-<area shape="rect" id="node1" title=" " alt="" coords="86,5,274,47"/>
-<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="100,95,260,121"/>
-<area shape="rect" id="node3" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="5,169,197,196"/>
-<area shape="rect" id="node6" href="$UIState_8h.html" title=" " alt="" coords="221,169,299,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="6,244,82,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="107,244,213,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="29,5,217,47"/>
+<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="43,95,203,121"/>
+<area shape="rect" id="node3" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="107,169,299,196"/>
+<area shape="rect" id="node6" href="$UIState_8h.html" title=" " alt="" coords="5,169,83,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="27,244,103,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,244,256,271"/>
 </map>
