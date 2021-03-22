@@ -106,6 +106,13 @@ public:
     thermo.clearFault();
   }
 
+#ifdef MOCK_PINS_COUNT
+  // set a temperature in the mock
+  void setTemperature(float newTemp) {
+    thermo.setTemperature(newTemp);
+  }
+#endif
+
 private:
   //  Class variables
   static TempProbe_TC* _instance;

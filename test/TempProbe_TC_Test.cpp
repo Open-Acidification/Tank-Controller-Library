@@ -23,6 +23,28 @@ unittest(TempProbe_Test) {
   tempProbe->clearFault();
   testFault = tempProbe->readFault();
   assertEqual(0, testFault);
+
+  // Test setTemperature()
+  float temp = 0.0;
+  tempProbe->setTemperature(0);
+  assertEqual(7621, tempProbe->getResistance());
+  temp = tempProbe->getTemperature();
+  assertTrue(-0.1 < temp && temp < 0.1);
+
+  tempProbe->setTemperature(10);
+  assertEqual(7918, tempProbe->getResistance());
+  temp = tempProbe->getTemperature();
+  assertTrue(9.9 < temp && temp < 10.1);
+
+  tempProbe->setTemperature(90);
+  assertEqual(10266, tempProbe->getResistance());
+  temp = tempProbe->getTemperature();
+  assertTrue(89.9 < temp && temp < 90.1);
+
+  tempProbe->setTemperature(100);
+  assertEqual(10554, tempProbe->getResistance());
+  temp = tempProbe->getTemperature();
+  assertTrue(99.9 < temp && temp < 100.1);
 }
 
 unittest_main()
