@@ -82,6 +82,7 @@ void TankControllerLib::handleUI() {
     state->handleKey(key);
   }
   updateState();
+  state->loop();
 }
 
 /**

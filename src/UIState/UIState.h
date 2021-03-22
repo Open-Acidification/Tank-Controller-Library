@@ -29,6 +29,7 @@ public:
   virtual bool isMainMenu() {
     return false;
   }
+  virtual void loop() {}
   virtual const char* prompt() {
     return "                ";
   }
