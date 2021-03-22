@@ -105,6 +105,9 @@ unittest(SeeDeviceUptime) {
   tc->loop();
   keypad->push_back('0');
   tc->loop();  // recognize and apply the key entry
+  delay(1000);
+  tc->loop();  // return to the main menu
+  delay(1100);
   tc->loop();  // return to the main menu
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
@@ -121,6 +124,8 @@ unittest(SeeDeviceAddress) {
   assertEqual("Device address  ", lc->getLines().at(0));
   keypad->push_back('D');  // Don't finish (cancel)
   tc->loop();              // recognize and apply the key entry
+  delay(1000);
+  tc->loop();
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
 }
@@ -136,6 +141,8 @@ unittest(ResetLCDScreen) {
   assertEqual("Clearing Screen ", lc->getLines().at(0));
   keypad->push_back('D');  // Don't finish (cancel)
   tc->loop();              // recognize and apply the key entry
+  delay(1000);
+  tc->loop();
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
 }
