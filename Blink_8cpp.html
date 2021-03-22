@@ -166,10 +166,10 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00040">40</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;               {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classBitCollector.html">BitCollector</a> led;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classBitCollector.html">BitCollector</a> <a class="code" href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a> = 0;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* tank = <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;digitalPin[LED_BUILTIN].addObserver(<span class="stringliteral">&quot;led&quot;</span>, &amp;led);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;digitalPin[LED_BUILTIN].addObserver(<span class="stringliteral">&quot;led&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  tank-&gt;<a class="code" href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">setup</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;resetClock();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  assertEqual(0, micros());</div>
@@ -203,11 +203,12 @@ Variables</h2></td></tr>
 <div class="ttc" id="aBlink_8cpp_html_a8667588dec524bf854d0c16771d425a1"><div class="ttname"><a href="Blink_8cpp.html#a8667588dec524bf854d0c16771d425a1">time</a></div><div class="ttdeci">long time</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00014">Blink.cpp:14</a></div></div>
 <div class="ttc" id="aclassBitCollector_html"><div class="ttname"><a href="classBitCollector.html">BitCollector</a></div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00020">Blink.cpp:20</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00011">TankControllerLib.h:11</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a0f09e0f0830a3c963a7a5f59f9696f51"><div class="ttname"><a href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">TankControllerLib::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00100">TankControllerLib.cpp:100</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib.cpp:91</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a0f09e0f0830a3c963a7a5f59f9696f51"><div class="ttname"><a href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">TankControllerLib::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00101">TankControllerLib.cpp:101</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib.cpp:92</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib.cpp:19</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a3652ee1f334ff82fa671dba966094fa6"><div class="ttname"><a href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a></div><div class="ttdeci">bool led()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00109">libTC.cpp:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, <a class="el" href="Blink_8cpp_source.html#l00017">logIndex</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib::loop()</a>, <a class="el" href="Blink_8cpp_source.html#l00018">overflowFlag</a>, <a class="el" href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00100">TankControllerLib::setup()</a>, <a class="el" href="Blink_8cpp_source.html#l00011">state</a>, <a class="el" href="Blink_8cpp_source.html#l00014">time</a>, and <a class="el" href="Blink_8cpp_source.html#l00015">value</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00109">led()</a>, <a class="el" href="Blink_8cpp_source.html#l00017">logIndex</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib::loop()</a>, <a class="el" href="Blink_8cpp_source.html#l00018">overflowFlag</a>, <a class="el" href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00101">TankControllerLib::setup()</a>, <a class="el" href="Blink_8cpp_source.html#l00011">state</a>, <a class="el" href="Blink_8cpp_source.html#l00014">time</a>, and <a class="el" href="Blink_8cpp_source.html#l00015">value</a>.</p>
 
 </div>
 </div>
@@ -296,7 +297,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00011">11</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00024">BitCollector::onBit()</a>, <a class="el" href="libTC_8cpp_source.html#l00098">serial()</a>, <a class="el" href="UIState_8cpp_source.html#l00072">UIState::setNextState()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00024">BitCollector::onBit()</a>, <a class="el" href="libTC_8cpp_source.html#l00123">serial()</a>, <a class="el" href="UIState_8cpp_source.html#l00024">UIState::setNextState()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>
@@ -314,7 +315,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00014">14</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00130">setTime()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>

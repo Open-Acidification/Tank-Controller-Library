@@ -74,8 +74,12 @@ $(function() {
 <div class="title">libTC.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<div class="textblock"><code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;Arduino.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="DateTime__TC_8h_source.html">DateTime_TC.h</a>&quot;</code><br />
@@ -84,28 +88,34 @@ $(function() {
 <code>#include &quot;<a class="el" href="LiquidCrystal__TC_8h_source.html">LiquidCrystal_TC.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="UIState_8h_source.html">UIState/UIState.h</a>&quot;</code><br />
 <code>#include &quot;pybind11/pybind11.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for libTC.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="libTC_8cpp__incl.png" border="0" usemap="#aGUI_2libTC_8cpp" alt=""/></div>
 <map name="aGUI_2libTC_8cpp" id="aGUI_2libTC_8cpp">
-<area shape="rect" title=" " alt="" coords="429,5,533,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,59,107"/>
-<area shape="rect" title=" " alt="" coords="83,80,138,107"/>
-<area shape="rect" title=" " alt="" coords="163,80,221,107"/>
-<area shape="rect" title=" " alt="" coords="611,229,687,256"/>
-<area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="311,80,423,107"/>
-<area shape="rect" href="EEPROM__TC_8h.html" title=" " alt="" coords="426,155,537,181"/>
-<area shape="rect" href="Keypad__TC_8h.html" title=" " alt="" coords="525,80,624,107"/>
-<area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="659,80,789,107"/>
-<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="893,155,982,181"/>
-<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="930,80,1065,107"/>
-<area shape="rect" title=" " alt="" coords="1089,80,1228,107"/>
-<area shape="rect" title=" " alt="" coords="331,155,402,181"/>
-<area shape="rect" title=" " alt="" coords="612,155,687,181"/>
-<area shape="rect" title=" " alt="" coords="761,155,868,181"/>
-<area shape="rect" href="TC__assert_8h.html" title=" " alt="" coords="1058,155,1150,181"/>
+<area shape="rect" title=" " alt="" coords="607,5,711,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,87,107"/>
+<area shape="rect" title=" " alt="" coords="111,80,173,107"/>
+<area shape="rect" title=" " alt="" coords="197,80,252,107"/>
+<area shape="rect" title=" " alt="" coords="277,80,330,107"/>
+<area shape="rect" title=" " alt="" coords="355,80,409,107"/>
+<area shape="rect" title=" " alt="" coords="434,80,493,107"/>
+<area shape="rect" title=" " alt="" coords="517,80,575,107"/>
+<area shape="rect" title=" " alt="" coords="1004,229,1080,256"/>
+<area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="650,80,762,107"/>
+<area shape="rect" href="EEPROM__TC_8h.html" title=" " alt="" coords="744,155,855,181"/>
+<area shape="rect" href="Keypad__TC_8h.html" title=" " alt="" coords="843,80,942,107"/>
+<area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="977,80,1107,107"/>
+<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="1211,155,1300,181"/>
+<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="1249,80,1384,107"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="1492,155,1619,181"/>
+<area shape="rect" title=" " alt="" coords="1459,80,1598,107"/>
+<area shape="rect" title=" " alt="" coords="649,155,720,181"/>
+<area shape="rect" title=" " alt="" coords="930,155,1005,181"/>
+<area shape="rect" title=" " alt="" coords="1079,155,1186,181"/>
+<area shape="rect" href="TC__assert_8h.html" title=" " alt="" coords="1376,155,1468,181"/>
 </map>
 </div>
 </div>
@@ -117,9 +127,13 @@ Macros</h2></td></tr>
 <tr class="separator:a4b6a08f7e940c3b9f5129fed463110fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ef7bba113f663df6996f286b632a3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#ae3ef7bba113f663df6996f286b632a3f">EEPROM_SIZE</a>&#160;&#160;&#160;4096</td></tr>
 <tr class="separator:ae3ef7bba113f663df6996f286b632a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4553be4db9860d940f81d7447173b2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#ab4553be4db9860d940f81d7447173b2f">LED_PIN</a>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:ab4553be4db9860d940f81d7447173b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe70025add575198dbe626aeab331386"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a> ()</td></tr>
 <tr class="separator:afe70025add575198dbe626aeab331386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231c574e99956196091663b46e622c28"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#a231c574e99956196091663b46e622c28">eeprom</a> (uint8_t index)</td></tr>
@@ -128,10 +142,12 @@ Functions</h2></td></tr>
 <tr class="separator:a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6d55d186296475a16cdd46a2863ca75"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a> (int index)</td></tr>
 <tr class="separator:ae6d55d186296475a16cdd46a2863ca75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
-<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3652ee1f334ff82fa671dba966094fa6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a> ()</td></tr>
+<tr class="separator:a3652ee1f334ff82fa671dba966094fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a816a7578f50c412ab43ec7d4eee3053c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#a816a7578f50c412ab43ec7d4eee3053c">serial</a> ()</td></tr>
 <tr class="separator:a816a7578f50c412ab43ec7d4eee3053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc443fe98a5312e4b6f8d5fe13baf7cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#afc443fe98a5312e4b6f8d5fe13baf7cb">setTime</a> ()</td></tr>
+<tr class="separator:afc443fe98a5312e4b6f8d5fe13baf7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae0723227a447e55f27ee7d2cbfc81cc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a> ()</td></tr>
@@ -158,6 +174,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00004">4</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4553be4db9860d940f81d7447173b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4553be4db9860d940f81d7447173b2f">&#9670;&nbsp;</a></span>LED_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_PIN&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00028">28</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
 
 </div>
 </div>
@@ -193,16 +225,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00022">22</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                 {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">as16CharacterString</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00036">36</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                 {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">as16CharacterString</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="ttc" id="aclassDateTime__TC_html_a517888828f617bf1de7d424398b474be"><div class="ttname"><a href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">DateTime_TC::as16CharacterString</a></div><div class="ttdeci">char * as16CharacterString()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00049">DateTime_TC.cpp:49</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00049">DateTime_TC::as16CharacterString()</a>, and <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>, and <a class="el" href="DateTime_8cpp_source.html#l00040">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>, and <a class="el" href="DateTime_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>
@@ -222,57 +254,57 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00026">26</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                             {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">switch</span> (index) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a01d765eca100b25d8db55df4b079c3e2">getPH</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a756b5e5d480b44afd06d80415bcac167">getTankID</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2a7c22b4dc990ce424b6df5cc8672d5a">getCorrectedTemp</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aa6e3b938b9d0ea88326f4dc70dfd762b">getKP</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">case</span> 5:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aea275546d6728b51fd7c7d4182b320ea">getKI</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">case</span> 6:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#af7d56e8357f96ae3abd912655f681986">getKD</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> 7:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aca7cf51069f9b24378d7bed6c92baca7">getMac</a>();  <span class="comment">// See issue #57 about this function</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">case</span> 8:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aa5e66eb1b19169ddd03add139b5893d2">getHeat</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">case</span> 9:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2b7abbcf641df64989bf1844b1b3666d">getAmplitude</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> 10:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8e41138f6a64d4ea2f361aea5d550e22">getFrequency</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a98ddfbd822cf21c37a38bb5adc6649a0">getGranularity</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a4cec461613cc901cbfca0c3e7db71aff">getMaxDataAge</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> 13:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ad9a5a8047705d7b8d7d10cab79143d8d">getPHSeriesSize</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">case</span> 14:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a22f19d71cda9f083004918a88ac77647">getPHSeriesPointer</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">case</span> 15:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a252da2088652c85936d2be7a2363e021">getTempSeriesSize</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> 16:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a208f1eb2ab2b2516b07668f48377541e">getTempSeriesPointer</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">case</span> 17:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#abf93d032f287efe593b8fdb0138c86ea">getPHInterval</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">case</span> 18:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a32e6b01292ca09bbf247e2499ef4fe8c">getPHDelay</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> 19:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a951e2bfea10bad3b6c24f62b94c81b5e">getTempInterval</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> 20:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a44cdc2a22fc254f1542336c9d275d2dd">getTempDelay</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">case</span> 21:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">getGoogleSheetInterval</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::quiet_NaN();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00040">40</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                             {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">switch</span> (index) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a01d765eca100b25d8db55df4b079c3e2">getPH</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a756b5e5d480b44afd06d80415bcac167">getTankID</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2a7c22b4dc990ce424b6df5cc8672d5a">getCorrectedTemp</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aa6e3b938b9d0ea88326f4dc70dfd762b">getKP</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aea275546d6728b51fd7c7d4182b320ea">getKI</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#af7d56e8357f96ae3abd912655f681986">getKD</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">case</span> 7:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aca7cf51069f9b24378d7bed6c92baca7">getMac</a>();  <span class="comment">// See issue #57 about this function</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aa5e66eb1b19169ddd03add139b5893d2">getHeat</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> 9:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2b7abbcf641df64989bf1844b1b3666d">getAmplitude</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">case</span> 10:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8e41138f6a64d4ea2f361aea5d550e22">getFrequency</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">case</span> 11:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a98ddfbd822cf21c37a38bb5adc6649a0">getGranularity</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> 12:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a4cec461613cc901cbfca0c3e7db71aff">getMaxDataAge</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> 13:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ad9a5a8047705d7b8d7d10cab79143d8d">getPHSeriesSize</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">case</span> 14:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a22f19d71cda9f083004918a88ac77647">getPHSeriesPointer</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">case</span> 15:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a252da2088652c85936d2be7a2363e021">getTempSeriesSize</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> 16:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a208f1eb2ab2b2516b07668f48377541e">getTempSeriesPointer</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> 17:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#abf93d032f287efe593b8fdb0138c86ea">getPHInterval</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">case</span> 18:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a32e6b01292ca09bbf247e2499ef4fe8c">getPHDelay</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> 19:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a951e2bfea10bad3b6c24f62b94c81b5e">getTempInterval</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">case</span> 20:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a44cdc2a22fc254f1542336c9d275d2dd">getTempDelay</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">case</span> 21:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">getGoogleSheetInterval</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> std::numeric_limits&lt;double&gt;::quiet_NaN();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="ttc" id="aclassEEPROM__TC_html_a01d765eca100b25d8db55df4b079c3e2"><div class="ttname"><a href="classEEPROM__TC.html#a01d765eca100b25d8db55df4b079c3e2">EEPROM_TC::getPH</a></div><div class="ttdeci">virtual double getPH()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a208f1eb2ab2b2516b07668f48377541e"><div class="ttname"><a href="classEEPROM__TC.html#a208f1eb2ab2b2516b07668f48377541e">EEPROM_TC::getTempSeriesPointer</a></div><div class="ttdeci">virtual double getTempSeriesPointer()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a22f19d71cda9f083004918a88ac77647"><div class="ttname"><a href="classEEPROM__TC.html#a22f19d71cda9f083004918a88ac77647">EEPROM_TC::getPHSeriesPointer</a></div><div class="ttdeci">virtual double getPHSeriesPointer()=0</div></div>
@@ -299,7 +331,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classEEPROM__TC.html#a2b7abbcf641df64989bf1844b1b3666d">EEPROM_TC::getAmplitude()</a>, <a class="el" href="classEEPROM__TC.html#a2a7c22b4dc990ce424b6df5cc8672d5a">EEPROM_TC::getCorrectedTemp()</a>, <a class="el" href="classEEPROM__TC.html#a8e41138f6a64d4ea2f361aea5d550e22">EEPROM_TC::getFrequency()</a>, <a class="el" href="classEEPROM__TC.html#a35ae288c5bb1fe0ba87189a1a8c4af1b">EEPROM_TC::getGoogleSheetInterval()</a>, <a class="el" href="classEEPROM__TC.html#a98ddfbd822cf21c37a38bb5adc6649a0">EEPROM_TC::getGranularity()</a>, <a class="el" href="classEEPROM__TC.html#aa5e66eb1b19169ddd03add139b5893d2">EEPROM_TC::getHeat()</a>, <a class="el" href="classEEPROM__TC.html#af7d56e8357f96ae3abd912655f681986">EEPROM_TC::getKD()</a>, <a class="el" href="classEEPROM__TC.html#aea275546d6728b51fd7c7d4182b320ea">EEPROM_TC::getKI()</a>, <a class="el" href="classEEPROM__TC.html#aa6e3b938b9d0ea88326f4dc70dfd762b">EEPROM_TC::getKP()</a>, <a class="el" href="classEEPROM__TC.html#aca7cf51069f9b24378d7bed6c92baca7">EEPROM_TC::getMac()</a>, <a class="el" href="classEEPROM__TC.html#a4cec461613cc901cbfca0c3e7db71aff">EEPROM_TC::getMaxDataAge()</a>, <a class="el" href="classEEPROM__TC.html#a01d765eca100b25d8db55df4b079c3e2">EEPROM_TC::getPH()</a>, <a class="el" href="classEEPROM__TC.html#a32e6b01292ca09bbf247e2499ef4fe8c">EEPROM_TC::getPHDelay()</a>, <a class="el" href="classEEPROM__TC.html#abf93d032f287efe593b8fdb0138c86ea">EEPROM_TC::getPHInterval()</a>, <a class="el" href="classEEPROM__TC.html#a22f19d71cda9f083004918a88ac77647">EEPROM_TC::getPHSeriesPointer()</a>, <a class="el" href="classEEPROM__TC.html#ad9a5a8047705d7b8d7d10cab79143d8d">EEPROM_TC::getPHSeriesSize()</a>, <a class="el" href="classEEPROM__TC.html#a756b5e5d480b44afd06d80415bcac167">EEPROM_TC::getTankID()</a>, <a class="el" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">EEPROM_TC::getTemp()</a>, <a class="el" href="classEEPROM__TC.html#a44cdc2a22fc254f1542336c9d275d2dd">EEPROM_TC::getTempDelay()</a>, <a class="el" href="classEEPROM__TC.html#a951e2bfea10bad3b6c24f62b94c81b5e">EEPROM_TC::getTempInterval()</a>, <a class="el" href="classEEPROM__TC.html#a208f1eb2ab2b2516b07668f48377541e">EEPROM_TC::getTempSeriesPointer()</a>, <a class="el" href="classEEPROM__TC.html#a252da2088652c85936d2be7a2363e021">EEPROM_TC::getTempSeriesSize()</a>, and <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PID__TC_8cpp_source.html#l00017">PID_TC::PID_TC()</a>, <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>, and <a class="el" href="EEPROM2_8cpp_source.html#l00006">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PID__TC_8cpp_source.html#l00017">PID_TC::PID_TC()</a>, <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>, and <a class="el" href="EEPROM2_8cpp_source.html#l00006">unittest()</a>.</p>
 
 </div>
 </div>
@@ -319,17 +351,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00077">77</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                   {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#ac3aff46de80e03901f9fe4d7898c14c5">_getPuppet</a>()-&gt;push_back(<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00091">91</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                   {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a>()-&gt;<a class="code" href="classKeypad__TC.html#ac3aff46de80e03901f9fe4d7898c14c5">_getPuppet</a>()-&gt;push_back(<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 <div class="ttc" id="aclassKeypad__TC_html_a3674237741eacf7c6c6e733a8e6f0d09"><div class="ttname"><a href="classKeypad__TC.html#a3674237741eacf7c6c6e733a8e6f0d09">Keypad_TC::instance</a></div><div class="ttdeci">static Keypad_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC.cpp:20</a></div></div>
 <div class="ttc" id="aclassKeypad__TC_html_ac3aff46de80e03901f9fe4d7898c14c5"><div class="ttname"><a href="classKeypad__TC.html#ac3aff46de80e03901f9fe4d7898c14c5">Keypad_TC::_getPuppet</a></div><div class="ttdeci">static Keypad * _getPuppet()</div><div class="ttdef"><b>Definition:</b> <a href="Keypad__TC_8h_source.html#l00020">Keypad_TC.h:20</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00077">libTC.cpp:77</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00091">libTC.cpp:91</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00113">libTC.cpp:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Keypad__TC_8h_source.html#l00020">Keypad_TC::_getPuppet()</a>, and <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>.</p>
+<p class="reference">References <a class="el" href="Keypad__TC_8h_source.html#l00020">Keypad_TC::_getPuppet()</a>, <a class="el" href="Keypad__TC_8cpp_source.html#l00020">Keypad_TC::instance()</a>, and <a class="el" href="libTC_8cpp_source.html#l00113">loop()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CalibrationManagement_8cpp_source.html#l00007">CalibrationManagement::handleKey()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00007">EnablePID::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00023">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00013">NumCollectorState::handleKey()</a>, <a class="el" href="PHCalibration_8cpp_source.html#l00007">PHCalibration::handleKey()</a>, <a class="el" href="PIDTuningMenu_8cpp_source.html#l00007">PIDTuningMenu::handleKey()</a>, <a class="el" href="ResetLCDScreen_8cpp_source.html#l00007">ResetLCDScreen::handleKey()</a>, <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00007">SeeDeviceAddress::handleKey()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00007">SeePIDConstants::handleKey()</a>, <a class="el" href="SeeTankID_8cpp_source.html#l00007">SeeTankID::handleKey()</a>, <a class="el" href="TemperatureCalibration_8cpp_source.html#l00007">TemperatureCalibration::handleKey()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00078">TankControllerLib::handleUI()</a>, and <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CalibrationManagement_8cpp_source.html#l00007">CalibrationManagement::handleKey()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00007">EnablePID::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00023">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00013">NumCollectorState::handleKey()</a>, <a class="el" href="PHCalibration_8cpp_source.html#l00007">PHCalibration::handleKey()</a>, <a class="el" href="PIDTuningMenu_8cpp_source.html#l00007">PIDTuningMenu::handleKey()</a>, <a class="el" href="ResetLCDScreen_8cpp_source.html#l00007">ResetLCDScreen::handleKey()</a>, <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00007">SeeDeviceAddress::handleKey()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00007">SeePIDConstants::handleKey()</a>, <a class="el" href="SeeTankID_8cpp_source.html#l00007">SeeTankID::handleKey()</a>, <a class="el" href="TemperatureCalibration_8cpp_source.html#l00007">TemperatureCalibration::handleKey()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00078">TankControllerLib::handleUI()</a>, and <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>.</p>
 
 </div>
 </div>
@@ -349,26 +383,52 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00081">81</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                           {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;String&gt; <a class="code" href="test_2SeeDeviceUptime_8cpp.html#a8424a2c09b683df7e0a65e65132ed783">lines</a> = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;getLines();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  String line = <a class="code" href="test_2SeeDeviceUptime_8cpp.html#a8424a2c09b683df7e0a65e65132ed783">lines</a>.at(index);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">int</span> size = line.size();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; ++i) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (line.at(i) &lt; 32) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      line.at(i) = <span class="charliteral">&#39;?&#39;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  strncpy(<a class="code" href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a>, line.c_str(), size);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00096">96</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                           {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  std::vector&lt;String&gt; lines = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;getLines();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  String line = lines.at(index);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">int</span> size = line.size();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; ++i) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (line.at(i) &lt; 32) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      line.at(i) = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  strncpy(<a class="code" href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a>, line.c_str(), size);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC.cpp:13</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_a40e26f81b7879a3fa8c8aa02215d6b3c"><div class="ttname"><a href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a></div><div class="ttdeci">char lcdLine[20]</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00020">libTC.cpp:20</a></div></div>
-<div class="ttc" id="atest_2SeeDeviceUptime_8cpp_html_a8424a2c09b683df7e0a65e65132ed783"><div class="ttname"><a href="test_2SeeDeviceUptime_8cpp.html#a8424a2c09b683df7e0a65e65132ed783">lines</a></div><div class="ttdeci">std::vector&lt; String &gt; lines</div><div class="ttdef"><b>Definition:</b> <a href="test_2SeeDeviceUptime_8cpp_source.html#l00011">SeeDeviceUptime.cpp:11</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a40e26f81b7879a3fa8c8aa02215d6b3c"><div class="ttname"><a href="libTC_8cpp.html#a40e26f81b7879a3fa8c8aa02215d6b3c">lcdLine</a></div><div class="ttdeci">char lcdLine[20]</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00031">libTC.cpp:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00020">lcdLine</a>, and <a class="el" href="test_2SeeDeviceUptime_8cpp_source.html#l00011">lines</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, and <a class="el" href="libTC_8cpp_source.html#l00031">lcdLine</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>, and <a class="el" href="test_2SetTime_8cpp_source.html#l00016">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>, and <a class="el" href="test_2SetTime_8cpp_source.html#l00010">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="a3652ee1f334ff82fa671dba966094fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3652ee1f334ff82fa671dba966094fa6">&#9670;&nbsp;</a></span>led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool led </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00109">109</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;           {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> digitalRead(<a class="code" href="libTC_8cpp.html#ab4553be4db9860d940f81d7447173b2f">LED_PIN</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="alibTC_8cpp_html_ab4553be4db9860d940f81d7447173b2f"><div class="ttname"><a href="libTC_8cpp.html#ab4553be4db9860d940f81d7447173b2f">LED_PIN</a></div><div class="ttdeci">#define LED_PIN</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00028">libTC.cpp:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00028">LED_PIN</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>, and <a class="el" href="Blink_8cpp_source.html#l00040">unittest()</a>.</p>
 
 </div>
 </div>
@@ -387,16 +447,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00094">94</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib.cpp:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00113">113</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> millisecondsSinceEpoch =</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      std::chrono::system_clock::now().time_since_epoch() / std::chrono::milliseconds(1);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">int</span> msBehind = millisecondsSinceEpoch - millis();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (msBehind) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    delay(msBehind);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib.cpp:92</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib.cpp:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib::loop()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00092">TankControllerLib::loop()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00091">key()</a>, and <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>.</p>
 
 </div>
 </div>
@@ -426,28 +492,29 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00113">113</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                          {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  m.doc() = <span class="stringliteral">&quot;pybind11 example plugin&quot;</span>;  <span class="comment">// optional module docstring</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  m.def(<span class="stringliteral">&quot;dateTime&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>, <span class="stringliteral">&quot;TankController DateTime&quot;</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  m.def(<span class="stringliteral">&quot;eeprom&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a231c574e99956196091663b46e622c28">eeprom</a>, <span class="stringliteral">&quot;TankController EEPROM&quot;</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  m.def(<span class="stringliteral">&quot;key&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>, <span class="stringliteral">&quot;TankController key&quot;</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  m.def(<span class="stringliteral">&quot;lcd&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a>, <span class="stringliteral">&quot;TankController LiquidCrystal&quot;</span>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  m.def(<span class="stringliteral">&quot;loop&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a>, <span class="stringliteral">&quot;TankController loop&quot;</span>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  m.def(<span class="stringliteral">&quot;serial&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a816a7578f50c412ab43ec7d4eee3053c">serial</a>, <span class="stringliteral">&quot;TankController serial&quot;</span>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  m.def(<span class="stringliteral">&quot;setup&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>, <span class="stringliteral">&quot;TankController setup&quot;</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  m.def(<span class="stringliteral">&quot;version&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a>, <span class="stringliteral">&quot;TankController version&quot;</span>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="ttc" id="alibTC_8cpp_html_a231c574e99956196091663b46e622c28"><div class="ttname"><a href="libTC_8cpp.html#a231c574e99956196091663b46e622c28">eeprom</a></div><div class="ttdeci">double eeprom(uint8_t index)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00026">libTC.cpp:26</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="libTC_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00105">libTC.cpp:105</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_a816a7578f50c412ab43ec7d4eee3053c"><div class="ttname"><a href="libTC_8cpp.html#a816a7578f50c412ab43ec7d4eee3053c">serial</a></div><div class="ttdeci">string serial()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00098">libTC.cpp:98</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_aae0723227a447e55f27ee7d2cbfc81cc"><div class="ttname"><a href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00109">libTC.cpp:109</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_ae6d55d186296475a16cdd46a2863ca75"><div class="ttname"><a href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a></div><div class="ttdeci">const char * lcd(int index)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00081">libTC.cpp:81</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00094">libTC.cpp:94</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_afe70025add575198dbe626aeab331386"><div class="ttname"><a href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a></div><div class="ttdeci">char * dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00022">libTC.cpp:22</a></div></div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00154">154</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                          {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  m.doc() = <span class="stringliteral">&quot;pybind11 example plugin&quot;</span>;  <span class="comment">// optional module docstring</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  m.def(<span class="stringliteral">&quot;dateTime&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a>, <span class="stringliteral">&quot;TankController DateTime&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  m.def(<span class="stringliteral">&quot;eeprom&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a231c574e99956196091663b46e622c28">eeprom</a>, <span class="stringliteral">&quot;TankController EEPROM&quot;</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  m.def(<span class="stringliteral">&quot;key&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>, <span class="stringliteral">&quot;TankController key&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  m.def(<span class="stringliteral">&quot;lcd&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a>, <span class="stringliteral">&quot;TankController LiquidCrystal&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  m.def(<span class="stringliteral">&quot;led&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a>, <span class="stringliteral">&quot;TankController LED pin value&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  m.def(<span class="stringliteral">&quot;loop&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a>, <span class="stringliteral">&quot;TankController loop&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  m.def(<span class="stringliteral">&quot;serial&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a816a7578f50c412ab43ec7d4eee3053c">serial</a>, <span class="stringliteral">&quot;TankController serial&quot;</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  m.def(<span class="stringliteral">&quot;setup&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>, <span class="stringliteral">&quot;TankController setup&quot;</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  m.def(<span class="stringliteral">&quot;version&quot;</span>, &amp;<a class="code" href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a>, <span class="stringliteral">&quot;TankController version&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="ttc" id="alibTC_8cpp_html_a231c574e99956196091663b46e622c28"><div class="ttname"><a href="libTC_8cpp.html#a231c574e99956196091663b46e622c28">eeprom</a></div><div class="ttdeci">double eeprom(uint8_t index)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00040">libTC.cpp:40</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a3652ee1f334ff82fa671dba966094fa6"><div class="ttname"><a href="libTC_8cpp.html#a3652ee1f334ff82fa671dba966094fa6">led</a></div><div class="ttdeci">bool led()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00109">libTC.cpp:109</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="libTC_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00145">libTC.cpp:145</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_a816a7578f50c412ab43ec7d4eee3053c"><div class="ttname"><a href="libTC_8cpp.html#a816a7578f50c412ab43ec7d4eee3053c">serial</a></div><div class="ttdeci">string serial()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00123">libTC.cpp:123</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_aae0723227a447e55f27ee7d2cbfc81cc"><div class="ttname"><a href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00150">libTC.cpp:150</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_ae6d55d186296475a16cdd46a2863ca75"><div class="ttname"><a href="libTC_8cpp.html#ae6d55d186296475a16cdd46a2863ca75">lcd</a></div><div class="ttdeci">const char * lcd(int index)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00096">libTC.cpp:96</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_afe70025add575198dbe626aeab331386"><div class="ttname"><a href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a></div><div class="ttdeci">char * dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00036">libTC.cpp:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00022">dateTime()</a>, <a class="el" href="libTC_8cpp_source.html#l00026">eeprom()</a>, <a class="el" href="libTC_8cpp_source.html#l00077">key()</a>, <a class="el" href="libTC_8cpp_source.html#l00081">lcd()</a>, <a class="el" href="libTC_8cpp_source.html#l00094">loop()</a>, <a class="el" href="libTC_8cpp_source.html#l00098">serial()</a>, <a class="el" href="libTC_8cpp_source.html#l00105">setup()</a>, and <a class="el" href="libTC_8cpp_source.html#l00109">version()</a>.</p>
+<p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00036">dateTime()</a>, <a class="el" href="libTC_8cpp_source.html#l00040">eeprom()</a>, <a class="el" href="libTC_8cpp_source.html#l00091">key()</a>, <a class="el" href="libTC_8cpp_source.html#l00096">lcd()</a>, <a class="el" href="libTC_8cpp_source.html#l00109">led()</a>, <a class="el" href="libTC_8cpp_source.html#l00113">loop()</a>, <a class="el" href="libTC_8cpp_source.html#l00123">serial()</a>, <a class="el" href="libTC_8cpp_source.html#l00145">setup()</a>, and <a class="el" href="libTC_8cpp_source.html#l00150">version()</a>.</p>
 
 </div>
 </div>
@@ -466,18 +533,57 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00098">98</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">string</span> result = string(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00123">123</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">string</span> result = string(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PID__TC_8cpp_source.html#l00048">PID_TC::logToSerial()</a>, and <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PID__TC_8cpp_source.html#l00048">PID_TC::logToSerial()</a>, and <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>.</p>
+
+</div>
+</div>
+<a id="afc443fe98a5312e4b6f8d5fe13baf7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc443fe98a5312e4b6f8d5fe13baf7cb">&#9670;&nbsp;</a></span>setTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00130">130</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;               {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">int</span> timeDelta = 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  time_t rawtime;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keyword">struct </span>tm *timeinfo;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <a class="code" href="Blink_8cpp.html#a8667588dec524bf854d0c16771d425a1">time</a>(&amp;rawtime);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  timeinfo = localtime(&amp;rawtime);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now(timeinfo-&gt;tm_year + 1900, timeinfo-&gt;tm_mon + 1, timeinfo-&gt;tm_mday, timeinfo-&gt;tm_hour,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                  timeinfo-&gt;tm_min, timeinfo-&gt;tm_sec);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> millisecondsSinceEpoch =</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      std::chrono::system_clock::now().time_since_epoch() / std::chrono::milliseconds(1);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  timeDelta = millisecondsSinceEpoch - millis();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  delay(timeDelta);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  now.setAsCurrent();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="ttc" id="aBlink_8cpp_html_a8667588dec524bf854d0c16771d425a1"><div class="ttname"><a href="Blink_8cpp.html#a8667588dec524bf854d0c16771d425a1">time</a></div><div class="ttdeci">long time</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00014">Blink.cpp:14</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00084">DateTime_TC::setAsCurrent()</a>, and <a class="el" href="Blink_8cpp_source.html#l00014">time</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00145">setup()</a>.</p>
 
 </div>
 </div>
@@ -496,15 +602,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00105">105</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;             {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">setup</a>();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_a0f09e0f0830a3c963a7a5f59f9696f51"><div class="ttname"><a href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">TankControllerLib::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00100">TankControllerLib.cpp:100</a></div></div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00145">145</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;             {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="libTC_8cpp.html#afc443fe98a5312e4b6f8d5fe13baf7cb">setTime</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">setup</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_a0f09e0f0830a3c963a7a5f59f9696f51"><div class="ttname"><a href="classTankControllerLib.html#a0f09e0f0830a3c963a7a5f59f9696f51">TankControllerLib::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00101">TankControllerLib.cpp:101</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_afc443fe98a5312e4b6f8d5fe13baf7cb"><div class="ttname"><a href="libTC_8cpp.html#afc443fe98a5312e4b6f8d5fe13baf7cb">setTime</a></div><div class="ttdeci">void setTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00130">libTC.cpp:130</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00100">TankControllerLib::setup()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, <a class="el" href="libTC_8cpp_source.html#l00130">setTime()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00101">TankControllerLib::setup()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>.</p>
 
 </div>
 </div>
@@ -523,15 +631,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00109">109</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                      {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#ab242a1a7cc1ca09678904a5a864a7ee9">version</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="ttc" id="aclassTankControllerLib_html_ab242a1a7cc1ca09678904a5a864a7ee9"><div class="ttname"><a href="classTankControllerLib.html#ab242a1a7cc1ca09678904a5a864a7ee9">TankControllerLib::version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00110">TankControllerLib.cpp:110</a></div></div>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00150">150</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                      {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;<a class="code" href="classTankControllerLib.html#ab242a1a7cc1ca09678904a5a864a7ee9">version</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="ttc" id="aclassTankControllerLib_html_ab242a1a7cc1ca09678904a5a864a7ee9"><div class="ttname"><a href="classTankControllerLib.html#ab242a1a7cc1ca09678904a5a864a7ee9">TankControllerLib::version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00111">TankControllerLib.cpp:111</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00110">TankControllerLib::version()</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00019">TankControllerLib::instance()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00111">TankControllerLib::version()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>, <a class="el" href="EEPROM__TC__3_8cpp_source.html#l00006">EEPROM_TC_3::isRightVersion()</a>, and <a class="el" href="libTC_8cpp_source.html#l00113">PYBIND11_MODULE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>, <a class="el" href="EEPROM__TC__3_8cpp_source.html#l00006">EEPROM_TC_3::isRightVersion()</a>, and <a class="el" href="libTC_8cpp_source.html#l00154">PYBIND11_MODULE()</a>.</p>
 
 </div>
 </div>
@@ -548,9 +656,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00020">20</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="libTC_8cpp_source.html#l00031">31</a> of file <a class="el" href="libTC_8cpp_source.html">libTC.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00081">lcd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00096">lcd()</a>.</p>
 
 </div>
 </div>
