@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 
+#include "Devices/DateTime_TC.h"
 #include "Devices/Keypad_TC.h"
 #include "Devices/LiquidCrystal_TC.h"
 #include "TankControllerLib.h"
@@ -10,7 +11,6 @@ unittest(SetPHSetPoint) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   lines = lc->getLines();
   assertEqual(" ONTHANK LAB", lc->getLines().at(0).substr(4));
   keypad->push_back('A');
@@ -27,7 +27,6 @@ unittest(SetTempSetPoint) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('B');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Set Temperature ", lc->getLines().at(0));
@@ -42,7 +41,6 @@ unittest(PHCalibration) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('C');
   tc->loop();  // recognize and apply the key entry
   assertEqual("pH-Calibration  ", lc->getLines().at(0));
@@ -57,7 +55,6 @@ unittest(CalibrationManagement) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('D');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Cal Management  ", lc->getLines().at(0));
@@ -72,7 +69,6 @@ unittest(SetTankID) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('#');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Set Tank ID#    ", lc->getLines().at(0));
@@ -87,7 +83,6 @@ unittest(SetGoogleSheetInterval) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('*');
   tc->loop();  // recognize and apply the key entry
   assertEqual("G Sheet Minutes ", lc->getLines().at(0));
@@ -102,13 +97,16 @@ unittest(SeeDeviceUptime) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('0');
-  tc->loop();  // recognize and apply the key entry
+  tc->loop();  // transition into the SeeDeviceUptime state
+  lines = lc->getLines();
+  assertEqual(DateTime_TC::now().as16CharacterString(), lines[0].c_str());
+  tc->loop();  // transition into the Wait state
+  lines = lc->getLines();
+  assertEqual(DateTime_TC::now().as16CharacterString(), lines[0].c_str());
   delay(1000);
-  tc->loop();  // return to the main menu
-  delay(1100);
-  tc->loop();  // return to the main menu
+  tc->loop();  // this will set MainMenu as the next state
+  tc->loop();  // this will start MainMenu
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
 }
@@ -118,7 +116,6 @@ unittest(SeeDeviceAddress) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('1');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Device address  ", lc->getLines().at(0));
@@ -135,7 +132,6 @@ unittest(ResetLCDScreen) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('2');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Clearing Screen ", lc->getLines().at(0));
@@ -152,7 +148,6 @@ unittest(SeeTankID) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('3');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Tank ID=        ", lc->getLines().at(0));
@@ -167,7 +162,6 @@ unittest(SeePIDConstants) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('4');
   tc->loop();  // recognize and apply the key entry
   assertEqual("PID Constants   ", lc->getLines().at(0));
@@ -182,7 +176,6 @@ unittest(PIDTuningMenu) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('5');
   tc->loop();  // recognize and apply the key entry
   assertEqual("PID TUNING      ", lc->getLines().at(0));
@@ -197,7 +190,6 @@ unittest(TemperatureCalibration) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('6');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Temp Calibration", lc->getLines().at(0));
@@ -212,7 +204,6 @@ unittest(SetTime) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('7');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Set Year (YYYY):", lc->getLines().at(0));
@@ -227,7 +218,6 @@ unittest(EnablePID) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('8');
   tc->loop();  // recognize and apply the key entry
   assertEqual("Enable PID?     ", lc->getLines().at(0));
@@ -242,7 +232,6 @@ unittest(SetChillOrHeat) {
   LiquidCrystal_TC* lc = LiquidCrystal_TC::instance();
   Keypad* keypad = Keypad_TC::instance()->_getPuppet();
   std::vector<String> lines;
-  tc->loop();
   keypad->push_back('9');
   tc->loop();  // recognize and apply the key entry
   assertEqual("1:Chill; 9:Heat ", lc->getLines().at(0));
