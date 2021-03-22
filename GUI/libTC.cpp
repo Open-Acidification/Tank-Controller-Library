@@ -32,7 +32,6 @@ char lcdLine[20];
 
 // function prototypes
 void loop();
-void sleepHandler(int ms);
 
 char *dateTime() {
   return DateTime_TC::now().as16CharacterString();
@@ -146,12 +145,6 @@ void setTime() {
 void setup() {
   setTime();
   TankControllerLib::instance()->setup();
-  UIState::addSleepHandler(sleepHandler);
-}
-
-void sleepHandler(int ms) {
-  std::cout << "sleepHandler(" << ms << ")" << std::endl;
-  std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 
 const char *version() {
