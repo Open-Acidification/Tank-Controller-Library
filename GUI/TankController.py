@@ -63,6 +63,37 @@ class TankController(wx.Frame):
     def layoutTopLeft(self):
         sizer = wx.StaticBoxSizer(wx.VERTICAL, self.panel)
         sizer.Add(self.layoutDevice(), flag=wx.EXPAND)
+        sizer.Add(self.layoutTank(), flag=wx.EXPAND)
+        return sizer
+
+    def layoutTank(self):
+        sizer = wx.StaticBoxSizer(wx.HORIZONTAL, self.panel)
+        sizer.Add(self.layoutTemp(), flag=wx.EXPAND)
+        sizer.Add(self.layoutPH(), flag=wx.EXPAND)
+        return sizer
+
+    def layoutTemp(self):
+        sizer = wx.StaticBoxSizer(
+            wx.VERTICAL, self.panel, label="Tank Temperature")
+        self.temp = wx.TextCtrl(
+            self.panel, value='12.345', style=wx.TE_RIGHT)
+        self.temp.Bind(wx.EVT_TEXT, self.onTempChanged)
+        font = wx.Font(18, wx.FONTFAMILY_TELETYPE,
+                       wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+        self.lqd.SetFont(font)
+        sizer.Add(self.temp, flag=wx.EXPAND)
+        return sizer
+
+    def layoutPH(self):
+        sizer = wx.StaticBoxSizer(
+            wx.VERTICAL, self.panel, label="Tank pH")
+        self.ph = wx.TextCtrl(
+            self.panel, value='8.1234', style=wx.TE_RIGHT)
+        self.ph.Bind(wx.EVT_TEXT, self.onPHChanged)
+        font = wx.Font(18, wx.FONTFAMILY_TELETYPE,
+                       wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+        self.lqd.SetFont(font)
+        sizer.Add(self.ph, flag=wx.EXPAND)
         return sizer
 
     def layoutDevice(self):
@@ -75,16 +106,28 @@ class TankController(wx.Frame):
     def layoutDisplay(self):
         sizer = wx.StaticBoxSizer(wx.HORIZONTAL, self.panel)
         sizer.Add(self.layoutLQD(), flag=wx.EXPAND)
+        sizer.Add(self.layoutPins(), flag=wx.EXPAND)
         return sizer
 
     def layoutLQD(self):
-        sizer = wx.StaticBoxSizer(wx.VERTICAL, self.panel, label="Liquid Crystal")
+        sizer = wx.StaticBoxSizer(
+            wx.VERTICAL, self.panel, label="Liquid Crystal")
         self.lqd = wx.StaticText(
             self.panel, label=libTC.lcd(0) + '\n' + libTC.lcd(1))
-        font = wx.Font(20, wx.FONTFAMILY_TELETYPE,
+        font = wx.Font(22, wx.FONTFAMILY_TELETYPE,
                        wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
         self.lqd.SetFont(font)
         sizer.Add(self.lqd, flag=wx.EXPAND)
+        return sizer
+
+    def layoutPins(self):
+        sizer = wx.StaticBoxSizer(wx.VERTICAL, self.panel, label="Pins")
+        self.pins = wx.StaticText(
+            self.panel, label='LED:  OFF\nHEAT: OFF\nCO2:  OFF')
+        font = wx.Font(15, wx.FONTFAMILY_TELETYPE,
+                       wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
+        self.pins.SetFont(font)
+        sizer.Add(self.pins, flag=wx.EXPAND)
         return sizer
 
     def layoutKeypad(self):
@@ -145,7 +188,9 @@ class TankController(wx.Frame):
             each.SetLabelText('{:.4f}'.format(libTC.eeprom(i)))
         # update Serial output
         self.console.AppendText(libTC.serial().replace('\r\n', '\n'))
-        # print(libTC.led())
+        # update pins
+        self.pins.SetLabelText('LED:  {}\nHEAT: OFF\nCO2:  OFF'.format(
+            'ON' if libTC.led() else 'OFF'))
 
     def handleKey(self, key):
         libTC.key(key)
@@ -164,6 +209,12 @@ class TankController(wx.Frame):
         if (key == '.'):  # decimal
             key = '*'
         self.handleKey(key)
+
+    def onPHChanged(self, event):
+        print("onPHChanged", event.GetString())
+
+    def onTempChanged(self, event):
+        print("onTempChanged", event.GetString())
 
 
 if __name__ == "__main__":
