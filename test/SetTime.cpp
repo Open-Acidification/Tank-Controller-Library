@@ -42,11 +42,11 @@ unittest(test) {
   // a year ago ensures that it precedes the compile time
   assertEqual("2020-03-18 13:15", DateTime_TC::now().as16CharacterString());
 
-  assertFalse(tc.isOnMainMenu());
+  assertEqual("Wait", tc->stateName());
   delay(1000);
   tc.loop();
   // now we should be back to the main menu
-  assertTrue(tc.isOnMainMenu());
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest_main()

@@ -106,15 +106,18 @@ void TankControllerLib::setup() {
 }
 
 /**
+ * Public member function used to get the current state name.
+ * This is primarioly used by testing.
+ */
+
+String TankControllerLib::stateName() {
+  return state->name();
+}
+
+/**
  * What is the current version?
  */
 const char *TankControllerLib::version() {
   log->print((const char *)F("TankControllerLib::version() = "), (const char *)TANK_CONTROLLER_VERSION);
   return TANK_CONTROLLER_VERSION;
 }
-
-#ifdef MOCK_PINS_COUNT
-bool TankControllerLibTest::isOnMainMenu() {
-  return state->isMainMenu();
-}
-#endif

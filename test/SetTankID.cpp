@@ -18,11 +18,11 @@ unittest(test) {
   // during the delay we showed the new value
   std::vector<String> lines = LiquidCrystal_TC::instance()->getLines();
   assertEqual("Tank ID = 12    ", lines[1]);
-  assertFalse(tc.isOnMainMenu());
+  assertEqual("Wait", tc->stateName());
   delay(1000);
   tc.loop();
   // now we should be back to the main menu
-  assertTrue(tc.isOnMainMenu());
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest_main()

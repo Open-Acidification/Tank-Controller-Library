@@ -20,6 +20,7 @@ unittest(SetPHSetPoint) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SetTempSetPoint) {
@@ -34,6 +35,7 @@ unittest(SetTempSetPoint) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(PHCalibration) {
@@ -48,6 +50,7 @@ unittest(PHCalibration) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(CalibrationManagement) {
@@ -62,6 +65,7 @@ unittest(CalibrationManagement) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SetTankID) {
@@ -76,6 +80,7 @@ unittest(SetTankID) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SetGoogleSheetInterval) {
@@ -90,6 +95,7 @@ unittest(SetGoogleSheetInterval) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SeeDeviceUptime) {
@@ -109,6 +115,7 @@ unittest(SeeDeviceUptime) {
   tc->loop();  // this will start MainMenu
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SeeDeviceAddress) {
@@ -125,6 +132,7 @@ unittest(SeeDeviceAddress) {
   tc->loop();
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(ResetLCDScreen) {
@@ -141,6 +149,7 @@ unittest(ResetLCDScreen) {
   tc->loop();
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SeeTankID) {
@@ -155,6 +164,7 @@ unittest(SeeTankID) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SeePIDConstants) {
@@ -169,6 +179,7 @@ unittest(SeePIDConstants) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(PIDTuningMenu) {
@@ -183,6 +194,7 @@ unittest(PIDTuningMenu) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(TemperatureCalibration) {
@@ -197,6 +209,7 @@ unittest(TemperatureCalibration) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SetTime) {
@@ -211,6 +224,7 @@ unittest(SetTime) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(EnablePID) {
@@ -225,6 +239,7 @@ unittest(EnablePID) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(SetChillOrHeat) {
@@ -239,6 +254,7 @@ unittest(SetChillOrHeat) {
   tc->loop();              // recognize and apply the key entry
   lines = lc->getLines();
   assertEqual("Main Menu       ", lc->getLines().at(0));
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest_main()

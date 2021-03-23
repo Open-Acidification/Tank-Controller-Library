@@ -16,6 +16,7 @@ public:
   // instance methods
   void setup();
   void loop();
+  String stateName();
   const char* version();
   virtual void setNextState(UIState* newState) {
     assert(nextState == nullptr);
