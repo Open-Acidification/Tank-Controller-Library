@@ -88,12 +88,16 @@ Collaboration diagram for TempProbe_TC:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a29525c21758d0bb355dcec35b9d29c38"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a29525c21758d0bb355dcec35b9d29c38">getResistance</a> ()</td></tr>
 <tr class="separator:a29525c21758d0bb355dcec35b9d29c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f6adbb3d669636b37d00205680f08f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#ac7f6adbb3d669636b37d00205680f08f">getTemperature</a> ()</td></tr>
-<tr class="separator:ac7f6adbb3d669636b37d00205680f08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab52c631535639bd8392986a7e581eaa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">getRawTemperature</a> ()</td></tr>
+<tr class="separator:aab52c631535639bd8392986a7e581eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c43d4a4b041a81ab34247f8b2bcb04a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a4c43d4a4b041a81ab34247f8b2bcb04a">getRunningAverage</a> ()</td></tr>
+<tr class="separator:a4c43d4a4b041a81ab34247f8b2bcb04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8060a952cdfa0b12867bc601fa8da12"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#ad8060a952cdfa0b12867bc601fa8da12">readFault</a> ()</td></tr>
 <tr class="separator:ad8060a952cdfa0b12867bc601fa8da12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a3b9696d8d8c2d14531f6de763d877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#ac3a3b9696d8d8c2d14531f6de763d877">clearFault</a> ()</td></tr>
 <tr class="separator:ac3a3b9696d8d8c2d14531f6de763d877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c74b1b58593dddfcb2220e617a9562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#ab6c74b1b58593dddfcb2220e617a9562">setCorrection</a> (float <a class="el" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>)</td></tr>
+<tr class="separator:ab6c74b1b58593dddfcb2220e617a9562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -107,17 +111,27 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5a3ee5ed24d320e5808d6c1ef7fa5859"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">RTDnominal</a> = 100</td></tr>
-<tr class="separator:a5a3ee5ed24d320e5808d6c1ef7fa5859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f0fc0b763f5d9e24488aacd1fd5535"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">refResistor</a> = 430</td></tr>
-<tr class="separator:a04f0fc0b763f5d9e24488aacd1fd5535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8f4d21349ead8d27020f5c970d1a257"><td class="memItemLeft" align="right" valign="top">Adafruit_MAX31865&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a> = Adafruit_MAX31865(45, 43, 41, 39)</td></tr>
 <tr class="separator:aa8f4d21349ead8d27020f5c970d1a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7e6361ea29975de6529237acecc244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#aba7e6361ea29975de6529237acecc244">firstTime</a> = true</td></tr>
+<tr class="separator:aba7e6361ea29975de6529237acecc244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91ad09293f9783e513e07cfd15f2efd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#af91ad09293f9783e513e07cfd15f2efd">history</a> [<a class="el" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>]</td></tr>
+<tr class="separator:af91ad09293f9783e513e07cfd15f2efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45adbc26c3714afa459756a0692b81b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a45adbc26c3714afa459756a0692b81b3">historyIndex</a> = 0</td></tr>
+<tr class="separator:a45adbc26c3714afa459756a0692b81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7de90e37c14bd29d4ff8f84c8e36129"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#aa7de90e37c14bd29d4ff8f84c8e36129">correction</a> = 0.0</td></tr>
+<tr class="separator:aa7de90e37c14bd29d4ff8f84c8e36129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a46671f95763b065eee44c842fe475fa5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTempProbe__TC.html">TempProbe_TC</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a46671f95763b065eee44c842fe475fa5">_instance</a> = nullptr</td></tr>
 <tr class="separator:a46671f95763b065eee44c842fe475fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3ee5ed24d320e5808d6c1ef7fa5859"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">RTDnominal</a> = 100</td></tr>
+<tr class="separator:a5a3ee5ed24d320e5808d6c1ef7fa5859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f0fc0b763f5d9e24488aacd1fd5535"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">refResistor</a> = 430</td></tr>
+<tr class="separator:a04f0fc0b763f5d9e24488aacd1fd5535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ddaee90f8b32ff8999bac5279afc68"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a> = 10</td></tr>
+<tr class="separator:a93ddaee90f8b32ff8999bac5279afc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Adafruit MAX31865 The Adafruit MAX31865 is an external device that connects to a thermocouple (temperature sensor), and has pins that can be used to read a resistance, temperature, or fault. The associated library has a simple API as described below.</p>
@@ -165,9 +179,9 @@ Static Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                           {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.begin(MAX31865_3WIRE);  <span class="comment">// Start pt100 temperature probe with 3 wire configuration</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="ttc" id="aclassTempProbe__TC_html_aa8f4d21349ead8d27020f5c970d1a257"><div class="ttname"><a href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">TempProbe_TC::thermo</a></div><div class="ttdeci">Adafruit_MAX31865 thermo</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00114">TempProbe_TC.h:114</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_aa8f4d21349ead8d27020f5c970d1a257"><div class="ttname"><a href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">TempProbe_TC::thermo</a></div><div class="ttdeci">Adafruit_MAX31865 thermo</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00129">TempProbe_TC.h:129</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00114">thermo</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00129">thermo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00013">instance()</a>.</p>
 
@@ -197,14 +211,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00105">105</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.clearFault();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00107">107</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.clearFault();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00114">thermo</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00129">thermo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="aab52c631535639bd8392986a7e581eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab52c631535639bd8392986a7e581eaa">&#9670;&nbsp;</a></span>getRawTemperature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TempProbe_TC::getRawTemperature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00097">97</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.temperature(<a class="code" href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">RTDnominal</a>, <a class="code" href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">refResistor</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="ttc" id="aclassTempProbe__TC_html_a04f0fc0b763f5d9e24488aacd1fd5535"><div class="ttname"><a href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">TempProbe_TC::refResistor</a></div><div class="ttdeci">static const int refResistor</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00128">TempProbe_TC.h:128</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_a5a3ee5ed24d320e5808d6c1ef7fa5859"><div class="ttname"><a href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">TempProbe_TC::RTDnominal</a></div><div class="ttdeci">static const int RTDnominal</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00127">TempProbe_TC.h:127</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00128">refResistor</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00127">RTDnominal</a>, and <a class="el" href="TempProbe__TC_8h_source.html#l00129">thermo</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>, and <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
 
 </div>
 </div>
@@ -236,45 +286,56 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.readRTD();</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00114">thermo</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00129">thermo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
 
 </div>
 </div>
-<a id="ac7f6adbb3d669636b37d00205680f08f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7f6adbb3d669636b37d00205680f08f">&#9670;&nbsp;</a></span>getTemperature()</h2>
+<a id="a4c43d4a4b041a81ab34247f8b2bcb04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c43d4a4b041a81ab34247f8b2bcb04a">&#9670;&nbsp;</a></span>getRunningAverage()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float TempProbe_TC::getTemperature </td>
+          <td class="memname">double TempProbe_TC::getRunningAverage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p><a class="el" href="classTempProbe__TC.html#a4c43d4a4b041a81ab34247f8b2bcb04a">getRunningAverage()</a></p>
+<p>Read the current temperature and return a running average </p>
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00097">97</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                         {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.temperature(<a class="code" href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">RTDnominal</a>, <a class="code" href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">refResistor</a>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
-<div class="ttc" id="aclassTempProbe__TC_html_a04f0fc0b763f5d9e24488aacd1fd5535"><div class="ttname"><a href="classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535">TempProbe_TC::refResistor</a></div><div class="ttdeci">const int refResistor</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00113">TempProbe_TC.h:113</a></div></div>
-<div class="ttc" id="aclassTempProbe__TC_html_a5a3ee5ed24d320e5808d6c1ef7fa5859"><div class="ttname"><a href="classTempProbe__TC.html#a5a3ee5ed24d320e5808d6c1ef7fa5859">TempProbe_TC::RTDnominal</a></div><div class="ttdeci">const int RTDnominal</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00112">TempProbe_TC.h:112</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">34</a> of file <a class="el" href="TempProbe__TC_8cpp_source.html">TempProbe_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                       {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">double</span> temp = this-&gt;<a class="code" href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">getRawTemperature</a>() + <a class="code" href="classTempProbe__TC.html#aa7de90e37c14bd29d4ff8f84c8e36129">correction</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTempProbe__TC.html#aba7e6361ea29975de6529237acecc244">firstTime</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>; ++i) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <a class="code" href="classTempProbe__TC.html#af91ad09293f9783e513e07cfd15f2efd">history</a>[i] = temp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classTempProbe__TC.html#aba7e6361ea29975de6529237acecc244">firstTime</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classTempProbe__TC.html#a45adbc26c3714afa459756a0692b81b3">historyIndex</a> = (<a class="code" href="classTempProbe__TC.html#a45adbc26c3714afa459756a0692b81b3">historyIndex</a> + 1) % <a class="code" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classTempProbe__TC.html#af91ad09293f9783e513e07cfd15f2efd">history</a>[<a class="code" href="classTempProbe__TC.html#a45adbc26c3714afa459756a0692b81b3">historyIndex</a>] = temp;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">double</span> sum = 0.0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>; ++i) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    sum += <a class="code" href="classTempProbe__TC.html#af91ad09293f9783e513e07cfd15f2efd">history</a>[i];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> sum / <a class="code" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="ttc" id="aclassTempProbe__TC_html_a45adbc26c3714afa459756a0692b81b3"><div class="ttname"><a href="classTempProbe__TC.html#a45adbc26c3714afa459756a0692b81b3">TempProbe_TC::historyIndex</a></div><div class="ttdeci">int historyIndex</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00133">TempProbe_TC.h:133</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_a93ddaee90f8b32ff8999bac5279afc68"><div class="ttname"><a href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">TempProbe_TC::HISTORY_SIZE</a></div><div class="ttdeci">static const int HISTORY_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00131">TempProbe_TC.h:131</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_aa7de90e37c14bd29d4ff8f84c8e36129"><div class="ttname"><a href="classTempProbe__TC.html#aa7de90e37c14bd29d4ff8f84c8e36129">TempProbe_TC::correction</a></div><div class="ttdeci">double correction</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00134">TempProbe_TC.h:134</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_aab52c631535639bd8392986a7e581eaa"><div class="ttname"><a href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">TempProbe_TC::getRawTemperature</a></div><div class="ttdeci">float getRawTemperature()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00097">TempProbe_TC.h:97</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_aba7e6361ea29975de6529237acecc244"><div class="ttname"><a href="classTempProbe__TC.html#aba7e6361ea29975de6529237acecc244">TempProbe_TC::firstTime</a></div><div class="ttdeci">bool firstTime</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00130">TempProbe_TC.h:130</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_af91ad09293f9783e513e07cfd15f2efd"><div class="ttname"><a href="classTempProbe__TC.html#af91ad09293f9783e513e07cfd15f2efd">TempProbe_TC::history</a></div><div class="ttdeci">double history[HISTORY_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00132">TempProbe_TC.h:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00113">refResistor</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00112">RTDnominal</a>, and <a class="el" href="TempProbe__TC_8h_source.html#l00114">thermo</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00134">correction</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00130">firstTime</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00097">getRawTemperature()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00132">history</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00131">HISTORY_SIZE</a>, and <a class="el" href="TempProbe__TC_8h_source.html#l00133">historyIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00081">MainMenu::loop()</a>, and <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00050">unittest()</a>.</p>
 
 </div>
 </div>
@@ -309,12 +370,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#a46671f95763b065eee44c842fe475fa5">_instance</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="aclassTempProbe__TC_html_a46671f95763b065eee44c842fe475fa5"><div class="ttname"><a href="classTempProbe__TC.html#a46671f95763b065eee44c842fe475fa5">TempProbe_TC::_instance</a></div><div class="ttdeci">static TempProbe_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00111">TempProbe_TC.h:111</a></div></div>
+<div class="ttc" id="aclassTempProbe__TC_html_a46671f95763b065eee44c842fe475fa5"><div class="ttname"><a href="classTempProbe__TC.html#a46671f95763b065eee44c842fe475fa5">TempProbe_TC::_instance</a></div><div class="ttdeci">static TempProbe_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00124">TempProbe_TC.h:124</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_ab5b560df0c4226f238b51318b1968cc2"><div class="ttname"><a href="classTempProbe__TC.html#ab5b560df0c4226f238b51318b1968cc2">TempProbe_TC::TempProbe_TC</a></div><div class="ttdeci">TempProbe_TC()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8cpp_source.html#l00024">TempProbe_TC.cpp:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00111">_instance</a>, and <a class="el" href="TempProbe__TC_8cpp_source.html#l00024">TempProbe_TC()</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00124">_instance</a>, and <a class="el" href="TempProbe__TC_8cpp_source.html#l00024">TempProbe_TC()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00081">MainMenu::loop()</a>, and <a class="el" href="Menu_8cpp_source.html#l00021">unittest()</a>.</p>
 
 </div>
 </div>
@@ -341,14 +402,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00101">101</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                      {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.readFault();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00103">103</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                      {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTempProbe__TC.html#aa8f4d21349ead8d27020f5c970d1a257">thermo</a>.readFault();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00114">thermo</a>.</p>
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00129">thermo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00006">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="ab6c74b1b58593dddfcb2220e617a9562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c74b1b58593dddfcb2220e617a9562">&#9670;&nbsp;</a></span>setCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TempProbe_TC::setCorrection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00111">111</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                  {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classTempProbe__TC.html#aa7de90e37c14bd29d4ff8f84c8e36129">correction</a> = <a class="code" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="ttc" id="aBlink_8cpp_html_a0376be5904d0dd864b7d97c9ce1295ab"><div class="ttname"><a href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a></div><div class="ttdeci">bool value</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00013">Blink.cpp:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00134">correction</a>, and <a class="el" href="Blink_8cpp_source.html#l00013">value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC__Test_8cpp_source.html#l00050">unittest()</a>.</p>
 
 </div>
 </div>
@@ -374,9 +471,139 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static variable for singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00111">111</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00124">124</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00013">instance()</a>.</p>
+
+</div>
+</div>
+<a id="aa7de90e37c14bd29d4ff8f84c8e36129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7de90e37c14bd29d4ff8f84c8e36129">&#9670;&nbsp;</a></span>correction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TempProbe_TC::correction = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00134">134</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>, and <a class="el" href="TempProbe__TC_8h_source.html#l00111">setCorrection()</a>.</p>
+
+</div>
+</div>
+<a id="aba7e6361ea29975de6529237acecc244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7e6361ea29975de6529237acecc244">&#9670;&nbsp;</a></span>firstTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TempProbe_TC::firstTime = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00130">130</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>.</p>
+
+</div>
+</div>
+<a id="af91ad09293f9783e513e07cfd15f2efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91ad09293f9783e513e07cfd15f2efd">&#9670;&nbsp;</a></span>history</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TempProbe_TC::history[<a class="el" href="classTempProbe__TC.html#a93ddaee90f8b32ff8999bac5279afc68">HISTORY_SIZE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00132">132</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>.</p>
+
+</div>
+</div>
+<a id="a93ddaee90f8b32ff8999bac5279afc68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ddaee90f8b32ff8999bac5279afc68">&#9670;&nbsp;</a></span>HISTORY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TempProbe_TC::HISTORY_SIZE = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00131">131</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>.</p>
+
+</div>
+</div>
+<a id="a45adbc26c3714afa459756a0692b81b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45adbc26c3714afa459756a0692b81b3">&#9670;&nbsp;</a></span>historyIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TempProbe_TC::historyIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00133">133</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8cpp_source.html#l00034">getRunningAverage()</a>.</p>
 
 </div>
 </div>
@@ -395,14 +622,14 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00113">113</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00128">128</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00097">getTemperature()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00097">getRawTemperature()</a>.</p>
 
 </div>
 </div>
@@ -421,14 +648,14 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00112">112</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00127">127</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00097">getTemperature()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00097">getRawTemperature()</a>.</p>
 
 </div>
 </div>
@@ -452,9 +679,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00114">114</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TempProbe__TC_8h_source.html#l00129">129</a> of file <a class="el" href="TempProbe__TC_8h_source.html">TempProbe_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00105">clearFault()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00093">getResistance()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00097">getTemperature()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00101">readFault()</a>, and <a class="el" href="TempProbe__TC_8cpp_source.html#l00024">TempProbe_TC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TempProbe__TC_8h_source.html#l00107">clearFault()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00097">getRawTemperature()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00093">getResistance()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00103">readFault()</a>, and <a class="el" href="TempProbe__TC_8cpp_source.html#l00024">TempProbe_TC()</a>.</p>
 
 </div>
 </div>

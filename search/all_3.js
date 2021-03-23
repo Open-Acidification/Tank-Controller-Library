@@ -15,5 +15,6 @@ var searchData=
   ['contributing_25',['Contributing',['../md_CONTRIBUTING.html',1,'']]],
   ['contributing_2emd_26',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]],
   ['contributor_20covenant_20code_20of_20conduct_27',['Contributor Covenant Code of Conduct',['../md_CODE_OF_CONDUCT.html',1,'']]],
-  ['currentswitchstate_28',['currentSwitchState',['../classTemperatureControl.html#a183aebebf73ad96510bebc398fca2a7a',1,'TemperatureControl']]]
+  ['correction_28',['correction',['../classTempProbe__TC.html#aa7de90e37c14bd29d4ff8f84c8e36129',1,'TempProbe_TC']]],
+  ['currentswitchstate_29',['currentSwitchState',['../classTemperatureControl.html#a183aebebf73ad96510bebc398fca2a7a',1,'TemperatureControl']]]
 ];

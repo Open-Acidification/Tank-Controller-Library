@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00020">20</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00019">19</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab2f6264930f1efc03216474c4503688a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2f6264930f1efc03216474c4503688a">&#9670;&nbsp;</a></span>BitCollector()</h2>
@@ -124,9 +124,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00022">22</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                 : DataStreamObserver(<span class="keyword">false</span>, <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00021">21</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                 : DataStreamObserver(<span class="keyword">false</span>, <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -154,10 +154,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00035">35</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                      {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;BitCollector&quot;</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00034">34</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                      {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;BitCollector&quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -185,24 +185,25 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00024">24</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a> &lt; <a class="code" href="Blink_8cpp.html#acefee82212a219c11c0278230cc96136">logSize</a>) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <a class="code" href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a>[<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>].time = micros();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a>[<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>].value = <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;digitalPin[LED_BUILTIN];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="comment">// std::cout &lt;&lt; logIndex &lt;&lt; &quot;:&quot; &lt;&lt; pinLog[logIndex].time &lt;&lt; &quot;:&quot; &lt;&lt; pinLog[logIndex].value &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>++;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <a class="code" href="Blink_8cpp.html#a43e5081a12570bf32bc5c52fff9abe24">overflowFlag</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00011">Blink.cpp:11</a></div></div>
-<div class="ttc" id="aBlink_8cpp_html_a43e5081a12570bf32bc5c52fff9abe24"><div class="ttname"><a href="Blink_8cpp.html#a43e5081a12570bf32bc5c52fff9abe24">overflowFlag</a></div><div class="ttdeci">bool overflowFlag</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00018">Blink.cpp:18</a></div></div>
-<div class="ttc" id="aBlink_8cpp_html_a6ea2e37d367f9efa43355b0310816326"><div class="ttname"><a href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a></div><div class="ttdeci">int logIndex</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00017">Blink.cpp:17</a></div></div>
-<div class="ttc" id="aBlink_8cpp_html_a797d9bcbb2654463b2018d10a1f48c9f"><div class="ttname"><a href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a></div><div class="ttdeci">struct @0 pinLog[logSize]</div></div>
-<div class="ttc" id="aBlink_8cpp_html_acefee82212a219c11c0278230cc96136"><div class="ttname"><a href="Blink_8cpp.html#acefee82212a219c11c0278230cc96136">logSize</a></div><div class="ttdeci">const int logSize</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00012">Blink.cpp:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Blink_8cpp_source.html#l00023">23</a> of file <a class="el" href="Blink_8cpp_source.html">Blink.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a> &lt; <a class="code" href="Blink_8cpp.html#a06e468c261b90d56838d6c89be07f5f7">LOG_SIZE</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <a class="code" href="Blink_8cpp.html#a8f1dab3d2fbefef4bb5ca3e504fa8e5c">pinLog</a>[<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>].time = micros();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <a class="code" href="Blink_8cpp.html#a8f1dab3d2fbefef4bb5ca3e504fa8e5c">pinLog</a>[<a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>].value = <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;digitalPin[<a class="code" href="Blink_8cpp.html#adae60f691931ebee43e0b1779dbd4219">LED_PIN</a>];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="comment">// std::cout &lt;&lt; logIndex &lt;&lt; &quot;:&quot; &lt;&lt; pinLog[logIndex].time &lt;&lt; &quot;:&quot; &lt;&lt; pinLog[logIndex].value &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <a class="code" href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a>++;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <a class="code" href="Blink_8cpp.html#a43e5081a12570bf32bc5c52fff9abe24">overflowFlag</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="ttc" id="aBlink_8cpp_html_a06e468c261b90d56838d6c89be07f5f7"><div class="ttname"><a href="Blink_8cpp.html#a06e468c261b90d56838d6c89be07f5f7">LOG_SIZE</a></div><div class="ttdeci">const int LOG_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00010">Blink.cpp:10</a></div></div>
+<div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00009">Blink.cpp:9</a></div></div>
+<div class="ttc" id="aBlink_8cpp_html_a43e5081a12570bf32bc5c52fff9abe24"><div class="ttname"><a href="Blink_8cpp.html#a43e5081a12570bf32bc5c52fff9abe24">overflowFlag</a></div><div class="ttdeci">bool overflowFlag</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00016">Blink.cpp:16</a></div></div>
+<div class="ttc" id="aBlink_8cpp_html_a6ea2e37d367f9efa43355b0310816326"><div class="ttname"><a href="Blink_8cpp.html#a6ea2e37d367f9efa43355b0310816326">logIndex</a></div><div class="ttdeci">int logIndex</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00015">Blink.cpp:15</a></div></div>
+<div class="ttc" id="aBlink_8cpp_html_a8f1dab3d2fbefef4bb5ca3e504fa8e5c"><div class="ttname"><a href="Blink_8cpp.html#a8f1dab3d2fbefef4bb5ca3e504fa8e5c">pinLog</a></div><div class="ttdeci">struct @0 pinLog[LOG_SIZE]</div></div>
+<div class="ttc" id="aBlink_8cpp_html_adae60f691931ebee43e0b1779dbd4219"><div class="ttname"><a href="Blink_8cpp.html#adae60f691931ebee43e0b1779dbd4219">LED_PIN</a></div><div class="ttdeci">const int LED_PIN</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00017">Blink.cpp:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Blink_8cpp_source.html#l00017">logIndex</a>, <a class="el" href="Blink_8cpp_source.html#l00012">logSize</a>, <a class="el" href="Blink_8cpp_source.html#l00018">overflowFlag</a>, <a class="el" href="Blink_8cpp.html#a797d9bcbb2654463b2018d10a1f48c9f">pinLog</a>, and <a class="el" href="Blink_8cpp_source.html#l00011">state</a>.</p>
+<p class="reference">References <a class="el" href="Blink_8cpp_source.html#l00017">LED_PIN</a>, <a class="el" href="Blink_8cpp_source.html#l00010">LOG_SIZE</a>, <a class="el" href="Blink_8cpp_source.html#l00015">logIndex</a>, <a class="el" href="Blink_8cpp_source.html#l00016">overflowFlag</a>, <a class="el" href="Blink_8cpp.html#a8f1dab3d2fbefef4bb5ca3e504fa8e5c">pinLog</a>, and <a class="el" href="Blink_8cpp_source.html#l00009">state</a>.</p>
 
 </div>
 </div>

@@ -100,6 +100,8 @@ Collaboration diagram for SetTempSetPoint:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5c38458eeb34e436a0bfb9aa1c41f72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTempSetPoint.html#ad5c38458eeb34e436a0bfb9aa1c41f72">SetTempSetPoint</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
 <tr class="separator:ad5c38458eeb34e436a0bfb9aa1c41f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a8840ad571acf25ee7da85a6df01d9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTempSetPoint.html#ac8a8840ad571acf25ee7da85a6df01d9">name</a> ()</td></tr>
+<tr class="separator:ac8a8840ad571acf25ee7da85a6df01d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb937a45566ce1cdf051852378c0f70d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTempSetPoint.html#abb937a45566ce1cdf051852378c0f70d">prompt</a> ()</td></tr>
 <tr class="separator:abb937a45566ce1cdf051852378c0f70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6332042531aa53b143a8792b9ef129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTempSetPoint.html#aaa6332042531aa53b143a8792b9ef129">setValue</a> (double <a class="el" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>)</td></tr>
@@ -186,11 +188,43 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                         : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
 <div class="ttc" id="aclassNumCollectorState_html_a01afcb5b7abc78c4ebdaa7cbc9eb9fd1"><div class="ttname"><a href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState::NumCollectorState</a></div><div class="ttdeci">NumCollectorState(TankControllerLib *tc)</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00011">NumberCollectorState.h:11</a></div></div>
-<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00036">UIState.h:36</a></div></div>
+<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00037">UIState.h:37</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac8a8840ad571acf25ee7da85a6df01d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a8840ad571acf25ee7da85a6df01d9">&#9670;&nbsp;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String SetTempSetPoint::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classUIState.html#a7f8233ee04008d4fdadadd5468ef04cb">UIState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SetTempSetPoint_8h_source.html#l00013">13</a> of file <a class="el" href="SetTempSetPoint_8h_source.html">SetTempSetPoint.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetTempSetPoint&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="abb937a45566ce1cdf051852378c0f70d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb937a45566ce1cdf051852378c0f70d">&#9670;&nbsp;</a></span>prompt()</h2>
 
@@ -216,10 +250,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTempSetPoint_8h_source.html#l00013">13</a> of file <a class="el" href="SetTempSetPoint_8h_source.html">SetTempSetPoint.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                       {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set Temperature &quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetTempSetPoint_8h_source.html#l00016">16</a> of file <a class="el" href="SetTempSetPoint_8h_source.html">SetTempSetPoint.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set Temperature &quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
