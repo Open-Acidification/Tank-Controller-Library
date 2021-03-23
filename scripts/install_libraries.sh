@@ -12,10 +12,9 @@ export SHALLOW_MASTER='--depth 1 --branch master --single-branch '
 # Use for installing locally
 # cd $(bundle exec arduino_library_location.rb)
 
-set -x
-whoami
-pwd
-hostname
+if ! [ $(id -u) = 0 ]; then
+   cd $(bundle exec arduino_library_location.rb)
+fi
 
 # add missing libraries
 export GITHUB="https://github.com/Arduino-CI"
