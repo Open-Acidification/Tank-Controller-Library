@@ -7,7 +7,7 @@
 #include "Devices/DateTime_TC.h"
 #include "Devices/LiquidCrystal_TC.h"
 
-void SeeDeviceUptime::start() {
+void SeeDeviceUptime::loop() {
   int days = floor(millis() / 86400000);
   int hours = floor((millis() - (days * 86400000)) / 3600000);
   int minutes = floor((millis() - (days * 86400000) - (hours * 3600000)) / 60000);
@@ -16,5 +16,7 @@ void SeeDeviceUptime::start() {
   sprintf(buffer, "Up d:%02i %02i:%02i:%02i", days, hours, minutes, seconds);
   LiquidCrystal_TC::instance()->writeLine(DateTime_TC::now().as16CharacterString(), 0);
   LiquidCrystal_TC::instance()->writeLine(buffer, 1);
-  returnToMainMenu(1000);  // after 1-second delay
+  if (countdown-- == 0) {
+    returnToMainMenu();
+  }
 }
