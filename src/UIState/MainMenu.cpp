@@ -16,6 +16,7 @@
 #include "SetTempSetPoint.h"
 #include "SetTime.h"
 #include "TemperatureCalibration.h"
+#include "TempProbe_TC.h"
 
 /**
  * Branch to other states to handle various menu options
@@ -76,6 +77,10 @@ void MainMenu::handleKey(char key) {
   }
 }
 
+// show current temp and pH
 void MainMenu::loop() {
-  // show current temp and pH
+  TempProbe_TC *tempProbe = TempProbe_TC::instance();
+  char output[17];
+  sprintf(output, "Temp=%2.2f", tempProbe->getRunningAverage());
+  LiquidCrystal_TC::instance()->writeLine(output, 1);
 }
