@@ -20,14 +20,14 @@ unittest(testWaitState) {
   assertEqual(DateTime_TC::now().as16CharacterString(), lines[0].c_str());
   assertEqual("Up d:01 02:03:04", lines[1]);
 
-  tc->loop(); // SeeDeviceUptime -> Wait
+  tc->loop();  // SeeDeviceUptime -> Wait
   assertEqual("Wait", tc->stateName());
   delay(900);
-  tc->loop(); // Are we done waiting? No!
+  tc->loop();  // Are we done waiting? No!
   assertEqual("Wait", tc->stateName());
   delay(100);
-  tc->loop(); // Wait nextState: MainMenu
-  tc->loop(); // Wait -> MainMenu
+  tc->loop();  // Wait nextState: MainMenu
+  tc->loop();  // Wait -> MainMenu
   // now we should be back to the main menu
   assertEqual("MainMenu", tc->stateName());
 }

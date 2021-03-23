@@ -124,7 +124,7 @@ void TankControllerLib::updateState() {
 
 /**
  * Public member function used to get the current state name.
- * This is primarioly used by testing.
+ * This is primarily used by testing.
  */
 
 String TankControllerLib::stateName() {
