@@ -58,30 +58,19 @@ void TankControllerLib::blink() {
 }
 
 /**
- * Private member function called by UIState subclasses
- * Only updates if a new state is available to switch to
- */
-void TankControllerLib::updateState() {
-  if (nextState) {
-    assert(state != nextState);
-    delete state;
-    state = nextState;
-    nextState = nullptr;
-    state->start();
-  }
-}
-
-/**
  * Private member function called by loop
  * Handles keypresses
  */
 void TankControllerLib::handleUI() {
+  // std::cout << "TankControllerLib::handleUI() - " << state->name() << std::endl;
   char key = Keypad_TC::instance()->getKey();
   if (key != NO_KEY) {
     log->print(F("Keypad input: "), key);
+    // std::cout << "TankControllerLib::handleUI() - " << state->name() << "::handleKey(" << key << ")" << std::endl;
     state->handleKey(key);
   }
   updateState();
+  // std::cout << "TankControllerLib::handleUI() - " << state->name() << "::loop()" << std::endl;
   state->loop();
 }
 
@@ -90,8 +79,21 @@ void TankControllerLib::handleUI() {
  * It is called repeatedly while the board is on.
  */
 void TankControllerLib::loop() {
+  // std::cout << "TankControllerLib::loop() for " << newState->name() << std::endl;
   blink();  //  blink the on-board LED to show that we are running
   handleUI();
+}
+
+/**
+ * Set the next state
+ */
+void TankControllerLib::setNextState(UIState *newState, bool update) {
+  // std::cout << "TankControllerLib::setNextState() to " << newState->name() << std::endl;
+  assert(nextState == nullptr);
+  nextState = newState;
+  if (update) {
+    this->updateState();
+  }
 }
 
 /**
@@ -103,6 +105,21 @@ void TankControllerLib::setup() {
   setNextState(((UIState *)new MainMenu(this)));
   updateState();
   pinMode(LED_BUILTIN, OUTPUT);
+}
+
+/**
+ * Private member function called by UIState subclasses
+ * Only updates if a new state is available to switch to
+ */
+void TankControllerLib::updateState() {
+  if (nextState) {
+    // std::cout << "TankControllerLib::updateState() to " << nextState->name() << std::endl;
+    assert(state != nextState);
+    delete state;
+    state = nextState;
+    nextState = nullptr;
+    state->start();
+  }
 }
 
 /**

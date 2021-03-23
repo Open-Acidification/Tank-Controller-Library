@@ -7,9 +7,9 @@
 #include "TankControllerLib.h"
 
 unittest(test) {
-  TankControllerLibTest tc;
-  SetPHSetPoint* test = new SetPHSetPoint(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetPHSetPoint* test = new SetPHSetPoint(tc);
+  tc->setNextState(test, true);
 
   // setValue
   test->setValue(7.1234);
@@ -20,7 +20,7 @@ unittest(test) {
   assertEqual("New pH=7.1234   ", lines[1]);
   assertEqual("Wait", tc->stateName());
   delay(1000);
-  tc.loop();
+  tc->loop();
   // now we should be back to the main menu
   assertEqual("MainMenu", tc->stateName());
 }

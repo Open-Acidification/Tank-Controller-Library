@@ -7,34 +7,34 @@
 #include "TankControllerLib.h"
 
 unittest(default) {
-  TankControllerLibTest tc;
-  SetChillOrHeat* test = new SetChillOrHeat(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetChillOrHeat* test = new SetChillOrHeat(tc);
+  tc->setNextState(test, true);
   assertTrue(EEPROM_TC::instance()->getHeat());
 }
 
 unittest(ignoreInvalidValues) {
-  TankControllerLibTest tc;
-  SetChillOrHeat* test = new SetChillOrHeat(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetChillOrHeat* test = new SetChillOrHeat(tc);
+  tc->setNextState(test, true);
   assertTrue(EEPROM_TC::instance()->getHeat());
   test->setValue(2.0);
   assertTrue(EEPROM_TC::instance()->getHeat());
 }
 
 unittest(switchToHeat) {
-  TankControllerLibTest tc;
-  SetChillOrHeat* test = new SetChillOrHeat(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetChillOrHeat* test = new SetChillOrHeat(tc);
+  tc->setNextState(test, true);
   EEPROM_TC::instance()->setHeat(false);
   test->setValue(9.0);
   assertTrue(EEPROM_TC::instance()->getHeat());
 }
 
 unittest(switchToChill) {
-  TankControllerLibTest tc;
-  SetChillOrHeat* test = new SetChillOrHeat(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetChillOrHeat* test = new SetChillOrHeat(tc);
+  tc->setNextState(test, true);
   EEPROM_TC::instance()->setHeat(true);
   test->setValue(1.0);
   assertFalse(EEPROM_TC::instance()->getHeat());
@@ -43,7 +43,7 @@ unittest(switchToChill) {
   assertEqual("Use chiller     ", lines[1]);
   assertEqual("Wait", tc->stateName());
   delay(1000);
-  tc.loop();
+  tc->loop();
   // now we should be back to the main menu
   assertEqual("MainMenu", tc->stateName());
 }

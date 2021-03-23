@@ -7,9 +7,10 @@
 #include "TankControllerLib.h"
 
 unittest(test) {
-  TankControllerLibTest tc;
-  SetTempSetPoint* test = new SetTempSetPoint(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetTempSetPoint* test = new SetTempSetPoint(tc);
+  assertEqual("MainMenu", tc->stateName());
+  tc->setNextState(test, true);
 
   // setValue
   test->setValue(50.05);
@@ -20,7 +21,7 @@ unittest(test) {
   assertEqual("New Temp=50.05  ", lines[1]);
   assertEqual("Wait", tc->stateName());
   delay(1000);
-  tc.loop();
+  tc->loop();
   // now we should be back to the main menu
   assertEqual("MainMenu", tc->stateName());
 }

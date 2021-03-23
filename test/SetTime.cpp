@@ -9,9 +9,9 @@
 
 unittest(test) {
   LiquidCrystal_TC* lcd = LiquidCrystal_TC::instance();
-  TankControllerLibTest tc;
-  SetTime* test = new SetTime(&tc);
-  tc.setNextState(test);
+  TankControllerLib* tc = TankControllerLib::instance();
+  SetTime* test = new SetTime(tc);
+  tc->setNextState(test, true);
 
   DateTime_TC now = DateTime_TC::now();
   // the default time is the code compile time
@@ -44,7 +44,7 @@ unittest(test) {
 
   assertEqual("Wait", tc->stateName());
   delay(1000);
-  tc.loop();
+  tc->loop();
   // now we should be back to the main menu
   assertEqual("MainMenu", tc->stateName());
 }
