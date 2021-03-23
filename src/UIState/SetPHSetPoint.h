@@ -10,7 +10,7 @@ class SetPHSetPoint : public NumCollectorState {
 public:
   SetPHSetPoint(TankControllerLib* tc) : NumCollectorState(tc) {
   }
-  String name() {
+  const String name() {
     return "SetPHSetPoint";
   }
   const char* prompt() {

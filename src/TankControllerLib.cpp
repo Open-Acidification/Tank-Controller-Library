@@ -127,7 +127,7 @@ void TankControllerLib::updateState() {
  * This is primarily used by testing.
  */
 
-String TankControllerLib::stateName() {
+const String TankControllerLib::stateName() {
   return state->name();
 }
 

@@ -10,7 +10,7 @@ class SetTankID : public NumCollectorState {
 public:
   SetTankID(TankControllerLib* tc) : NumCollectorState(tc) {
   }
-  String name() {
+  const String name() {
     return "SetTankID";
   }
   const char* prompt() {
