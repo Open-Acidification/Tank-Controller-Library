@@ -10,6 +10,24 @@
 
 Arduino library for the Open Acidification pH Stat Controller
 
+## Installation
+
+The following is based on [`scripts/install.sh`](scripts/install.sh):
+
+```bash
+sudo apt install -y \
+  build-essential git ruby libgtk-3-dev \
+  python3-dev python3-pip python-is-python3
+sudo gem install bundler
+git clone https://github.com/Open-Acidification/TankControllerLib.git
+cd TankControllerLib
+bundle config --local path vendor/bundle
+bundle install
+scripts/install_libraries.sh
+```
+
+To install the GUI simulator, see [GUI/build.sh](GUI/build.sh).
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
