@@ -1,6 +1,7 @@
 #include "MainMenu.h"
 
 #include "CalibrationManagement.h"
+#include "Devices/TempProbe_TC.h"
 #include "EnablePID.h"
 #include "PHCalibration.h"
 #include "PIDTuningMenu.h"
@@ -15,7 +16,6 @@
 #include "SetTankID.h"
 #include "SetTempSetPoint.h"
 #include "SetTime.h"
-#include "Devices/TempProbe_TC.h"
 #include "TemperatureCalibration.h"
 
 /**
