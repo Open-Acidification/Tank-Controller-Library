@@ -6,13 +6,6 @@
 #include "EEPROM_TC.h"
 #include "TankControllerLib.h"
 
-unittest(default) {
-  TankControllerLib* tc = TankControllerLib::instance();
-  SetChillOrHeat* test = new SetChillOrHeat(tc);
-  tc->setNextState(test, true);
-  assertTrue(EEPROM_TC::instance()->getHeat());
-}
-
 unittest(ignoreInvalidValues) {
   TankControllerLib* tc = TankControllerLib::instance();
   SetChillOrHeat* test = new SetChillOrHeat(tc);
@@ -20,6 +13,12 @@ unittest(ignoreInvalidValues) {
   assertTrue(EEPROM_TC::instance()->getHeat());
   test->setValue(2.0);
   assertTrue(EEPROM_TC::instance()->getHeat());
+  tc->loop();  // transition to Wait
+  delay(1000);
+  tc->loop();  // queue MainMenu to be next
+  tc->loop();  // transition to MainMenu
+  // now we should be back to the main menu
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(switchToHeat) {
@@ -29,6 +28,12 @@ unittest(switchToHeat) {
   EEPROM_TC::instance()->setHeat(false);
   test->setValue(9.0);
   assertTrue(EEPROM_TC::instance()->getHeat());
+  tc->loop();  // transition to Wait
+  delay(1000);
+  tc->loop();  // queue MainMenu to be next
+  tc->loop();  // transition to MainMenu
+  // now we should be back to the main menu
+  assertEqual("MainMenu", tc->stateName());
 }
 
 unittest(switchToChill) {
