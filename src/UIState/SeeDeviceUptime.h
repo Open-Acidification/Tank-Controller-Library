@@ -10,8 +10,13 @@ class SeeDeviceUptime : public UIState {
 public:
   SeeDeviceUptime(TankControllerLib* tc) : UIState(tc) {
   }
-  String name() {
+  void loop();
+  const char* name() {
     return "SeeDeviceUptime";
   }
-  void start();
+  void start() {  // override to do nothing
+  }
+
+private:
+  int countdown = 5;
 };

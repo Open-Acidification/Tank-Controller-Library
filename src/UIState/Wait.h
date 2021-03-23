@@ -13,7 +13,7 @@ public:
   }
   // watch to see if enough time has passed
   void loop();
-  const String name() {
+  const char* name() {
     return "Wait";
   }
   // override to do nothing

@@ -39,7 +39,7 @@ public:
   void setValue(double value) {
     storedValue = value;
   }
-  const String name() {
+  const char* name() {
     return "TestNumCollectorState";
   }
   const char* prompt() {

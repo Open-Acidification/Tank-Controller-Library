@@ -17,7 +17,7 @@ public:
   void loop();
   void setNextState(UIState* newState, bool update = false);
   void setup();
-  const String stateName();
+  const char* stateName();
   const char* version();
 
 protected:
