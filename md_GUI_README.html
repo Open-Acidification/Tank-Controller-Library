@@ -72,7 +72,7 @@ $(function() {
 <li><code>python3 -m pip install wxPython pybind11</code></li>
 <li><code>cd GUI</code></li>
 <li><code>filePath=`bundle exec which arduino_library_location.rb`</code></li>
-<li><code>ARDUINO_CI=${filePath%/*}/</code></li>
+<li><code>export ARDUINO_CI=${filePath%/bin/*}/gems/arduino_ci-1.3.0/cpp/arduino</code></li>
 <li><code>make clean</code></li>
 <li><code>(mkdir -p build; cd build; make -f ../Makefile)</code></li>
 <li><code>python3 <a class="el" href="TankController_8py.html">TankController.py</a></code></li>
