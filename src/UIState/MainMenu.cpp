@@ -15,7 +15,7 @@
 #include "SetTankID.h"
 #include "SetTempSetPoint.h"
 #include "SetTime.h"
-#include "TempProbe_TC.h"
+#include "Devices/TempProbe_TC.h"
 #include "TemperatureCalibration.h"
 
 /**
