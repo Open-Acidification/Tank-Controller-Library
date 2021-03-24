@@ -53,6 +53,7 @@ Kd
 Keymap
 Kp
 len
+libgtk
 libtc
 localtime
 LOWTHRESH
