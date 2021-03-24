@@ -14,9 +14,10 @@ public:
   const char* name() {
     return "SeeDeviceUptime";
   }
-  void start() {  // override to do nothing
+  void start() {
+    msEnd = millis() + 5000;
   }
 
 private:
-  int countdown = 5;
+  int msEnd;
 };

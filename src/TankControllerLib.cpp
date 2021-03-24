@@ -4,15 +4,9 @@
 #include "Devices/LiquidCrystal_TC.h"
 #include "Devices/SD_TC.h"
 #include "Devices/Serial_TC.h"
+#include "TC_util.h"
 #include "UIState/MainMenu.h"
 #include "UIState/UIState.h"
-
-#define DEBUG 0
-#if DEBUG
-#define COUT(x) do { std::cout << __FILE__ << ":" << __LINE__ << " - " << x << std::endl; } while (0)
-#else
-#define COUT(x) (void)0
-#endif
 
 // ------------ Class Methods ------------
 /**
@@ -118,7 +112,7 @@ void TankControllerLib::setup() {
  * Public member function used to get the current state name.
  * This is primarily used by testing.
  */
-const char* TankControllerLib::stateName() {
+const char *TankControllerLib::stateName() {
   return state->name();
 }
 
