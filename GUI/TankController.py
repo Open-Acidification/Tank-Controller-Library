@@ -27,6 +27,7 @@ class TankController(wx.Frame):
         self.Centre()
         self.Show()
         self.startLoop()
+        libTC.setTemperature(12.345)
 
     def InitUI(self):
         self.layoutMain()
@@ -75,25 +76,25 @@ class TankController(wx.Frame):
     def layoutTemp(self):
         sizer = wx.StaticBoxSizer(
             wx.VERTICAL, self.panel, label="Tank Temp")
-        self.temp = wx.TextCtrl(
+        temp = wx.TextCtrl(
             self.panel, value='12.345', style=wx.TE_RIGHT)
-        self.temp.Bind(wx.EVT_TEXT, self.onTempChanged)
+        temp.Bind(wx.EVT_TEXT, self.onTempChanged)
         font = wx.Font(18, wx.FONTFAMILY_TELETYPE,
                        wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        self.lqd.SetFont(font)
-        sizer.Add(self.temp, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
+        temp.SetFont(font)
+        sizer.Add(temp, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
         return sizer
 
     def layoutPH(self):
         sizer = wx.StaticBoxSizer(
             wx.VERTICAL, self.panel, label="Tank pH")
-        self.ph = wx.TextCtrl(
+        ph = wx.TextCtrl(
             self.panel, value='8.1234', style=wx.TE_RIGHT)
-        self.ph.Bind(wx.EVT_TEXT, self.onPHChanged)
+        ph.Bind(wx.EVT_TEXT, self.onPHChanged)
         font = wx.Font(18, wx.FONTFAMILY_TELETYPE,
                        wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL)
-        self.lqd.SetFont(font)
-        sizer.Add(self.ph, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
+        ph.SetFont(font)
+        sizer.Add(ph, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
         return sizer
 
     def layoutDevice(self):
@@ -182,7 +183,6 @@ class TankController(wx.Frame):
         return sizer
 
     def updateDisplay(self):
-        return None
         # update Liquid Crystal display
         self.lqd.SetLabelText(libTC.lcd(0) + '\n' + libTC.lcd(1))
         # update EEPROM storage
@@ -216,7 +216,7 @@ class TankController(wx.Frame):
         print("onPHChanged", event.GetString())
 
     def onTempChanged(self, event):
-        print("onTempChanged", event.GetString())
+        libTC.setTemperature(float(event.GetString()))
 
 
 if __name__ == "__main__":
