@@ -9,7 +9,10 @@
 
 #define DEBUG 0
 #if DEBUG
-#define COUT(x) do { std::cout << __FILE__ << ":" << __LINE__ << " - " << x << std::endl; } while (0)
+#define COUT(x)                                                          \
+  do {                                                                   \
+    std::cout << __FILE__ << ":" << __LINE__ << " - " << x << std::endl; \
+  } while (0)
 #else
 #define COUT(x) (void)0
 #endif
