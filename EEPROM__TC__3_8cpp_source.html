@@ -72,7 +72,7 @@ $(function() {
 <div class="contents">
 <a href="EEPROM__TC__3_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EEPROM__TC__3_8h.html">Devices/EEPROM_TC_3.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TC__assert_8h.html">TC_assert.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TC__util_8h.html">TC_util.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  instance methods</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classEEPROM__TC__3.html#a210ec90a59e18c247601926642c1cf1d">    6</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classEEPROM__TC__3.html#a210ec90a59e18c247601926642c1cf1d">EEPROM_TC_3::isRightVersion</a>() {</div>
@@ -230,7 +230,7 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a0376be5904d0dd864b7d97c9ce1295ab"><div class="ttname"><a href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a></div><div class="ttdeci">bool value</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00013">Blink.cpp:13</a></div></div>
 <div class="ttc" id="aEEPROM__TC__3_8h_html"><div class="ttname"><a href="EEPROM__TC__3_8h.html">EEPROM_TC_3.h</a></div></div>
-<div class="ttc" id="aTC__assert_8h_html"><div class="ttname"><a href="TC__assert_8h.html">TC_assert.h</a></div></div>
+<div class="ttc" id="aTC__util_8h_html"><div class="ttname"><a href="TC__util_8h.html">TC_util.h</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC__3_html_a02cb35b8529e5b9f85a72fa8ecca9cad"><div class="ttname"><a href="classEEPROM__TC__3.html#a02cb35b8529e5b9f85a72fa8ecca9cad">EEPROM_TC_3::getMac</a></div><div class="ttdeci">double getMac()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC__3_8cpp_source.html#l00040">EEPROM_TC_3.cpp:40</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC__3_html_a0d67d35b75b15af1ebaf428de5c9326a"><div class="ttname"><a href="classEEPROM__TC__3.html#a0d67d35b75b15af1ebaf428de5c9326a">EEPROM_TC_3::setTemp</a></div><div class="ttdeci">void setTemp(double value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC__3_8cpp_source.html#l00141">EEPROM_TC_3.cpp:141</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC__3_html_a0e137e67e8db609d56b76b89718a7b5d"><div class="ttname"><a href="classEEPROM__TC__3.html#a0e137e67e8db609d56b76b89718a7b5d">EEPROM_TC_3::MAC_ADDRESS</a></div><div class="ttdeci">const int MAC_ADDRESS</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC__3_8h_source.html#l00073">EEPROM_TC_3.h:73</a></div></div>
@@ -305,7 +305,7 @@ $(function() {
 <div class="ttc" id="aclassEEPROM__TC_html_ac669c2e093773d0c849633d522535183"><div class="ttname"><a href="classEEPROM__TC.html#ac669c2e093773d0c849633d522535183">EEPROM_TC::eepromWriteDouble</a></div><div class="ttdeci">void eepromWriteDouble(int address, double value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00044">EEPROM_TC.cpp:44</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_ad72be8c7a3e8baad6a78f5f086831ec1"><div class="ttname"><a href="classEEPROM__TC.html#ad72be8c7a3e8baad6a78f5f086831ec1">EEPROM_TC::eepromWriteInt</a></div><div class="ttdeci">void eepromWriteInt(int address, int value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00062">EEPROM_TC.cpp:62</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_ad76221b4312f79cb7d818b1c3e15f0c4"><div class="ttname"><a href="classEEPROM__TC.html#ad76221b4312f79cb7d818b1c3e15f0c4">EEPROM_TC::eepromReadDouble</a></div><div class="ttdeci">double eepromReadDouble(int address)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00034">EEPROM_TC.cpp:34</a></div></div>
-<div class="ttc" id="alibTC_8cpp_html_aae0723227a447e55f27ee7d2cbfc81cc"><div class="ttname"><a href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00161">libTC.cpp:161</a></div></div>
+<div class="ttc" id="alibTC_8cpp_html_aae0723227a447e55f27ee7d2cbfc81cc"><div class="ttname"><a href="libTC_8cpp.html#aae0723227a447e55f27ee7d2cbfc81cc">version</a></div><div class="ttdeci">const char * version()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00160">libTC.cpp:160</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

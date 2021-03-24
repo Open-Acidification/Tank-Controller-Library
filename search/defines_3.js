@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fserial_5fports_809',['NUM_SERIAL_PORTS',['../libTC_8cpp.html#a4b6a08f7e940c3b9f5129fed463110fd',1,'libTC.cpp']]]
+  ['eeprom_5fsize_810',['EEPROM_SIZE',['../libTC_8cpp.html#ae3ef7bba113f663df6996f286b632a3f',1,'libTC.cpp']]]
 ];

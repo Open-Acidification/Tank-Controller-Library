@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d58bb071e2f4b4eb78e0f1069a29f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14bebe1f298527641c25930ef6f0db59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">loop</a> ()</td></tr>
 <tr class="separator:a14bebe1f298527641c25930ef6f0db59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8233ee04008d4fdadadd5468ef04cb"><td class="memItemLeft" align="right" valign="top">virtual String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a7f8233ee04008d4fdadadd5468ef04cb">name</a> ()=0</td></tr>
-<tr class="separator:a7f8233ee04008d4fdadadd5468ef04cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a250672e847e2630a82af13320dab7978"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">name</a> ()=0</td></tr>
+<tr class="separator:a250672e847e2630a82af13320dab7978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0104fcd88e3ae4514e45b94806698ab8"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">prompt</a> ()</td></tr>
 <tr class="separator:a0104fcd88e3ae4514e45b94806698ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a4a56c0f68998ce342a73585c256cce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a9a4a56c0f68998ce342a73585c256cce">start</a> ()</td></tr>
@@ -248,7 +248,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00016">returnToMainMenu()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib::handleUI()</a>, <a class="el" href="TankController_8py_source.html#l00202">TankController.TankController::Keyboard()</a>, and <a class="el" href="TankController_8py_source.html#l00198">TankController.TankController::KeypadEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib::handleUI()</a>, <a class="el" href="TankController_8py_source.html#l00204">TankController.TankController::Keyboard()</a>, and <a class="el" href="TankController_8py_source.html#l00200">TankController.TankController::KeypadEvent()</a>.</p>
 
 </div>
 </div>
@@ -307,18 +307,18 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classWait.html#af6f7e34c6acd1211ff695eeb0c5a680f">Wait</a>, and <a class="el" href="classMainMenu.html#a1030afe998ac2fbcaf6af266dc78195e">MainMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="classWait.html#af6f7e34c6acd1211ff695eeb0c5a680f">Wait</a>, <a class="el" href="classSeeDeviceUptime.html#ab83681083d66f18b43aba8a1cd8ec0c8">SeeDeviceUptime</a>, and <a class="el" href="classMainMenu.html#a1030afe998ac2fbcaf6af266dc78195e">MainMenu</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00026">26</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                      {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00064">TankControllerLib::handleUI()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib::handleUI()</a>.</p>
 
 </div>
 </div>
-<a id="a7f8233ee04008d4fdadadd5468ef04cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f8233ee04008d4fdadadd5468ef04cb">&#9670;&nbsp;</a></span>name()</h2>
+<a id="a250672e847e2630a82af13320dab7978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a250672e847e2630a82af13320dab7978">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +327,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual String UIState::name </td>
+          <td class="memname">virtual const char* UIState::name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -340,9 +340,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classWait.html#a922624ee3e01a124cfd43c42d623a1db">Wait</a>, <a class="el" href="classTemperatureCalibration.html#a7c249c5a70fd45ac30894a15b9f885bc">TemperatureCalibration</a>, <a class="el" href="classSetTime.html#aa6bd8fcb5433d758138226582f42f592">SetTime</a>, <a class="el" href="classSetTempSetPoint.html#ac8a8840ad571acf25ee7da85a6df01d9">SetTempSetPoint</a>, <a class="el" href="classSetTankID.html#ac7083c0cae9616dcaa809f62bb88a134">SetTankID</a>, <a class="el" href="classSetPHSetPoint.html#ae4e3023c306089d83ed8155b61b28bc8">SetPHSetPoint</a>, <a class="el" href="classSetGoogleSheetInterval.html#ae939ccfe5871ccfd494b0c19abc87873">SetGoogleSheetInterval</a>, <a class="el" href="classSetChillOrHeat.html#ab9be221138bdc711fc9ed3f220753971">SetChillOrHeat</a>, <a class="el" href="classSeeTankID.html#a1a469d5f4ef140f2117360735a2e9d61">SeeTankID</a>, <a class="el" href="classSeePIDConstants.html#a4c37302bf162329218ba3971fffebaa4">SeePIDConstants</a>, <a class="el" href="classSeeDeviceUptime.html#a56b9159594e0c19aa17b2d04ffb0644b">SeeDeviceUptime</a>, <a class="el" href="classSeeDeviceAddress.html#ab48b9e0cf605d36341b46e350c2b03df">SeeDeviceAddress</a>, <a class="el" href="classResetLCDScreen.html#abb5721f326967c43a854af478b6d7d85">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#a00e7b371e40d16b7bd9c87186c8fe040">PIDTuningMenu</a>, <a class="el" href="classPHCalibration.html#a758a2a4d9658ec693880fc2d2b59ad44">PHCalibration</a>, <a class="el" href="classMainMenu.html#a9a6f6eb5e2ea98f52fdfe8f3a0375492">MainMenu</a>, <a class="el" href="classEnablePID.html#a8acd979f7b3acf4eca1e3c2b32f5d855">EnablePID</a>, and <a class="el" href="classCalibrationManagement.html#acb475affb1ef9bc1181182cfd7f23984">CalibrationManagement</a>.</p>
+<p>Implemented in <a class="el" href="classWait.html#a1ca8a7a7db7a2b1d3432fc609f01340b">Wait</a>, <a class="el" href="classTemperatureCalibration.html#a740519f850d23dd7d10aed31840990eb">TemperatureCalibration</a>, <a class="el" href="classSetTime.html#ab783d32a78f08cd3e1bfc6828a9cf134">SetTime</a>, <a class="el" href="classSetTempSetPoint.html#a4efb1690a1add4f205d3b46c559a81f0">SetTempSetPoint</a>, <a class="el" href="classSetTankID.html#a8691e69d2042b58f5195b311c5c30f7b">SetTankID</a>, <a class="el" href="classSetPHSetPoint.html#a652ba6d8498192b83b249c3d05b3510e">SetPHSetPoint</a>, <a class="el" href="classSetGoogleSheetInterval.html#af20285ef9df4f1d237167e235a7d3cb6">SetGoogleSheetInterval</a>, <a class="el" href="classSetChillOrHeat.html#aacd70781c4c2a9d5cce46f1be8222946">SetChillOrHeat</a>, <a class="el" href="classSeeTankID.html#a229b366a2fc502bb4cdbfe516900152e">SeeTankID</a>, <a class="el" href="classSeePIDConstants.html#a5e82acf5e4009321d5bb145acb88454a">SeePIDConstants</a>, <a class="el" href="classSeeDeviceUptime.html#acd9fea4b78c67c7227e622f6fc68ff2c">SeeDeviceUptime</a>, <a class="el" href="classSeeDeviceAddress.html#a8c3e5691c071d667341133e90a437e47">SeeDeviceAddress</a>, <a class="el" href="classResetLCDScreen.html#a95bc4ae3511c69d8fa601e6156f593a1">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#ae916dcfee7ba7a3e6d359d91e997f167">PIDTuningMenu</a>, <a class="el" href="classPHCalibration.html#a795dc2b13ad8e9ec8a171e4903821d02">PHCalibration</a>, <a class="el" href="classMainMenu.html#a8d36189349cb25d9cbc442c80fbf26e9">MainMenu</a>, <a class="el" href="classEnablePID.html#aabd19b650d4ce93d70a5af0940070b94">EnablePID</a>, and <a class="el" href="classCalibrationManagement.html#a12ccac9f5cdfd39e9b498de5140cdf97">CalibrationManagement</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00130">TankControllerLib::stateName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00065">TankControllerLib::handleUI()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00082">TankControllerLib::loop()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib::setNextState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00115">TankControllerLib::stateName()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00123">TankControllerLib::updateState()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +419,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00024">setNextState()</a>, and <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CalibrationManagement_8cpp_source.html#l00007">CalibrationManagement::handleKey()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00007">EnablePID::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00024">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00013">NumCollectorState::handleKey()</a>, <a class="el" href="PHCalibration_8cpp_source.html#l00007">PHCalibration::handleKey()</a>, <a class="el" href="PIDTuningMenu_8cpp_source.html#l00007">PIDTuningMenu::handleKey()</a>, <a class="el" href="ResetLCDScreen_8cpp_source.html#l00007">ResetLCDScreen::handleKey()</a>, <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00007">SeeDeviceAddress::handleKey()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00007">SeePIDConstants::handleKey()</a>, <a class="el" href="SeeTankID_8cpp_source.html#l00007">SeeTankID::handleKey()</a>, <a class="el" href="TemperatureCalibration_8cpp_source.html#l00007">TemperatureCalibration::handleKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00010">handleKey()</a>, <a class="el" href="Wait_8cpp_source.html#l00003">Wait::loop()</a>, <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, <a class="el" href="src_2UIState_2SetGoogleSheetInterval_8cpp_source.html#l00010">SetGoogleSheetInterval::setValue()</a>, <a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html#l00010">SetPHSetPoint::setValue()</a>, <a class="el" href="src_2UIState_2SetTankID_8cpp_source.html#l00010">SetTankID::setValue()</a>, <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="src_2UIState_2SetTime_8cpp_source.html#l00012">SetTime::setValue()</a>, and <a class="el" href="src_2UIState_2SeeDeviceUptime_8cpp_source.html#l00010">SeeDeviceUptime::start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CalibrationManagement_8cpp_source.html#l00007">CalibrationManagement::handleKey()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00007">EnablePID::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00024">MainMenu::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00013">NumCollectorState::handleKey()</a>, <a class="el" href="PHCalibration_8cpp_source.html#l00007">PHCalibration::handleKey()</a>, <a class="el" href="PIDTuningMenu_8cpp_source.html#l00007">PIDTuningMenu::handleKey()</a>, <a class="el" href="ResetLCDScreen_8cpp_source.html#l00007">ResetLCDScreen::handleKey()</a>, <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00007">SeeDeviceAddress::handleKey()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00007">SeePIDConstants::handleKey()</a>, <a class="el" href="SeeTankID_8cpp_source.html#l00007">SeeTankID::handleKey()</a>, <a class="el" href="TemperatureCalibration_8cpp_source.html#l00007">TemperatureCalibration::handleKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00010">handleKey()</a>, <a class="el" href="src_2UIState_2SeeDeviceUptime_8cpp_source.html#l00011">SeeDeviceUptime::loop()</a>, <a class="el" href="Wait_8cpp_source.html#l00003">Wait::loop()</a>, <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, <a class="el" href="src_2UIState_2SetGoogleSheetInterval_8cpp_source.html#l00010">SetGoogleSheetInterval::setValue()</a>, <a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html#l00010">SetPHSetPoint::setValue()</a>, <a class="el" href="src_2UIState_2SetTankID_8cpp_source.html#l00010">SetTankID::setValue()</a>, <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, and <a class="el" href="src_2UIState_2SetTime_8cpp_source.html#l00012">SetTime::setValue()</a>.</p>
 
 </div>
 </div>
@@ -452,9 +452,9 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">setNextState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00009">Blink.cpp:9</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00090">TankControllerLib.cpp:90</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib.cpp:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00090">TankControllerLib::setNextState()</a>, <a class="el" href="Blink_8cpp_source.html#l00009">state</a>, and <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00091">TankControllerLib::setNextState()</a>, <a class="el" href="Blink_8cpp_source.html#l00009">state</a>, and <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00024">MainMenu::handleKey()</a>, and <a class="el" href="UIState_8cpp_source.html#l00016">returnToMainMenu()</a>.</p>
 
@@ -498,7 +498,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00013">LiquidCrystal_TC::instance()</a>, <a class="el" href="UIState_8h_source.html#l00029">prompt()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00084">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetTime_8cpp_source.html#l00012">SetTime::setValue()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00114">TankControllerLib::updateState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetTime_8cpp_source.html#l00012">SetTime::setValue()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00123">TankControllerLib::updateState()</a>.</p>
 
 </div>
 </div>
